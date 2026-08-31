@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gallery — Curio Maker Student Projects</title>
+<meta name="description" content="Real projects built by Curio Maker kids: line-follower racers, sorting arms, homemade games, printed prosthetic hands and AI experiments." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/pages.css" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.hero__title .word{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="index.html">
+    <span class="brand__bot" aria-hidden="true">
+      <svg viewBox="0 0 40 40" width="34" height="34">
+        <rect x="7" y="12" width="26" height="21" rx="8" fill="#7b5cff"/>
+        <circle cx="20" cy="6" r="3" fill="#ffd23f"/>
+        <rect x="19" y="8" width="2" height="5" fill="#ffd23f"/>
+        <circle cx="15" cy="21" r="3.4" fill="#fff"/><circle cx="25" cy="21" r="3.4" fill="#fff"/>
+        <circle cx="15" cy="21.5" r="1.7" fill="#16123a"/><circle cx="25" cy="21.5" r="1.7" fill="#16123a"/>
+        <path d="M15 27.5q5 3.5 10 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <span class="brand__text">Curio<span>Maker</span></span>
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a class="is-active" href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn btn--sm btn--primary" href="contact.html#book">Book Free Trial</a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+<!-- ══ PAGE HERO ══ -->
+<section class="phero">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="grid" data-speed="0.10"></div>
+    <div class="blob blob--grape" data-speed="0.26"></div>
+    <div class="blob blob--sky"   data-speed="0.34"></div>
+    <div class="blob blob--sun"   data-speed="0.18"></div>
+    <span class="float float--star"   data-speed="0.6">⭐</span>
+    <span class="float float--rocket" data-speed="0.48">🚀</span>
+    <span class="float float--bulb"   data-speed="0.32">💡</span>
+  </div>
+  <div class="phero__inner">
+    <nav class="crumb reveal" data-reveal="1" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><b>Gallery</b>
+    </nav>
+    <h1 class="phero__title reveal" data-reveal="2">
+      Look what our <span class="hl hl--mint">makers made</span>
+    </h1>
+    <p class="phero__sub reveal" data-reveal="3">
+      Every project here was built by a child, bugs and all. Tap any one to hear the story
+      behind it &mdash; including the parts that went wrong first.
+    </p>
+  </div>
+</section>
+
+<!-- ══ GALLERY ══ -->
+<section class="section">
+  <div class="filters" data-filter-target="#galGrid" role="group" aria-label="Filter projects">
+    <button class="chip-btn is-on" data-filter="all"    aria-pressed="true">Everything</button>
+    <button class="chip-btn"       data-filter="robots" aria-pressed="false">🤖 Robots</button>
+    <button class="chip-btn"       data-filter="games"  aria-pressed="false">🎮 Games</button>
+    <button class="chip-btn"       data-filter="prints" aria-pressed="false">🖨️ 3D Prints</button>
+    <button class="chip-btn"       data-filter="ai"     aria-pressed="false">🧠 AI</button>
+  </div>
+
+  <div class="gal" id="galGrid">
+
+    <article class="gal__tile reveal" tabindex="0" role="button" data-cat="robots" data-reveal="1"
+      data-title="Line-Follower Racer"
+      data-maker="Zayn, 9 · Robot Lab"
+      data-tech="Arduino · 2× IR sensors · 3D printed chassis"
+      data-story="Zayn wanted the fastest bot in the class, so he kept turning the motor speed up until the racer flew straight off the track at every corner. Six attempts later he worked out the fix himself: read the sensors more often and slow down before the turn, not during it. It now finishes the course in 14 seconds.">
+      <div class="gal__art gal__art--a">🏎️</div>
+      <div class="gal__meta"><h3>Line-Follower Racer</h3><p>Zayn, 9 · Robot Lab</p><span class="gal__more">Read the story →</span></div>
+    </article>
+
+    <article class="gal__tile reveal" tabindex="0" role="button" data-cat="robots" data-reveal="2"
+      data-title="Colour-Sorting Arm"
+      data-maker="Elena, 12 · Robot Lab"
+      data-tech="3 servos · colour sensor · Python"
+      data-story="A three-joint arm that picks up bottle caps and drops them into the right bin by colour. Elena's first version sorted everything into the red bin because she compared the wrong sensor value. Finding that bug took her two sessions and she now explains it to newer students herself.">
+      <div class="gal__art gal__art--b">🦾</div>
+      <div class="gal__meta"><h3>Colour-Sorting Arm</h3><p>Elena, 12 · Robot Lab</p><span class="gal__more">Read the story →</span></div>
+    </article>
+
+    <article class="gal__tile reveal" tabindex="0" role="button" data-cat="games" data-reveal="3"
+      data-title="Cat Escape (platformer)"
+      data-maker="Ayaan, 10 · Code &amp; Game Lab"
+      data-tech="Python · Pygame · hand-drawn sprites"
+      data-story="Twelve levels, a double jump and a boss made of laundry. Ayaan drew every sprite on paper first, scanned them in, then spent three weeks getting the jump to feel right. He tested it on his little sister and cut four levels she found boring.">
+      <div class="gal__art gal__art--c">🐱</div>
+      <div class="gal__meta"><h3>Cat Escape</h3><p>Ayaan, 10 · Game Lab</p><span class="gal__more">Read the story →</span></div>
+    </article>
+
+    <article class="gal__tile reveal" tabindex="0" role="button" data-cat="prints" data-reveal="1"
+      data-title="Printed Helping Hand"
+      data-maker="Maryam, 13 · Maker Studio"
+      data-tech="Tinkercad · PLA · fishing line tendons"
+      data-story="A mechanical hand where pulling a string curls the fingers. Maryam redesigned the knuckle joint five times because the printed pins kept snapping. Version six uses a thicker pin and a looser tolerance, and it has survived four months of demos.">
+      <div class="gal__art gal__art--d">🖐️</div>
+      <div class="gal__meta"><h3>Printed Helping Hand</h3><p>Maryam, 13 · Maker Studio</p><span class="gal__more">Read the story →</span></div>
+    </article>
+
+    <article class="gal__tile reveal" tabindex="0" role="button" data-cat="ai" data-reveal="2"
+      data-title="Trash Sorter Camera"
+      data-maker="Bilal, 14 · AI Explorers"
+      data-tech="Single-board computer · camera · vision model"
+      data-story="Points a camera at a bin and calls out paper, plastic or metal. Bilal trained it on photos he took around the lab, then discovered it only worked under the lab's lights. Re-shooting the training photos in four different rooms fixed it — his own lesson in why data matters more than code.">
+      <div class="gal__art gal__art--e">♻️</div>
+      <div class="gal__meta"><h3>Trash Sorter Camera</h3><p>Bilal, 14 · AI Explorers</p><span class="gal__more">Read the story →</span></div>
+    </article>
+
+    <article class="gal__tile reveal" tabindex="0" role="button" data-cat="robots" data-reveal="3"
+      data-title="Obstacle Dodger Buggy"
+      data-maker="Hania, 8 · Little Tinkerers"
+      data-tech="Snap chassis · ultrasonic sensor · block coding"
+      data-story="Hania's buggy reverses and turns whenever something gets within 20 cm. Her first program made it reverse forever because she forgot to stop the loop. She now calls that bug 'the scared robot' and demonstrates it on purpose.">
+      <div class="gal__art gal__art--f">🚙</div>
+      <div class="gal__meta"><h3>Obstacle Dodger Buggy</h3><p>Hania, 8 · Little Tinkerers</p><span class="gal__more">Read the story →</span></div>
+    </article>
+
+    <article class="gal__tile reveal" tabindex="0" role="button" data-cat="games" data-reveal="1"
+      data-title="Quiz Buzzer Showdown"
+      data-maker="Team of 4, ages 9–11 · Game Lab"
+      data-tech="Arduino · 4 buzzers · LED scoreboard"
+      data-story="Four buttons, one scoreboard and a lockout so only the first press counts. The team argued for a whole session about whose button was faster, then built a test that proved the code was fair. That argument is now part of how we teach debouncing.">
+      <div class="gal__art gal__art--b">🔔</div>
+      <div class="gal__meta"><h3>Quiz Buzzer Showdown</h3><p>Team of 4, ages 9–11</p><span class="gal__more">Read the story →</span></div>
+    </article>
+
+    <article class="gal__tile reveal" tabindex="0" role="button" data-cat="prints" data-reveal="2"
+      data-title="Custom Robot Faces"
+      data-maker="Little Tinkerers group · Maker Studio"
+      data-tech="Tinkercad · PLA · magnets"
+      data-story="Every child in the 6–8 group designed a face plate that clips onto the class robot with magnets. It was their first time turning something they drew into something they could hold, and the whole set now lives on the lab wall.">
+      <div class="gal__art gal__art--a">😄</div>
+      <div class="gal__meta"><h3>Custom Robot Faces</h3><p>Little Tinkerers group</p><span class="gal__more">Read the story →</span></div>
+    </article>
+
+    <article class="gal__tile reveal" tabindex="0" role="button" data-cat="ai" data-reveal="3"
+      data-title="Sign-Language Speller"
+      data-maker="Zoya, 15 · AI Explorers"
+      data-tech="Camera · hand-tracking · text-to-speech"
+      data-story="Reads finger-spelled letters from a webcam and speaks them out loud. Zoya built it after meeting a deaf cousin, and spent most of her time on the hardest part: knowing when a letter has finished rather than firing the same letter twenty times a second.">
+      <div class="gal__art gal__art--c">🤟</div>
+      <div class="gal__meta"><h3>Sign-Language Speller</h3><p>Zoya, 15 · AI Explorers</p><span class="gal__more">Read the story →</span></div>
+    </article>
+
+  </div>
+  <p class="grid-empty" hidden>Nothing in that category yet — try another filter.</p>
+</section>
+
+<!-- ══ SHOWCASE BAND ══ -->
+<section class="stats">
+  <div class="stats__inner">
+    <div class="stat reveal" data-reveal="1"><b class="count" data-count="380">0</b><span>projects finished</span></div>
+    <div class="stat reveal" data-reveal="2"><b class="count" data-count="12">0</b><span>showcase days</span></div>
+    <div class="stat reveal" data-reveal="3"><b class="count" data-count="7">0</b><span>competition wins</span></div>
+    <div class="stat reveal" data-reveal="4"><b class="count" data-count="100" data-suffix="%">0</b><span>built by kids</span></div>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="cta">
+  <div class="cta__card reveal" data-reveal="1">
+    <span class="cta__spark cta__spark--1">✦</span>
+    <span class="cta__spark cta__spark--2">✦</span>
+    <h2>The next project here <span>could be theirs</span></h2>
+    <p>Book a free trial class and your child leaves with something that actually works.</p>
+    <a class="btn btn--dark btn--lg" href="contact.html#book">Book a free trial →</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ LIGHTBOX ══ -->
+<div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-labelledby="lbTitle">
+  <div class="lightbox__panel">
+    <button class="lightbox__close" aria-label="Close project">✕</button>
+    <div class="lightbox__art"></div>
+    <div class="lightbox__body">
+      <h2 class="lightbox__title" id="lbTitle"></h2>
+      <p class="lightbox__maker"></p>
+      <p class="lightbox__story"></p>
+      <span class="lightbox__tech"></span>
+    </div>
+  </div>
+</div>
+
+<footer class="foot">
+  <div class="foot__inner">
+    <div class="foot__brand">
+      <span class="brand__text">Curio<span>Maker</span></span>
+      <p>A STEM &amp; robotics club where children learn by building things that actually work.</p>
+      <div class="foot__social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="YouTube">YT</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+    <div class="foot__col"><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="gallery.html">Gallery</a></div>
+    <div class="foot__col"><h4>Labs</h4><a href="index.html#programs">Robot Lab</a><a href="index.html#programs">Code &amp; Game</a><a href="index.html#programs">Maker Studio</a><a href="index.html#programs">AI Explorers</a></div>
+    <div class="foot__col"><h4>Say hi</h4><a href="mailto:hello@curiomaker.com">hello@curiomaker.com</a><a href="tel:+920000000000">+92 000 000 0000</a><a href="contact.html#book">Book a free trial</a></div>
+  </div>
+  <p class="foot__base">© <span class="yr">2026</span> Curio Maker · Made for young inventors 🤖</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

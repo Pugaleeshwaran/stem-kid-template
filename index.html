@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Curio Maker — STEM &amp; Robotics Club for Kids</title>
+<meta name="description" content="Curio Maker is a hands-on STEM and robotics club where kids aged 6-16 build robots, code games and invent wild machines." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/pages.css" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.hero__title .word{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+
+<!-- ══ scroll progress ══ -->
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<!-- ══ NAV ══ -->
+<header class="nav" id="nav">
+  <a class="brand" href="#top">
+    <span class="brand__bot" aria-hidden="true">
+      <svg viewBox="0 0 40 40" width="34" height="34">
+        <rect x="7" y="12" width="26" height="21" rx="8" fill="#7b5cff"/>
+        <circle cx="20" cy="6" r="3" fill="#ffd23f"/>
+        <rect x="19" y="8" width="2" height="5" fill="#ffd23f"/>
+        <circle cx="15" cy="21" r="3.4" fill="#fff"/>
+        <circle cx="25" cy="21" r="3.4" fill="#fff"/>
+        <circle cx="15" cy="21.5" r="1.7" fill="#16123a"/>
+        <circle cx="25" cy="21.5" r="1.7" fill="#16123a"/>
+        <path d="M15 27.5q5 3.5 10 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <span class="brand__text">Curio<span>Maker</span></span>
+  </a>
+
+  <nav class="nav__links" id="navLinks">
+    <a class="is-active" href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="products.html">Products</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn btn--sm btn--primary" href="contact.html#book">Book Free Trial</a>
+  </nav>
+
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+<!-- ══ HERO ══ -->
+<section class="hero" id="hero">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="grid" data-speed="0.12"></div>
+    <div class="blob blob--grape" data-speed="0.28"></div>
+    <div class="blob blob--sky"   data-speed="0.42"></div>
+    <div class="blob blob--sun"   data-speed="0.20"></div>
+    <div class="blob blob--mint"  data-speed="0.34"></div>
+
+    <span class="float float--gear"   data-speed="0.55">⚙️</span>
+    <span class="float float--bolt"   data-speed="0.70">⚡</span>
+    <span class="float float--chip"   data-speed="0.40">🔩</span>
+    <span class="float float--star"   data-speed="0.62">⭐</span>
+    <span class="float float--rocket" data-speed="0.48">🚀</span>
+    <span class="float float--bulb"   data-speed="0.30">💡</span>
+  </div>
+
+  <div class="hero__inner">
+    <div class="hero__copy">
+      <p class="pill reveal" data-reveal="1">
+        <span class="pill__dot"></span> Ages 6–16 · Small batches · 100% hands-on
+      </p>
+
+      <h1 class="hero__title">
+        <span class="line"><span class="word" style="--i:0">Build</span> <span class="word" style="--i:1">robots.</span></span>
+        <span class="line"><span class="word pop" style="--i:2">Break</span> <span class="word" style="--i:3">rules.</span></span>
+        <span class="line"><span class="word" style="--i:4">Become</span> <span class="word grad" style="--i:5">a&nbsp;maker.</span></span>
+      </h1>
+
+      <p class="hero__sub reveal" data-reveal="2">
+        At <b>Curio Maker</b> kids don&rsquo;t just watch science — they wire it, code it,
+        crash it and fix it. Real robots, real code, real &ldquo;I made that!&rdquo; moments.
+      </p>
+
+      <div class="hero__cta reveal" data-reveal="3">
+        <a class="btn btn--primary btn--lg" href="#join">
+          Book a Free Trial Class <span class="btn__arrow">→</span>
+        </a>
+        <a class="btn btn--ghost btn--lg" href="#programs">
+          <span class="btn__play">▶</span> See what kids build
+        </a>
+      </div>
+
+      <ul class="hero__trust reveal" data-reveal="4">
+        <li><b>1,200+</b><span>Young makers</span></li>
+        <li><b>40+</b><span>Robot projects</span></li>
+        <li><b>4.9★</b><span>Parent rating</span></li>
+      </ul>
+    </div>
+
+    <div class="hero__stage" data-speed="0.10">
+      <div class="stage__ring stage__ring--1"></div>
+      <div class="stage__ring stage__ring--2"></div>
+      <div class="stage__glow"></div>
+
+      <div class="bot" id="bot">
+        <svg viewBox="0 0 320 360" class="bot__svg" role="img" aria-label="Friendly Curio Maker robot">
+          <line x1="160" y1="46" x2="160" y2="22" stroke="#16123a" stroke-width="7" stroke-linecap="round"/>
+          <circle class="bot__ping" cx="160" cy="14" r="12" fill="#ffd23f"/>
+
+          <rect x="60" y="44" width="200" height="150" rx="46" fill="#7b5cff"/>
+          <rect x="72" y="56" width="176" height="112" rx="36" fill="#16123a"/>
+
+          <g id="pupils">
+            <circle cx="128" cy="112" r="21" fill="#ffffff"/>
+            <circle cx="192" cy="112" r="21" fill="#ffffff"/>
+            <circle cx="128" cy="112" r="9.5" fill="#16123a"/>
+            <circle cx="192" cy="112" r="9.5" fill="#16123a"/>
+            <circle cx="132" cy="107" r="3.4" fill="#ffffff"/>
+            <circle cx="196" cy="107" r="3.4" fill="#ffffff"/>
+          </g>
+          <path d="M136 146q24 18 48 0" stroke="#2ee6a8" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+          <rect x="42" y="96"  width="18" height="46" rx="9" fill="#ff6b6b"/>
+          <rect x="260" y="96" width="18" height="46" rx="9" fill="#ff6b6b"/>
+
+          <rect x="146" y="192" width="28" height="20" fill="#16123a"/>
+          <rect x="66" y="208" width="188" height="128" rx="40" fill="#3ec6ff"/>
+          <rect x="98" y="238" width="124" height="72" rx="20" fill="#fff8ec"/>
+          <path class="bot__heart" d="M160 300c-24-16-31-26-31-37a15.5 15.5 0 0 1 31-7 15.5 15.5 0 0 1 31 7c0 11-7 21-31 37z" fill="#ff6b6b"/>
+
+          <rect class="bot__arm bot__arm--l" x="24" y="222"  width="46" height="18" rx="9" fill="#7b5cff"/>
+          <rect class="bot__arm bot__arm--r" x="250" y="222" width="46" height="18" rx="9" fill="#7b5cff"/>
+          <circle cx="26" cy="231"  r="14" fill="#ffd23f"/>
+          <circle cx="294" cy="231" r="14" fill="#ffd23f"/>
+        </svg>
+
+        <span class="chip chip--1">Arduino</span>
+        <span class="chip chip--2">Python</span>
+        <span class="chip chip--3">3D Print</span>
+        <span class="chip chip--4">AI</span>
+      </div>
+    </div>
+  </div>
+
+  <a class="scrollcue" href="#programs" aria-label="Scroll down">
+    <span class="scrollcue__mouse"><i></i></span>
+    <span class="scrollcue__txt">scroll to explore</span>
+  </a>
+</section>
+
+<!-- ══ MARQUEE ══ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>ROBOTICS <b>·</b> CODING <b>·</b> 3D PRINTING <b>·</b> AI FOR KIDS <b>·</b> DRONES <b>·</b> ELECTRONICS <b>·</b> GAME DEV <b>·</b>&nbsp;</span>
+    <span>ROBOTICS <b>·</b> CODING <b>·</b> 3D PRINTING <b>·</b> AI FOR KIDS <b>·</b> DRONES <b>·</b> ELECTRONICS <b>·</b> GAME DEV <b>·</b>&nbsp;</span>
+  </div>
+</div>
+
+<!-- ══ PROGRAMS ══ -->
+<section class="section programs" id="programs">
+  <header class="sec-head">
+    <p class="pill pill--dark reveal" data-reveal="1"><span class="pill__dot"></span> Our Labs</p>
+    <h2 class="sec-title reveal" data-reveal="2">Pick a lab. <span class="hl">Start inventing.</span></h2>
+    <p class="sec-sub reveal" data-reveal="3">Every class ends with something that beeps, rolls, glows or talks back.</p>
+  </header>
+
+  <div class="cards">
+    <article class="card card--sky reveal" data-reveal="1">
+      <div class="card__icon">🤖</div>
+      <h3>Robot Lab</h3>
+      <p>Motors, sensors and servos. Kids build line-followers, obstacle dodgers and battle bots from scratch.</p>
+      <ul class="card__tags"><li>Arduino</li><li>Sensors</li><li>Teamwork</li></ul>
+      <span class="card__blob"></span>
+    </article>
+
+    <article class="card card--sun reveal" data-reveal="2">
+      <div class="card__icon">🎮</div>
+      <h3>Code &amp; Game Lab</h3>
+      <p>From block coding to real Python. Kids ship their own games and share them with the whole class.</p>
+      <ul class="card__tags"><li>Scratch</li><li>Python</li><li>Logic</li></ul>
+      <span class="card__blob"></span>
+    </article>
+
+    <article class="card card--mint reveal" data-reveal="3">
+      <div class="card__icon">🖨️</div>
+      <h3>Maker Studio</h3>
+      <p>Design in 3D, print it, hold it. Cardboard prototypes turn into printed parts for their robots.</p>
+      <ul class="card__tags"><li>Tinkercad</li><li>3D Print</li><li>Design</li></ul>
+      <span class="card__blob"></span>
+    </article>
+
+    <article class="card card--coral reveal" data-reveal="4">
+      <div class="card__icon">🧠</div>
+      <h3>AI Explorers</h3>
+      <p>Teach a machine to see and listen. Kid-safe AI projects that make tech feel like magic they control.</p>
+      <ul class="card__tags"><li>Vision</li><li>Voice</li><li>Ethics</li></ul>
+      <span class="card__blob"></span>
+    </article>
+  </div>
+</section>
+
+<!-- ══ AGE GROUPS ══ -->
+<section class="section ages" id="ages">
+  <header class="sec-head">
+    <p class="pill pill--dark reveal" data-reveal="1"><span class="pill__dot"></span> Age Groups</p>
+    <h2 class="sec-title reveal" data-reveal="2">The right challenge, <span class="hl hl--sun">at the right age</span></h2>
+  </header>
+
+  <div class="lanes">
+    <div class="lane reveal" data-reveal="1">
+      <span class="lane__age">6–8</span>
+      <h3>Little Tinkerers</h3>
+      <p>Snap circuits, colourful block coding and squishy-motor crafts. Big buttons, bigger giggles.</p>
+      <span class="lane__emoji">🧩</span>
+    </div>
+    <div class="lane lane--mid reveal" data-reveal="2">
+      <span class="lane__age">9–12</span>
+      <h3>Junior Engineers</h3>
+      <p>Real Arduino boards, sensors and their first line of typed code. This is where robots start moving.</p>
+      <span class="lane__emoji">🔧</span>
+    </div>
+    <div class="lane reveal" data-reveal="3">
+      <span class="lane__age">13–16</span>
+      <h3>Innovator Squad</h3>
+      <p>Python, IoT, drones and AI. Teams build competition-ready projects and present them like founders.</p>
+      <span class="lane__emoji">🚀</span>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STATS ══ -->
+<section class="stats">
+  <div class="stats__inner">
+    <div class="stat reveal" data-reveal="1"><b class="count" data-count="1200">0</b><span>kids taught</span></div>
+    <div class="stat reveal" data-reveal="2"><b class="count" data-count="40">0</b><span>robot projects</span></div>
+    <div class="stat reveal" data-reveal="3"><b class="count" data-count="18">0</b><span>expert mentors</span></div>
+    <div class="stat reveal" data-reveal="4"><b class="count" data-count="96" data-suffix="%">0</b><span>parents renew</span></div>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ══ -->
+<section class="section how" id="how">
+  <header class="sec-head">
+    <p class="pill pill--dark reveal" data-reveal="1"><span class="pill__dot"></span> How It Works</p>
+    <h2 class="sec-title reveal" data-reveal="2">From curious to <span class="hl hl--mint">creator</span> in 4 steps</h2>
+  </header>
+
+  <ol class="steps">
+    <li class="step reveal" data-reveal="1"><span class="step__no">01</span><h3>Free trial class</h3><p>Your child builds a working mini-robot on day one. No kit to buy, no pressure.</p></li>
+    <li class="step reveal" data-reveal="2"><span class="step__no">02</span><h3>Find their lab</h3><p>We match them to the lab and level that fits their age and curiosity.</p></li>
+    <li class="step reveal" data-reveal="3"><span class="step__no">03</span><h3>Build every week</h3><p>Weekly hands-on sessions, max 8 kids per mentor, one finished project each month.</p></li>
+    <li class="step reveal" data-reveal="4"><span class="step__no">04</span><h3>Showcase day</h3><p>Kids demo their inventions to family — and walk away with a real portfolio.</p></li>
+  </ol>
+</section>
+
+<!-- ══ PARENTS ══ -->
+<section class="section parents" id="parents">
+  <header class="sec-head">
+    <p class="pill pill--dark reveal" data-reveal="1"><span class="pill__dot"></span> Parents Say</p>
+    <h2 class="sec-title reveal" data-reveal="2">Screen time, <span class="hl hl--coral">turned into build time</span></h2>
+  </header>
+
+  <div class="quotes">
+    <figure class="quote reveal" data-reveal="1">
+      <blockquote>He used to ask for the tablet. Now he asks for jumper wires. The change in six months is unreal.</blockquote>
+      <figcaption><span class="ava" style="--c:#7b5cff">A</span><b>Aisha R.</b><i>parent of Zayn, 9</i></figcaption>
+    </figure>
+    <figure class="quote reveal" data-reveal="2">
+      <blockquote>The mentors never hand over the answer. They let her fail, then help her debug. That is real teaching.</blockquote>
+      <figcaption><span class="ava" style="--c:#ff6b6b">M</span><b>Maria D.</b><i>parent of Elena, 12</i></figcaption>
+    </figure>
+    <figure class="quote reveal" data-reveal="3">
+      <blockquote>My son presented his drone project to the whole family. The confidence alone was worth every rupee.</blockquote>
+      <figcaption><span class="ava" style="--c:#2ee6a8">K</span><b>Kamran S.</b><i>parent of Bilal, 14</i></figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="cta" id="join">
+  <div class="cta__card reveal" data-reveal="1">
+    <span class="cta__spark cta__spark--1">✦</span>
+    <span class="cta__spark cta__spark--2">✦</span>
+    <h2>Your kid&rsquo;s first robot is <span>one class away</span></h2>
+    <p>Free 60-minute trial. They build it, they keep the memory, you keep your weekend.</p>
+    <form class="cta__form" id="trialForm">
+      <input type="text"  aria-label="Parent name" placeholder="Parent&rsquo;s name" required />
+      <input type="email" aria-label="Email"       placeholder="Email address" required />
+      <button class="btn btn--dark btn--lg" type="submit">Grab a free seat →</button>
+    </form>
+    <small>No card needed · Slots are limited to 8 kids per batch</small>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer class="foot">
+  <div class="foot__inner">
+    <div class="foot__brand">
+      <span class="brand__text">Curio<span>Maker</span></span>
+      <p>A STEM &amp; robotics club where children learn by building things that actually work.</p>
+      <div class="foot__social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="YouTube">YT</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+    <div class="foot__col"><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="gallery.html">Gallery</a></div>
+    <div class="foot__col"><h4>Labs</h4><a href="index.html#programs">Robot Lab</a><a href="index.html#programs">Code &amp; Game</a><a href="index.html#programs">Maker Studio</a><a href="index.html#programs">AI Explorers</a></div>
+    <div class="foot__col"><h4>Say hi</h4><a href="mailto:hello@curiomaker.com">hello@curiomaker.com</a><a href="tel:+920000000000">+92 000 000 0000</a><a href="contact.html#book">Book a free trial</a></div>
+  </div>
+  <p class="foot__base">© <span class="yr">2026</span> Curio Maker · Made for young inventors 🤖</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

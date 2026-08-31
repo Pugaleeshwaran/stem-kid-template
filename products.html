@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Products — Curio Maker Robotics Kits</title>
+<meta name="description" content="Robotics and coding kits for kids aged 6-16. Starter bots, Arduino kits, 3D printing packs and AI add-ons, built for small hands and big ideas." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/pages.css" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.hero__title .word{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<header class="nav" id="nav">
+  <a class="brand" href="index.html">
+    <span class="brand__bot" aria-hidden="true">
+      <svg viewBox="0 0 40 40" width="34" height="34">
+        <rect x="7" y="12" width="26" height="21" rx="8" fill="#7b5cff"/>
+        <circle cx="20" cy="6" r="3" fill="#ffd23f"/>
+        <rect x="19" y="8" width="2" height="5" fill="#ffd23f"/>
+        <circle cx="15" cy="21" r="3.4" fill="#fff"/><circle cx="25" cy="21" r="3.4" fill="#fff"/>
+        <circle cx="15" cy="21.5" r="1.7" fill="#16123a"/><circle cx="25" cy="21.5" r="1.7" fill="#16123a"/>
+        <path d="M15 27.5q5 3.5 10 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <span class="brand__text">Curio<span>Maker</span></span>
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a class="is-active" href="products.html">Products</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn btn--sm btn--primary" href="contact.html#book">Book Free Trial</a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+<!-- ══ PAGE HERO ══ -->
+<section class="phero">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="grid" data-speed="0.10"></div>
+    <div class="blob blob--sky"  data-speed="0.28"></div>
+    <div class="blob blob--sun"  data-speed="0.18"></div>
+    <div class="blob blob--mint" data-speed="0.32"></div>
+    <span class="float float--chip" data-speed="0.5">🔩</span>
+    <span class="float float--bolt" data-speed="0.68">⚡</span>
+    <span class="float float--star" data-speed="0.58">⭐</span>
+  </div>
+  <div class="phero__inner">
+    <nav class="crumb reveal" data-reveal="1" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><b>Products</b>
+    </nav>
+    <h1 class="phero__title reveal" data-reveal="2">
+      Arrives as a box. Leaves as a <span class="hl">robot.</span>
+    </h1>
+    <p class="phero__sub reveal" data-reveal="3">
+      Every kit is the same hardware we use in the lab &mdash; chosen because it survives being
+      dropped, rewired backwards and argued with. Illustrated guides included, no jargon.
+    </p>
+  </div>
+</section>
+
+<!-- ══ PRODUCTS ══ -->
+<section class="section">
+  <div class="filters" data-filter-target="#prodGrid" role="group" aria-label="Filter kits">
+    <button class="chip-btn is-on" data-filter="all"     aria-pressed="true">All kits</button>
+    <button class="chip-btn"       data-filter="starter" aria-pressed="false">Ages 6–9</button>
+    <button class="chip-btn"       data-filter="junior"  aria-pressed="false">Ages 9–12</button>
+    <button class="chip-btn"       data-filter="pro"     aria-pressed="false">Ages 13–16</button>
+    <button class="chip-btn"       data-filter="addon"   aria-pressed="false">Add-ons</button>
+  </div>
+
+  <div class="prods" id="prodGrid">
+
+    <article class="prod reveal" data-cat="starter" data-reveal="1">
+      <div class="prod__art prod__art--a">🤖<b class="prod__badge">Best seller</b></div>
+      <div class="prod__body">
+        <div class="prod__row"><h3>Curio Starter Bot</h3><span class="prod__price">PKR 6,500</span></div>
+        <p class="prod__age">Ages 6–9 · 12 build projects</p>
+        <p>A snap-together robot with no soldering at all. Kids build it, drive it, then rebuild it as something else.</p>
+        <ul class="prod__kit">
+          <li>Snap-fit chassis + 2 motors</li>
+          <li>Colour and touch sensors</li>
+          <li>Block-coding app, no typing</li>
+          <li>36-page picture guide</li>
+        </ul>
+        <a class="btn btn--primary btn--full" href="contact.html?item=Curio%20Starter%20Bot#book">Ask about this kit →</a>
+      </div>
+    </article>
+
+    <article class="prod reveal" data-cat="junior" data-reveal="2">
+      <div class="prod__art prod__art--b">🔌</div>
+      <div class="prod__body">
+        <div class="prod__row"><h3>Junior Arduino Lab</h3><span class="prod__price">PKR 11,900</span></div>
+        <p class="prod__age">Ages 9–12 · 20 build projects</p>
+        <p>The real thing: a genuine microcontroller, a breadboard and their first typed line of code.</p>
+        <ul class="prod__kit">
+          <li>Arduino-compatible board + USB</li>
+          <li>Breadboard, 120 jumper wires</li>
+          <li>Ultrasonic, IR and light sensors</li>
+          <li>Servo, buzzer, 40 LEDs</li>
+        </ul>
+        <a class="btn btn--primary btn--full" href="contact.html?item=Junior%20Arduino%20Lab#book">Ask about this kit →</a>
+      </div>
+    </article>
+
+    <article class="prod reveal" data-cat="pro" data-reveal="3">
+      <div class="prod__art prod__art--c">🛸<b class="prod__badge">New</b></div>
+      <div class="prod__body">
+        <div class="prod__row"><h3>Innovator Drone Kit</h3><span class="prod__price">PKR 24,500</span></div>
+        <p class="prod__age">Ages 13–16 · 8 build projects</p>
+        <p>Build the frame, tune the flight controller, then write Python to fly a programmed route.</p>
+        <ul class="prod__kit">
+          <li>Carbon frame + 4 brushless motors</li>
+          <li>Flight controller &amp; telemetry</li>
+          <li>Python flight-scripting library</li>
+          <li>Spare props and safety cage</li>
+        </ul>
+        <a class="btn btn--primary btn--full" href="contact.html?item=Innovator%20Drone%20Kit#book">Ask about this kit →</a>
+      </div>
+    </article>
+
+    <article class="prod reveal" data-cat="pro" data-reveal="1">
+      <div class="prod__art prod__art--e">🧠</div>
+      <div class="prod__body">
+        <div class="prod__row"><h3>AI Vision Pack</h3><span class="prod__price">PKR 18,000</span></div>
+        <p class="prod__age">Ages 13–16 · 10 build projects</p>
+        <p>A camera module and a single-board computer. Teach a machine to spot colours, faces and hand signs.</p>
+        <ul class="prod__kit">
+          <li>Single-board computer + case</li>
+          <li>Camera module and mount</li>
+          <li>Offline vision models, kid-safe</li>
+          <li>Ethics workbook for teens</li>
+        </ul>
+        <a class="btn btn--primary btn--full" href="contact.html?item=AI%20Vision%20Pack#book">Ask about this kit →</a>
+      </div>
+    </article>
+
+    <article class="prod reveal" data-cat="addon" data-reveal="2">
+      <div class="prod__art prod__art--d">🖨️</div>
+      <div class="prod__body">
+        <div class="prod__row"><h3>3D Print Parts Pack</h3><span class="prod__price">PKR 4,200</span></div>
+        <p class="prod__age">Any age · add-on</p>
+        <p>Filament plus a printed parts library so robots stop being held together with tape.</p>
+        <ul class="prod__kit">
+          <li>1 kg PLA filament, 2 colours</li>
+          <li>30 ready-to-print STL parts</li>
+          <li>Tinkercad starter workbook</li>
+        </ul>
+        <a class="btn btn--primary btn--full" href="contact.html?item=3D%20Print%20Parts%20Pack#book">Ask about this kit →</a>
+      </div>
+    </article>
+
+    <article class="prod reveal" data-cat="addon" data-reveal="3">
+      <div class="prod__art prod__art--f">🔋</div>
+      <div class="prod__body">
+        <div class="prod__row"><h3>Spare &amp; Rescue Box</h3><span class="prod__price">PKR 3,400</span></div>
+        <p class="prod__age">Any age · add-on</p>
+        <p>The parts that always go missing or get fried. Every parent buys this one eventually.</p>
+        <ul class="prod__kit">
+          <li>Rechargeable batteries + charger</li>
+          <li>Replacement wires and resistors</li>
+          <li>Spare motor, servo and buzzer</li>
+        </ul>
+        <a class="btn btn--primary btn--full" href="contact.html?item=Spare%20and%20Rescue%20Box#book">Ask about this kit →</a>
+      </div>
+    </article>
+
+  </div>
+  <p class="grid-empty" hidden>No kits in that group yet — try another filter.</p>
+</section>
+
+<!-- ══ WHAT EVERY KIT INCLUDES ══ -->
+<section class="section">
+  <header class="sec-head">
+    <p class="pill pill--dark reveal" data-reveal="1"><span class="pill__dot"></span> Every Kit Includes</p>
+    <h2 class="sec-title reveal" data-reveal="2">No missing screws, <span class="hl hl--sun">no dead ends</span></h2>
+  </header>
+
+  <div class="incl reveal" data-reveal="1">
+    <div class="incl__item"><i>📘</i><div><b>Illustrated guide</b><span>Pictures first, words second. Readable by a six-year-old.</span></div></div>
+    <div class="incl__item"><i>🎥</i><div><b>Video walkthroughs</b><span>Every build filmed step by step, pause-friendly.</span></div></div>
+    <div class="incl__item"><i>💬</i><div><b>Mentor helpline</b><span>Stuck at home? Message a real mentor, same day.</span></div></div>
+    <div class="incl__item"><i>🔁</i><div><b>Free part replacement</b><span>Something fried in the first year? We replace it.</span></div></div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="section">
+  <header class="sec-head">
+    <p class="pill pill--dark reveal" data-reveal="1"><span class="pill__dot"></span> Kit Questions</p>
+    <h2 class="sec-title reveal" data-reveal="2">Things parents <span class="hl hl--coral">always ask</span></h2>
+  </header>
+
+  <div class="faq">
+    <details class="faq__item reveal" data-reveal="1">
+      <summary>Do I need to buy a kit to join a class?</summary>
+      <p>No. Every lab session already has all the hardware on the bench. Kits are for children who want to keep building at home between classes.</p>
+    </details>
+    <details class="faq__item reveal" data-reveal="2">
+      <summary>Is soldering involved? Is it safe?</summary>
+      <p>Nothing in the 6–9 and 9–12 kits needs soldering — everything snaps or plugs together. Soldering only appears in the teen kits, and only under mentor supervision in the lab.</p>
+    </details>
+    <details class="faq__item reveal" data-reveal="3">
+      <summary>What if my child gets stuck at home?</summary>
+      <p>Each kit comes with a mentor helpline. Send a photo of the wiring on WhatsApp and you will get a reply the same day, usually within a couple of hours.</p>
+    </details>
+    <details class="faq__item reveal" data-reveal="4">
+      <summary>Can we upgrade a kit later?</summary>
+      <p>Yes. The Starter Bot chassis accepts Junior Arduino parts, so nothing gets thrown away when your child moves up an age group.</p>
+    </details>
+    <details class="faq__item reveal" data-reveal="5">
+      <summary>How do we actually order one?</summary>
+      <p>Use the enquiry button on any kit. Tell us your child's age and we will confirm stock, price and delivery before you pay anything.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="cta">
+  <div class="cta__card reveal" data-reveal="1">
+    <span class="cta__spark cta__spark--1">✦</span>
+    <span class="cta__spark cta__spark--2">✦</span>
+    <h2>Not sure which kit <span>fits your kid?</span></h2>
+    <p>Tell us their age and what they are into. We will point you at one kit, not a catalogue.</p>
+    <a class="btn btn--dark btn--lg" href="contact.html#book">Ask a mentor →</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__inner">
+    <div class="foot__brand">
+      <span class="brand__text">Curio<span>Maker</span></span>
+      <p>A STEM &amp; robotics club where children learn by building things that actually work.</p>
+      <div class="foot__social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="YouTube">YT</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+    <div class="foot__col"><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="gallery.html">Gallery</a></div>
+    <div class="foot__col"><h4>Labs</h4><a href="index.html#programs">Robot Lab</a><a href="index.html#programs">Code &amp; Game</a><a href="index.html#programs">Maker Studio</a><a href="index.html#programs">AI Explorers</a></div>
+    <div class="foot__col"><h4>Say hi</h4><a href="mailto:hello@curiomaker.com">hello@curiomaker.com</a><a href="tel:+920000000000">+92 000 000 0000</a><a href="contact.html#book">Book a free trial</a></div>
+  </div>
+  <p class="foot__base">© <span class="yr">2026</span> Curio Maker · Made for young inventors 🤖</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
