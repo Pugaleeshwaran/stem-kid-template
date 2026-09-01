@@ -8,10 +8,13 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/themes.css" />
 <link rel="stylesheet" href="css/style.css" />
 <link rel="stylesheet" href="css/pages.css" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <noscript><style>.reveal{opacity:1!important;transform:none!important}.hero__title .word{opacity:1!important;transform:none!important}</style></noscript>
+<script>/* apply the saved theme before first paint, so there is no flash */
+try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 </head>
 <body>
 
@@ -23,14 +26,14 @@
   <a class="brand" href="#top">
     <span class="brand__bot" aria-hidden="true">
       <svg viewBox="0 0 40 40" width="34" height="34">
-        <rect x="7" y="12" width="26" height="21" rx="8" fill="#7b5cff"/>
-        <circle cx="20" cy="6" r="3" fill="#ffd23f"/>
-        <rect x="19" y="8" width="2" height="5" fill="#ffd23f"/>
+        <rect class="r-shell" x="7" y="12" width="26" height="21" rx="8" fill="#7b5cff"/>
+        <circle class="r-bulb" cx="20" cy="6" r="3" fill="#ffd23f"/>
+        <rect class="r-bulb" x="19" y="8" width="2" height="5" fill="#ffd23f"/>
         <circle cx="15" cy="21" r="3.4" fill="#fff"/>
         <circle cx="25" cy="21" r="3.4" fill="#fff"/>
-        <circle cx="15" cy="21.5" r="1.7" fill="#16123a"/>
-        <circle cx="25" cy="21.5" r="1.7" fill="#16123a"/>
-        <path d="M15 27.5q5 3.5 10 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <circle class="r-pupil" cx="15" cy="21.5" r="1.7" fill="#16123a"/>
+        <circle class="r-pupil" cx="25" cy="21.5" r="1.7" fill="#16123a"/>
+        <path class="r-smile--light" d="M15 27.5q5 3.5 10 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
       </svg>
     </span>
     <span class="brand__text">Curio<span>Maker</span></span>
@@ -109,34 +112,34 @@
 
       <div class="bot" id="bot">
         <svg viewBox="0 0 320 360" class="bot__svg" role="img" aria-label="Friendly Curio Maker robot">
-          <line x1="160" y1="46" x2="160" y2="22" stroke="#16123a" stroke-width="7" stroke-linecap="round"/>
-          <circle class="bot__ping" cx="160" cy="14" r="12" fill="#ffd23f"/>
+          <line class="r-line" x1="160" y1="46" x2="160" y2="22" stroke="#16123a" stroke-width="7" stroke-linecap="round"/>
+          <circle class="bot__ping r-bulb" cx="160" cy="14" r="12" fill="#ffd23f"/>
 
-          <rect x="60" y="44" width="200" height="150" rx="46" fill="#7b5cff"/>
-          <rect x="72" y="56" width="176" height="112" rx="36" fill="#16123a"/>
+          <rect class="r-shell" x="60" y="44" width="200" height="150" rx="46" fill="#7b5cff"/>
+          <rect class="r-face" x="72" y="56" width="176" height="112" rx="36" fill="#16123a"/>
 
           <g id="pupils">
-            <circle cx="128" cy="112" r="21" fill="#ffffff"/>
-            <circle cx="192" cy="112" r="21" fill="#ffffff"/>
-            <circle cx="128" cy="112" r="9.5" fill="#16123a"/>
-            <circle cx="192" cy="112" r="9.5" fill="#16123a"/>
-            <circle cx="132" cy="107" r="3.4" fill="#ffffff"/>
-            <circle cx="196" cy="107" r="3.4" fill="#ffffff"/>
+            <circle class="r-eye" cx="128" cy="112" r="21" fill="#ffffff"/>
+            <circle class="r-eye" cx="192" cy="112" r="21" fill="#ffffff"/>
+            <circle class="r-pupil" cx="128" cy="112" r="9.5" fill="#16123a"/>
+            <circle class="r-pupil" cx="192" cy="112" r="9.5" fill="#16123a"/>
+            <circle class="r-eye" cx="132" cy="107" r="3.4" fill="#ffffff"/>
+            <circle class="r-eye" cx="196" cy="107" r="3.4" fill="#ffffff"/>
           </g>
-          <path d="M136 146q24 18 48 0" stroke="#2ee6a8" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <path class="r-smile" d="M136 146q24 18 48 0" stroke="#2ee6a8" stroke-width="8" fill="none" stroke-linecap="round"/>
 
-          <rect x="42" y="96"  width="18" height="46" rx="9" fill="#ff6b6b"/>
-          <rect x="260" y="96" width="18" height="46" rx="9" fill="#ff6b6b"/>
+          <rect class="r-ear" x="42" y="96"  width="18" height="46" rx="9" fill="#ff6b6b"/>
+          <rect class="r-ear" x="260" y="96" width="18" height="46" rx="9" fill="#ff6b6b"/>
 
-          <rect x="146" y="192" width="28" height="20" fill="#16123a"/>
-          <rect x="66" y="208" width="188" height="128" rx="40" fill="#3ec6ff"/>
-          <rect x="98" y="238" width="124" height="72" rx="20" fill="#fff8ec"/>
+          <rect class="r-face" x="146" y="192" width="28" height="20" fill="#16123a"/>
+          <rect class="r-body" x="66" y="208" width="188" height="128" rx="40" fill="#3ec6ff"/>
+          <rect class="r-screen" x="98" y="238" width="124" height="72" rx="20" fill="#fff8ec"/>
           <path class="bot__heart" d="M160 300c-24-16-31-26-31-37a15.5 15.5 0 0 1 31-7 15.5 15.5 0 0 1 31 7c0 11-7 21-31 37z" fill="#ff6b6b"/>
 
           <rect class="bot__arm bot__arm--l" x="24" y="222"  width="46" height="18" rx="9" fill="#7b5cff"/>
           <rect class="bot__arm bot__arm--r" x="250" y="222" width="46" height="18" rx="9" fill="#7b5cff"/>
-          <circle cx="26" cy="231"  r="14" fill="#ffd23f"/>
-          <circle cx="294" cy="231" r="14" fill="#ffd23f"/>
+          <circle class="r-hand" cx="26" cy="231"  r="14" fill="#ffd23f"/>
+          <circle class="r-hand" cx="294" cy="231" r="14" fill="#ffd23f"/>
         </svg>
 
         <span class="chip chip--1">Arduino</span>
@@ -268,15 +271,15 @@
   <div class="quotes">
     <figure class="quote reveal" data-reveal="1">
       <blockquote>He used to ask for the tablet. Now he asks for jumper wires. The change in six months is unreal.</blockquote>
-      <figcaption><span class="ava" style="--c:#7b5cff">A</span><b>Aisha R.</b><i>parent of Zayn, 9</i></figcaption>
+      <figcaption><span class="ava" style="--c:var(--grape)">A</span><b>Aisha R.</b><i>parent of Zayn, 9</i></figcaption>
     </figure>
     <figure class="quote reveal" data-reveal="2">
       <blockquote>The mentors never hand over the answer. They let her fail, then help her debug. That is real teaching.</blockquote>
-      <figcaption><span class="ava" style="--c:#ff6b6b">M</span><b>Maria D.</b><i>parent of Elena, 12</i></figcaption>
+      <figcaption><span class="ava" style="--c:var(--coral)">M</span><b>Maria D.</b><i>parent of Elena, 12</i></figcaption>
     </figure>
     <figure class="quote reveal" data-reveal="3">
       <blockquote>My son presented his drone project to the whole family. The confidence alone was worth every rupee.</blockquote>
-      <figcaption><span class="ava" style="--c:#2ee6a8">K</span><b>Kamran S.</b><i>parent of Bilal, 14</i></figcaption>
+      <figcaption><span class="ava" style="--c:var(--mint)">K</span><b>Kamran S.</b><i>parent of Bilal, 14</i></figcaption>
     </figure>
   </div>
 </section>
@@ -318,6 +321,20 @@
   </div>
   <p class="foot__base">© <span class="yr">2026</span> Curio Maker · Made for young inventors 🤖</p>
 </footer>
+
+
+<!-- ══ THEME SWITCHER ══ -->
+<div class="themer" id="themer">
+  <button class="themer__btn" id="themerBtn" aria-expanded="false" aria-controls="themerPanel" aria-label="Change colour theme" title="Change colour theme">🎨</button>
+  <div class="themer__panel" id="themerPanel" role="group" aria-label="Colour themes">
+    <p class="themer__title">Pick a colour</p>
+    <button class="swatch" data-theme="pop"    aria-pressed="true"><i></i>Curio Pop<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="bubble" aria-pressed="false"><i></i>Bubblegum<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="jungle" aria-pressed="false"><i></i>Jungle Circuit<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="space"  aria-pressed="false"><i></i>Space Cadet<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="sunset" aria-pressed="false"><i></i>Sunset Lab<span class="swatch__tick">✓</span></button>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 </body>

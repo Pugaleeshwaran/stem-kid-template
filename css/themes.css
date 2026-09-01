@@ -1,0 +1,112 @@
+/* ============================================================
+   CURIO MAKER — colour themes
+   Loaded BEFORE style.css. Each block is a complete palette;
+   the switcher sets data-theme="…" on <html>.
+
+   To add your own theme: copy a block, rename the key, change
+   the nine colours, then add a matching <button data-theme="…">
+   to the .themer panel in each page.
+
+   Token guide
+     --ink        text + every outline / hard shadow
+     --ink-soft   secondary text
+     --ink-rgb    same as --ink, comma form, for rgba()
+     --cream      page background        --cream-rgb  ditto
+     --white      card surface
+     --deep       dark band (footer, stats, marquee) — ALWAYS dark
+     --on-deep    text sitting on --deep --on-deep-rgb ditto
+     --on-accent  text sitting on a bright accent fill (sun/mint/sky)
+     --veil       lightbox backdrop
+     --grape --sky --sun --coral --mint   the five accents
+   ============================================================ */
+
+/* ── 1 · Curio Pop — grape, sky and sunshine on warm cream ── */
+:root,
+:root[data-theme="pop"]{
+  --ink:#16123a;      --ink-rgb:22,18,58;
+  --ink-soft:#4a4472;
+  --cream:#fff8ec;    --cream-rgb:255,248,236;
+  --white:#ffffff;
+  --deep:#16123a;
+  --on-deep:#fff8ec;  --on-deep-rgb:255,248,236;
+  --on-accent:#16123a;
+  --veil:rgba(22,18,58,.72);
+
+  --grape:#7b5cff;
+  --sky:#3ec6ff;
+  --sun:#ffd23f;
+  --coral:#ff6b6b;
+  --mint:#2ee6a8;
+}
+
+/* ── 2 · Bubblegum — candy pink, cyan and teal ─────────────── */
+:root[data-theme="bubble"]{
+  --ink:#2d0f33;      --ink-rgb:45,15,51;
+  --ink-soft:#7a5080;
+  --cream:#fff2f7;    --cream-rgb:255,242,247;
+  --white:#ffffff;
+  --deep:#2d0f33;
+  --on-deep:#fff2f7;  --on-deep-rgb:255,242,247;
+  --on-accent:#2d0f33;
+  --veil:rgba(45,15,51,.72);
+
+  --grape:#c9339b;
+  --sky:#3fc5e8;
+  --sun:#ffcf5c;
+  --coral:#e8446b;
+  --mint:#12cf9c;
+}
+
+/* ── 3 · Jungle Circuit — forest green, river blue, clay ───── */
+:root[data-theme="jungle"]{
+  --ink:#12261b;      --ink-rgb:18,38,27;
+  --ink-soft:#4a6353;
+  --cream:#f3f7e6;    --cream-rgb:243,247,230;
+  --white:#ffffff;
+  --deep:#12261b;
+  --on-deep:#f3f7e6;  --on-deep-rgb:243,247,230;
+  --on-accent:#12261b;
+  --veil:rgba(18,38,27,.74);
+
+  --grape:#2f7a4f;
+  --sky:#2f9ec4;
+  --sun:#ffc93c;
+  --coral:#cf5630;
+  --mint:#8ed14f;
+}
+
+/* ── 4 · Space Cadet — the dark one: deep navy and neon ────── */
+:root[data-theme="space"]{
+  --ink:#e9efff;      --ink-rgb:233,239,255;
+  --ink-soft:#9fabdc;
+  --cream:#111536;    --cream-rgb:17,21,54;
+  --white:#1c2150;
+  --deep:#080b20;
+  --on-deep:#e9efff;  --on-deep-rgb:233,239,255;
+  --on-accent:#0d1030;
+  --veil:rgba(4,6,18,.78);
+
+  --grape:#7a63f7;
+  --sky:#38e1ff;
+  --sun:#ffd54a;
+  --coral:#f4478a;
+  --mint:#5cf2b0;
+}
+
+/* ── 5 · Sunset Lab — tangerine, plum and warm teal ────────── */
+:root[data-theme="sunset"]{
+  --ink:#2b1330;      --ink-rgb:43,19,48;
+  --ink-soft:#755269;
+  --cream:#fff3e9;    --cream-rgb:255,243,233;
+  --white:#ffffff;
+  --deep:#2b1330;
+  --on-deep:#fff3e9;  --on-deep-rgb:255,243,233;
+  --on-accent:#2b1330;
+  --veil:rgba(43,19,48,.72);
+
+  --grape:#8d4bd6;
+  --sky:#37b3c9;
+  --sun:#ffb238;
+  --coral:#ef5a49;
+  --mint:#4fd18b;
+}
