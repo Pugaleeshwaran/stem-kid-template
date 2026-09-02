@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Curio Maker — Preview Sheet</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<style>
+/* ============================================================
+   MARKETPLACE PREVIEW SHEET
+   NOT part of the template — this is a marketing asset for YOU.
+   Screenshot the blocks below to make your listing images.
+   Delete this whole folder before you ZIP the product.
+   ============================================================ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Nunito",sans-serif;background:#e9e6f5;padding:40px 20px;color:#16123a}
+.sheet{
+  width:1180px;margin:0 auto 40px;background:#fff8ec;
+  border:4px solid #16123a;border-radius:28px;overflow:hidden;
+}
+.sheet--thumb{width:590px;height:300px}
+
+.shot{position:relative;padding:56px 60px}
+.shot--hero{
+  background:
+    radial-gradient(700px 420px at 80% 8%,rgba(62,198,255,.3),transparent 60%),
+    radial-gradient(600px 380px at 8% 92%,rgba(123,92,255,.25),transparent 62%),
+    #fff8ec;
+}
+h1{font-family:"Fredoka",sans-serif;font-weight:700;letter-spacing:-2.5px;line-height:1.02}
+h2{font-family:"Fredoka",sans-serif;font-weight:600;letter-spacing:-1px}
+.kicker{
+  display:inline-flex;align-items:center;gap:.5em;
+  font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;
+  padding:8px 18px;border-radius:999px;background:#16123a;color:#ffd23f;margin-bottom:22px;
+}
+.big{font-size:76px;margin-bottom:14px}
+.big em{font-style:normal;background:linear-gradient(100deg,#7b5cff,#3ec6ff 45%,#2ee6a8);
+        -webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-size:21px;color:#4a4472;max-width:30ch;margin-bottom:30px;line-height:1.5}
+
+.feat{display:flex;flex-wrap:wrap;gap:10px;max-width:640px}
+.feat span{
+  font-family:"Fredoka",sans-serif;font-size:15px;font-weight:600;
+  padding:9px 18px;border-radius:999px;background:#fff;
+  border:3px solid #16123a;box-shadow:0 4px 0 #16123a;
+}
+
+/* theme strip */
+.themes{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:4px solid #16123a}
+.tcard{padding:26px 20px;text-align:center;border-right:4px solid #16123a}
+.tcard:last-child{border-right:0}
+.tcard b{display:block;font-family:"Fredoka",sans-serif;font-size:17px;margin-bottom:12px}
+.dots{display:flex;gap:7px;justify-content:center}
+.dots i{width:26px;height:26px;border-radius:50%;border:3px solid #16123a;display:block}
+
+.t1{background:#fff8ec}
+.t2{background:#fff2f7}
+.t3{background:#f3f7e6}
+.t4{background:#111536;color:#e9efff}
+.t5{background:#fff3e9}
+.t4 i{border-color:#e9efff}
+
+/* stat row */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);background:#16123a;color:#fff8ec;
+       border-top:4px solid #16123a}
+.stats div{padding:26px 16px;text-align:center;border-right:1px solid rgba(255,248,236,.16)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font-family:"Fredoka",sans-serif;font-size:34px;
+         background:linear-gradient(100deg,#ffd23f,#2ee6a8);
+         -webkit-background-clip:text;background-clip:text;color:transparent}
+.stats span{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.1em;opacity:.75}
+
+/* page grid */
+.pages{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;padding:56px 60px}
+.pcard{
+  border:4px solid #16123a;border-radius:20px;overflow:hidden;background:#fff;
+  box-shadow:0 8px 0 #16123a;
+}
+.pcard .top{height:96px;display:grid;place-items:center;font-size:38px;border-bottom:4px solid #16123a}
+.pcard .lab{padding:14px 16px;font-family:"Fredoka",sans-serif;font-size:17px}
+.pcard .lab i{display:block;font-style:normal;font-size:13px;font-weight:700;color:#4a4472;margin-top:2px}
+
+.note{
+  max-width:1180px;margin:0 auto 30px;padding:20px 24px;border-radius:16px;
+  background:#fff;border:3px dashed #7b5cff;font-size:15px;line-height:1.6;
+}
+.note b{font-family:"Fredoka",sans-serif;display:block;margin-bottom:6px;font-size:17px}
+.note code{background:#f3f1fb;padding:2px 6px;border-radius:4px;font-size:13px}
+
+/* thumbnail */
+.thumb{
+  height:100%;display:grid;place-items:center;text-align:center;
+  background:
+    radial-gradient(400px 260px at 78% 12%,rgba(62,198,255,.34),transparent 62%),
+    radial-gradient(360px 240px at 10% 90%,rgba(123,92,255,.3),transparent 62%),
+    #fff8ec;
+}
+.thumb h2{font-size:42px;letter-spacing:-1.6px;margin-bottom:8px}
+.thumb p{font-size:16px;font-weight:700;color:#4a4472;margin-bottom:16px}
+.thumb .dots{margin-top:4px}
+</style>
+</head>
+<body>
+
+<div class="note">
+  <b>How to use this file</b>
+  This page is a <strong>marketing asset for you</strong>, not part of the template you sell.
+  Open it in Chrome at 100% zoom, then screenshot each bordered block to produce your
+  marketplace images. In Chrome DevTools: <code>Ctrl/Cmd + Shift + P</code> →
+  “Capture node screenshot”, with the <code>.sheet</code> element selected.
+  <strong>Delete the whole <code>marketing/</code> folder before you ZIP the product.</strong>
+</div>
+
+<!-- ═══════════ 1 · MAIN PREVIEW (1180 wide) ═══════════ -->
+<div class="sheet">
+  <div class="shot shot--hero">
+    <span class="kicker">🤖 HTML Template · Kids STEM &amp; Robotics</span>
+    <h1 class="big">Curio Maker<br /><em>9 pages. 5 themes.</em></h1>
+    <p class="sub">A bright, scroll-animated template for robotics clubs, coding schools and kids&rsquo; STEM academies.</p>
+    <div class="feat">
+      <span>⚡ Zero dependencies</span>
+      <span>🎨 5 colour themes</span>
+      <span>🌙 Dark mode included</span>
+      <span>📱 Fully responsive</span>
+      <span>🖼️ No images required</span>
+      <span>✨ Scroll animations</span>
+      <span>♿ Accessible</span>
+      <span>📝 Fully commented</span>
+    </div>
+  </div>
+
+  <div class="themes">
+    <div class="tcard t1"><b>Curio Pop</b><div class="dots"><i style="background:#7b5cff"></i><i style="background:#ffd23f"></i><i style="background:#2ee6a8"></i></div></div>
+    <div class="tcard t2"><b>Bubblegum</b><div class="dots"><i style="background:#c9339b"></i><i style="background:#ffcf5c"></i><i style="background:#3fc5e8"></i></div></div>
+    <div class="tcard t3"><b>Jungle</b><div class="dots"><i style="background:#2f7a4f"></i><i style="background:#ffc93c"></i><i style="background:#8ed14f"></i></div></div>
+    <div class="tcard t4"><b>Space Cadet</b><div class="dots"><i style="background:#7a63f7"></i><i style="background:#38e1ff"></i><i style="background:#5cf2b0"></i></div></div>
+    <div class="tcard t5"><b>Sunset Lab</b><div class="dots"><i style="background:#8d4bd6"></i><i style="background:#ffb238"></i><i style="background:#ef5a49"></i></div></div>
+  </div>
+
+  <div class="stats">
+    <div><b>9</b><span>HTML pages</span></div>
+    <div><b>5</b><span>Colour themes</span></div>
+    <div><b>0</b><span>Dependencies</span></div>
+    <div><b>0</b><span>Image files needed</span></div>
+  </div>
+
+  <div class="pages">
+    <div class="pcard"><div class="top" style="background:#7b5cff">🏠</div><div class="lab">Home<i>Animated hero, programs, stats</i></div></div>
+    <div class="pcard"><div class="top" style="background:#3ec6ff">📖</div><div class="lab">About Us<i>Story, values, timeline, team</i></div></div>
+    <div class="pcard"><div class="top" style="background:#ffd23f">🛒</div><div class="lab">Products<i>Filterable kit cards + FAQ</i></div></div>
+    <div class="pcard"><div class="top" style="background:#2ee6a8">💳</div><div class="lab">Pricing<i>Plans + billing toggle</i></div></div>
+    <div class="pcard"><div class="top" style="background:#ff6b6b">🖼️</div><div class="lab">Gallery<i>Filter grid + lightbox</i></div></div>
+    <div class="pcard"><div class="top" style="background:#7b5cff">📰</div><div class="lab">Blog<i>Featured post + categories</i></div></div>
+    <div class="pcard"><div class="top" style="background:#3ec6ff">📄</div><div class="lab">Blog Post<i>Full article layout</i></div></div>
+    <div class="pcard"><div class="top" style="background:#ffd23f">✉️</div><div class="lab">Contact<i>Validated form + map + FAQ</i></div></div>
+    <div class="pcard"><div class="top" style="background:#ff6b6b">🚧</div><div class="lab">404<i>Friendly error page</i></div></div>
+  </div>
+</div>
+
+<!-- ═══════════ 2 · THUMBNAIL (590 × 300) ═══════════ -->
+<div class="note"><b>Thumbnail — 590 × 300</b>Screenshot the block below for the marketplace grid thumbnail.</div>
+
+<div class="sheet sheet--thumb">
+  <div class="thumb">
+    <div>
+      <span class="kicker" style="margin-bottom:14px">🤖 Kids STEM &amp; Robotics</span>
+      <h2>Curio&nbsp;Maker</h2>
+      <p>9 pages · 5 themes · no dependencies</p>
+      <div class="dots">
+        <i style="background:#7b5cff"></i><i style="background:#3ec6ff"></i>
+        <i style="background:#ffd23f"></i><i style="background:#ff6b6b"></i>
+        <i style="background:#2ee6a8"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

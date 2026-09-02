@@ -1,0 +1,65 @@
+CURIO MAKER — HTML TEMPLATE
+License information
+================================================================================
+
+WHICH LICENSE APPLIES TO YOU
+
+If you bought this template through a marketplace (ThemeForest, Creative Market,
+Gumroad, etc.), THAT MARKETPLACE'S LICENSE is the one that governs your use.
+It was shown to you at checkout and is included with your purchase receipt.
+This file is a plain-language summary only and does not replace it.
+
+--------------------------------------------------------------------------------
+IN PLAIN LANGUAGE — WHAT YOU CAN NORMALLY DO
+
+  YES  Use the template for one website, personal or commercial.
+  YES  Modify anything: colours, text, layout, structure, code.
+  YES  Use it for a paying client, as part of a project you are billing for.
+  YES  Keep using it forever, including after any support period ends.
+  YES  Remove or change any credit line in the footer.
+
+  NO   Resell or redistribute the template files themselves, modified or not.
+  NO   Offer it on another marketplace, free download site, or in a bundle.
+  NO   Use it in a product where the template itself is the thing being sold
+       (for example a website builder, or a "1000 templates" pack).
+
+  ONE LICENSE = ONE END PRODUCT. If you are building a second website for a
+  different client or brand, buy a second license.
+
+--------------------------------------------------------------------------------
+THIRD-PARTY ASSETS
+
+Fonts — Fredoka and Nunito
+  Source:  Google Fonts (fonts.google.com)
+  License: SIL Open Font License 1.1 — free for commercial use, including
+           self-hosting. Not covered by this template's license; they carry
+           their own, which permits what you need.
+
+Icons — Unicode emoji
+  Not files. They are characters rendered by the visitor's own device, so no
+  icon license applies.
+
+Robot mascot and all other graphics
+  Original artwork created for this template, delivered as inline SVG and CSS.
+  Covered by this template's license.
+
+Photographs
+  NONE are included. Any photos you add are your responsibility — make sure you
+  hold the rights, and get written permission from a parent or guardian before
+  publishing photographs of children.
+
+--------------------------------------------------------------------------------
+DEMO CONTENT
+
+Every name, price, address, phone number, testimonial and student project in the
+demo is fictional. They exist to show the layout. Replace them all before you
+publish.
+
+--------------------------------------------------------------------------------
+NO WARRANTY
+
+The template is provided "as is", without warranty of any kind, express or
+implied. The author is not liable for any claim, damages or other liability
+arising from the use of the template.
+
+================================================================================

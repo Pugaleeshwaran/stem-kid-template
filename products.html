@@ -3,14 +3,15 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- EDIT: page title + description (shown in Google results) -->
 <title>Products — Curio Maker Robotics Kits</title>
 <meta name="description" content="Robotics and coding kits for kids aged 6-16. Starter bots, Arduino kits, 3D printing packs and AI add-ons, built for small hands and big ideas." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="css/themes.css" />
-<link rel="stylesheet" href="css/style.css" />
-<link rel="stylesheet" href="css/pages.css" />
+<link rel="stylesheet" href="assets/css/themes.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/pages.css" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <noscript><style>.reveal{opacity:1!important;transform:none!important}.hero__title .word{opacity:1!important;transform:none!important}</style></noscript>
 <script>/* apply the saved theme before first paint, so there is no flash */
@@ -21,6 +22,7 @@ try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setA
 <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 
 <header class="nav" id="nav">
+  <!-- EDIT: your logo + brand name -->
   <a class="brand" href="index.html">
     <span class="brand__bot" aria-hidden="true">
       <svg viewBox="0 0 40 40" width="34" height="34">
@@ -36,9 +38,11 @@ try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setA
   </a>
   <nav class="nav__links" id="navLinks">
     <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
+    <a href="about.html">About</a>
     <a class="is-active" href="products.html">Products</a>
+    <a href="pricing.html">Pricing</a>
     <a href="gallery.html">Gallery</a>
+    <a href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
     <a class="btn btn--sm btn--primary" href="contact.html#book">Book Free Trial</a>
   </nav>
@@ -84,12 +88,15 @@ try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setA
     <button class="chip-btn"       data-filter="addon"   aria-pressed="false">Add-ons</button>
   </div>
 
+  <!-- EDIT: one <article class="prod"> = one product card.
+       Copy a whole <article> block to add another; delete one to remove it.
+       data-cat="…" must match a data-filter="…" button above. -->
   <div class="prods" id="prodGrid">
 
     <article class="prod reveal" data-cat="starter" data-reveal="1">
       <div class="prod__art prod__art--a">🤖<b class="prod__badge">Best seller</b></div>
       <div class="prod__body">
-        <div class="prod__row"><h3>Curio Starter Bot</h3><span class="prod__price">PKR 6,500</span></div>
+        <div class="prod__row"><h3>Curio Starter Bot</h3><span class="prod__price">$59</span></div>
         <p class="prod__age">Ages 6–9 · 12 build projects</p>
         <p>A snap-together robot with no soldering at all. Kids build it, drive it, then rebuild it as something else.</p>
         <ul class="prod__kit">
@@ -105,7 +112,7 @@ try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setA
     <article class="prod reveal" data-cat="junior" data-reveal="2">
       <div class="prod__art prod__art--b">🔌</div>
       <div class="prod__body">
-        <div class="prod__row"><h3>Junior Arduino Lab</h3><span class="prod__price">PKR 11,900</span></div>
+        <div class="prod__row"><h3>Junior Arduino Lab</h3><span class="prod__price">$109</span></div>
         <p class="prod__age">Ages 9–12 · 20 build projects</p>
         <p>The real thing: a genuine microcontroller, a breadboard and their first typed line of code.</p>
         <ul class="prod__kit">
@@ -121,7 +128,7 @@ try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setA
     <article class="prod reveal" data-cat="pro" data-reveal="3">
       <div class="prod__art prod__art--c">🛸<b class="prod__badge">New</b></div>
       <div class="prod__body">
-        <div class="prod__row"><h3>Innovator Drone Kit</h3><span class="prod__price">PKR 24,500</span></div>
+        <div class="prod__row"><h3>Innovator Drone Kit</h3><span class="prod__price">$229</span></div>
         <p class="prod__age">Ages 13–16 · 8 build projects</p>
         <p>Build the frame, tune the flight controller, then write Python to fly a programmed route.</p>
         <ul class="prod__kit">
@@ -137,7 +144,7 @@ try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setA
     <article class="prod reveal" data-cat="pro" data-reveal="1">
       <div class="prod__art prod__art--e">🧠</div>
       <div class="prod__body">
-        <div class="prod__row"><h3>AI Vision Pack</h3><span class="prod__price">PKR 18,000</span></div>
+        <div class="prod__row"><h3>AI Vision Pack</h3><span class="prod__price">$169</span></div>
         <p class="prod__age">Ages 13–16 · 10 build projects</p>
         <p>A camera module and a single-board computer. Teach a machine to spot colours, faces and hand signs.</p>
         <ul class="prod__kit">
@@ -153,7 +160,7 @@ try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setA
     <article class="prod reveal" data-cat="addon" data-reveal="2">
       <div class="prod__art prod__art--d">🖨️</div>
       <div class="prod__body">
-        <div class="prod__row"><h3>3D Print Parts Pack</h3><span class="prod__price">PKR 4,200</span></div>
+        <div class="prod__row"><h3>3D Print Parts Pack</h3><span class="prod__price">$39</span></div>
         <p class="prod__age">Any age · add-on</p>
         <p>Filament plus a printed parts library so robots stop being held together with tape.</p>
         <ul class="prod__kit">
@@ -168,7 +175,7 @@ try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setA
     <article class="prod reveal" data-cat="addon" data-reveal="3">
       <div class="prod__art prod__art--f">🔋</div>
       <div class="prod__body">
-        <div class="prod__row"><h3>Spare &amp; Rescue Box</h3><span class="prod__price">PKR 3,400</span></div>
+        <div class="prod__row"><h3>Spare &amp; Rescue Box</h3><span class="prod__price">$32</span></div>
         <p class="prod__age">Any age · add-on</p>
         <p>The parts that always go missing or get fried. Every parent buys this one eventually.</p>
         <ul class="prod__kit">
@@ -243,6 +250,7 @@ try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setA
 
 </main>
 
+<!-- ══ FOOTER — EDIT: same on every page, keep them in sync ══ -->
 <footer class="foot">
   <div class="foot__inner">
     <div class="foot__brand">
@@ -255,7 +263,7 @@ try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setA
         <a href="#" aria-label="WhatsApp">WA</a>
       </div>
     </div>
-    <div class="foot__col"><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="gallery.html">Gallery</a></div>
+    <div class="foot__col"><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a></div>
     <div class="foot__col"><h4>Labs</h4><a href="index.html#programs">Robot Lab</a><a href="index.html#programs">Code &amp; Game</a><a href="index.html#programs">Maker Studio</a><a href="index.html#programs">AI Explorers</a></div>
     <div class="foot__col"><h4>Say hi</h4><a href="mailto:hello@curiomaker.com">hello@curiomaker.com</a><a href="tel:+920000000000">+92 000 000 0000</a><a href="contact.html#book">Book a free trial</a></div>
   </div>
@@ -276,6 +284,6 @@ try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setA
   </div>
 </div>
 
-<script src="js/main.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

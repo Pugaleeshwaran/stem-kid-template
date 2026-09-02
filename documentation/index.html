@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Curio Maker — Documentation</title>
+<style>
+  :root{
+    --ink:#16123a; --soft:#5b5580; --line:#e4e0f0;
+    --bg:#ffffff; --panel:#f8f7fc; --accent:#7b5cff; --code:#f3f1fb;
+    --ok:#0d8f62; --warn:#b8860b;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--bg);
+  }
+  .wrap{display:grid;grid-template-columns:262px 1fr;min-height:100vh;align-items:start}
+
+  /* sidebar */
+  .side{
+    position:sticky;top:0;height:100vh;overflow-y:auto;
+    background:var(--panel);border-right:1px solid var(--line);padding:1.8rem 1.3rem;
+  }
+  .side h1{font-size:1.18rem;line-height:1.25;margin-bottom:.15rem}
+  .side .ver{font-size:.8rem;color:var(--soft);margin-bottom:1.4rem;display:block}
+  .side h2{
+    font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;color:var(--soft);
+    margin:1.5rem 0 .5rem;
+  }
+  .side a{display:block;color:var(--ink);text-decoration:none;font-size:.92rem;padding:.28rem .5rem;border-radius:7px}
+  .side a:hover{background:#ece8fa;color:var(--accent)}
+
+  /* content */
+  main{padding:3rem clamp(1.2rem,4vw,3.5rem);max-width:900px}
+  section{margin-bottom:3.5rem;scroll-margin-top:1.5rem}
+  h2.t{font-size:1.75rem;margin-bottom:.5rem;letter-spacing:-.5px}
+  h3{font-size:1.12rem;margin:1.8rem 0 .5rem}
+  h4{font-size:.98rem;margin:1.3rem 0 .35rem}
+  p,li{color:#332f57}
+  p{margin-bottom:.85rem}
+  ul,ol{margin:0 0 1rem 1.3rem}
+  li{margin-bottom:.35rem}
+  a{color:var(--accent)}
+  hr{border:0;border-top:1px solid var(--line);margin:2.5rem 0}
+
+  code{background:var(--code);padding:.13em .42em;border-radius:5px;font-size:.88em;
+       font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+  pre{background:var(--code);border:1px solid var(--line);border-radius:10px;
+      padding:1rem 1.1rem;overflow-x:auto;margin:.7rem 0 1.1rem}
+  pre code{background:none;padding:0;font-size:.85rem;line-height:1.6}
+
+  .note,.warn,.tip{
+    border-left:4px solid var(--accent);background:var(--panel);
+    padding:.9rem 1.1rem;border-radius:0 9px 9px 0;margin:1.1rem 0;font-size:.94rem;
+  }
+  .warn{border-left-color:#d98324;background:#fdf6ec}
+  .tip{border-left-color:var(--ok);background:#eefaf4}
+  .note strong,.warn strong,.tip strong{display:block;margin-bottom:.2rem}
+
+  table{border-collapse:collapse;width:100%;margin:.8rem 0 1.2rem;font-size:.93rem}
+  th,td{border:1px solid var(--line);padding:.6rem .8rem;text-align:left;vertical-align:top}
+  th{background:var(--panel);font-weight:600}
+  td code{white-space:nowrap}
+
+  .lead{font-size:1.08rem;color:var(--soft);margin-bottom:1.5rem}
+  .badge{display:inline-block;background:var(--accent);color:#fff;font-size:.72rem;
+         font-weight:600;padding:.2em .6em;border-radius:20px;vertical-align:middle}
+  .steps{counter-reset:s;list-style:none;margin-left:0}
+  .steps>li{counter-increment:s;position:relative;padding-left:2.4rem;margin-bottom:1rem}
+  .steps>li::before{
+    content:counter(s);position:absolute;left:0;top:.05rem;
+    width:1.7rem;height:1.7rem;border-radius:50%;background:var(--accent);color:#fff;
+    display:grid;place-items:center;font-size:.85rem;font-weight:600;
+  }
+  @media (max-width:820px){
+    .wrap{grid-template-columns:1fr}
+    .side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)}
+    main{padding-top:2rem}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<aside class="side">
+  <h1>Curio Maker</h1>
+  <span class="ver">HTML Template · v1.0.0</span>
+
+  <h2>Start here</h2>
+  <a href="#intro">Introduction</a>
+  <a href="#start">Quick start</a>
+  <a href="#files">File structure</a>
+
+  <h2>Customise</h2>
+  <a href="#colors">Colours &amp; themes</a>
+  <a href="#content">Editing content</a>
+  <a href="#pages">Page by page</a>
+  <a href="#newpages">Pricing &amp; Blog</a>
+  <a href="#fonts">Fonts</a>
+  <a href="#logo">Logo &amp; favicon</a>
+  <a href="#images">Using real photos</a>
+
+  <h2>Features</h2>
+  <a href="#form">Make the form send</a>
+  <a href="#animation">Scroll animation</a>
+  <a href="#addpage">Adding a new page</a>
+
+  <h2>Publish</h2>
+  <a href="#deploy">Going live</a>
+  <a href="#seo">SEO checklist</a>
+
+  <h2>Reference</h2>
+  <a href="#credits">Credits &amp; licences</a>
+  <a href="#faq">FAQ</a>
+  <a href="#support">Support</a>
+</aside>
+
+<main>
+
+<!-- ─────────────────────────────────────────── -->
+<section id="intro">
+  <h2 class="t">Curio Maker <span class="badge">v1.0.0</span></h2>
+  <p class="lead">
+    A nine-page HTML template for kids&rsquo; STEM, robotics and coding clubs —
+    with five built-in colour themes and a scroll-animated hero.
+  </p>
+
+  <p>Thank you for buying Curio Maker. This document covers everything you need
+     to make the template your own. Nothing here requires a build step, a
+     framework, or Node.js — it is plain HTML, CSS and JavaScript.</p>
+
+  <h3>What you need to know</h3>
+  <p><strong>Basic HTML.</strong> If you can find a heading in a file and type over it,
+     you can customise this template. No JavaScript knowledge is required for
+     normal content edits.</p>
+
+  <h3>What is included</h3>
+  <table>
+    <tr><th>9 pages</th><td>Home, About Us, Products, Pricing, Gallery, Blog, Blog Post, Contact, 404</td></tr>
+    <tr><th>5 colour themes</th><td>Switchable live; one is a full dark theme</td></tr>
+    <tr><th>Responsive</th><td>Desktop, tablet and mobile layouts</td></tr>
+    <tr><th>No dependencies</th><td>No jQuery, no Bootstrap, no build tools</td></tr>
+    <tr><th>Working parts</th><td>Filterable product, gallery &amp; blog grids, project lightbox, pricing toggle, validated contact form, FAQ accordions, animated counters</td></tr>
+  </table>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
+<section id="start">
+  <h2 class="t">Quick start</h2>
+
+  <ol class="steps">
+    <li><strong>Unzip the folder.</strong> Everything lives inside one folder — keep it together.</li>
+    <li><strong>Double-click <code>index.html</code>.</strong> It opens in your browser. That is the whole setup — there is nothing to install.</li>
+    <li><strong>Open the folder in a code editor.</strong> <a href="https://code.visualstudio.com/">VS Code</a> is free and works well.</li>
+    <li><strong>Edit the text</strong> in the <code>.html</code> files, save, and refresh your browser.</li>
+  </ol>
+
+  <div class="tip">
+    <strong>Recommended: use Live Server</strong>
+    In VS Code, install the “Live Server” extension, then right-click
+    <code>index.html</code> → <em>Open with Live Server</em>. Your browser then
+    refreshes automatically every time you save.
+  </div>
+
+  <div class="warn">
+    <strong>One thing that needs a server</strong>
+    Opening files directly with <code>file://</code> works for everything except
+    the theme memory (it is stored per-page instead of shared). On a real web
+    host, or via Live Server, this works normally. Nothing else is affected.
+  </div>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
+<section id="files">
+  <h2 class="t">File structure</h2>
+
+<pre><code>curio-maker/
+├── index.html            ← Home page
+├── about.html            ← About Us
+├── products.html         ← Products / kits
+├── pricing.html          ← Membership plans
+├── gallery.html          ← Student project gallery
+├── blog.html             ← Article listing
+├── blog-single.html      ← Single article layout
+├── contact.html          ← Contact + booking form
+├── 404.html              ← Error page
+├── favicon.svg           ← Browser tab icon
+│
+├── assets/
+│   ├── css/
+│   │   ├── themes.css    ← 🎨 ALL COLOURS LIVE HERE
+│   │   ├── style.css     ← Shared layout: nav, hero, buttons, footer
+│   │   └── pages.css     ← Inner-page styles: products, gallery, forms
+│   ├── js/
+│   │   └── main.js       ← All interactions (one file, commented)
+│   └── img/              ← Put your own photos here
+│
+├── documentation/
+│   └── index.html        ← This file
+│
+├── README.md             ← Short version of this guide
+├── CHANGELOG.md          ← Version history
+└── LICENSE.txt           ← What you are allowed to do with it</code></pre>
+
+  <h3>Which file do I edit?</h3>
+  <table>
+    <tr><th>I want to…</th><th>Open this</th></tr>
+    <tr><td>Change words, headings, prices</td><td>the <code>.html</code> file for that page</td></tr>
+    <tr><td>Change colours</td><td><code>assets/css/themes.css</code></td></tr>
+    <tr><td>Change spacing, sizes, borders</td><td><code>assets/css/style.css</code></td></tr>
+    <tr><td>Change product / gallery / form styling</td><td><code>assets/css/pages.css</code></td></tr>
+    <tr><td>Change how something behaves</td><td><code>assets/js/main.js</code></td></tr>
+  </table>
+
+  <div class="note">
+    <strong>Look for <code>EDIT:</code> comments</strong>
+    The HTML files contain comments like
+    <code>&lt;!-- EDIT: your logo + brand name --&gt;</code>
+    marking the spots most people change first. Search the files for
+    <code>EDIT:</code> to find them all.
+  </div>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
+<section id="colors">
+  <h2 class="t">Colours &amp; themes</h2>
+
+  <p>All colour lives in one file: <code>assets/css/themes.css</code>.
+     Nothing else in the template contains a hard-coded colour, so changing that
+     one file recolours the entire site — including the robot mascot.</p>
+
+  <h3>The five bundled themes</h3>
+  <table>
+    <tr><th>Name</th><th>Key</th><th>Look</th></tr>
+    <tr><td>Curio Pop</td><td><code>pop</code></td><td>Purple, sky blue and sunshine on cream <em>(default)</em></td></tr>
+    <tr><td>Bubblegum</td><td><code>bubble</code></td><td>Candy pink, cyan and teal</td></tr>
+    <tr><td>Jungle Circuit</td><td><code>jungle</code></td><td>Forest green, river blue and clay</td></tr>
+    <tr><td>Space Cadet</td><td><code>space</code></td><td>Dark theme — deep navy and neon</td></tr>
+    <tr><td>Sunset Lab</td><td><code>sunset</code></td><td>Tangerine, plum and warm teal</td></tr>
+  </table>
+
+  <h3>Setting a permanent theme</h3>
+  <p>Visitors can switch themes with the 🎨 button. To ship your site with one
+     fixed theme instead, add <code>data-theme</code> to the <code>&lt;html&gt;</code> tag
+     of every page:</p>
+<pre><code>&lt;html lang="en" data-theme="jungle"&gt;</code></pre>
+  <p>To remove the switcher entirely, delete the
+     <code>&lt;div class="themer"&gt;…&lt;/div&gt;</code> block near the bottom of each page.</p>
+
+  <h3>Changing a theme&rsquo;s colours</h3>
+  <p>Each theme is one block of ten colours. Change the hex codes and save:</p>
+<pre><code>:root[data-theme="jungle"]{
+  --ink:#12261b;      --ink-rgb:18,38,27;   /* text + all outlines   */
+  --ink-soft:#4a6353;                       /* secondary text        */
+  --cream:#f3f7e6;    --cream-rgb:243,247,230;  /* page background   */
+  --white:#ffffff;                          /* card surface          */
+  --deep:#12261b;                           /* footer / stats band   */
+  --on-deep:#f3f7e6;  --on-deep-rgb:243,247,230;
+  --on-accent:#12261b;                      /* text on bright fills  */
+  --veil:rgba(18,38,27,.74);                /* lightbox backdrop     */
+
+  --grape:#2f7a4f;    /* primary accent  */
+  --sky:#2f9ec4;      /* secondary       */
+  --sun:#ffc93c;      /* buttons, badges */
+  --coral:#cf5630;    /* highlights      */
+  --mint:#8ed14f;     /* success, ticks  */
+}</code></pre>
+
+  <div class="warn">
+    <strong>Two rules to keep it readable</strong>
+    <strong style="display:inline">1.</strong> If you change <code>--ink</code> or <code>--cream</code>,
+    update the matching <code>--ink-rgb</code> / <code>--cream-rgb</code> to the same colour
+    in comma form — they power the subtle transparent tints.<br />
+    <strong style="display:inline">2.</strong> <code>--deep</code> must stay dark and
+    <code>--on-accent</code> must stay dark, whatever else you do. White text is drawn
+    on <code>--deep</code>, and dark text is drawn on the bright accents.
+  </div>
+
+  <h3>Adding a sixth theme</h3>
+  <ol class="steps">
+    <li>Copy any complete block in <code>themes.css</code> and rename the key, e.g.
+        <code>:root[data-theme="ocean"]{ … }</code></li>
+    <li>Change the colours inside it.</li>
+    <li>In every <code>.html</code> file, add a button to the theme panel:
+<pre><code>&lt;button class="swatch" data-theme="ocean" aria-pressed="false"&gt;
+  &lt;i&gt;&lt;/i&gt;Ocean&lt;span class="swatch__tick"&gt;✓&lt;/span&gt;
+&lt;/button&gt;</code></pre></li>
+    <li>Give the swatch its little preview stripe in <code>assets/css/style.css</code>
+        (search for <code>.swatch[data-theme=</code>):
+<pre><code>.swatch[data-theme="ocean"]{--s1:#0b6fa4;--s2:#31d3c9;--s3:#ffd86b}</code></pre></li>
+  </ol>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
+<section id="content">
+  <h2 class="t">Editing content</h2>
+
+  <p>Open any <code>.html</code> file in your editor. Sections are separated by
+     banner comments so you can find them quickly:</p>
+<pre><code>&lt;!-- ══ PROGRAMS ══ --&gt;
+&lt;section class="section programs" id="programs"&gt;
+  …
+&lt;/section&gt;</code></pre>
+
+  <h3>Golden rule: copy, don&rsquo;t invent</h3>
+  <p>To add another card, product, project, mentor or FAQ, copy an existing
+     block from <code>&lt;article&gt;</code> (or <code>&lt;details&gt;</code>) to its closing tag,
+     paste it below, and change the words. To remove one, delete the whole block.
+     The grids re-flow automatically — you never have to touch the CSS.</p>
+
+  <h3>Things to replace everywhere</h3>
+  <table>
+    <tr><th>Placeholder</th><th>Where</th></tr>
+    <tr><td>Brand name <code>CurioMaker</code></td><td>Nav and footer on all 9 pages</td></tr>
+    <tr><td><code>hello@curiomaker.com</code></td><td>Footer on all 9 pages, Contact page</td></tr>
+    <tr><td><code>+92 000 000 0000</code></td><td>Footer on all 9 pages, Contact page</td></tr>
+    <tr><td><code>24 Maker Street, Your City</code></td><td>Contact page</td></tr>
+    <tr><td>Social links <code>href="#"</code></td><td>Footer on all 9 pages</td></tr>
+    <tr><td>Prices <code>$59</code> etc.</td><td>Products page</td></tr>
+    <tr><td>Plan prices <code>data-month</code> / <code>data-term</code></td><td>Pricing page</td></tr>
+  </table>
+
+  <div class="tip">
+    <strong>Fastest way to do this</strong>
+    Use your editor&rsquo;s <em>Find in Folder</em> (Ctrl/Cmd + Shift + F in VS Code),
+    search for <code>curiomaker.com</code>, and Replace All across the folder.
+    Repeat for the phone number and brand name.
+  </div>
+
+  <div class="note">
+    <strong>The footer is repeated on every page</strong>
+    This template is plain HTML with no includes, so the nav and footer exist in
+    all nine files. When you change one, change all five. Find &amp; Replace across
+    the folder does this in one go.
+  </div>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
+<section id="pages">
+  <h2 class="t">Page by page</h2>
+
+  <h3>index.html — Home</h3>
+  <table>
+    <tr><th>Section</th><th>What to change</th></tr>
+    <tr><td>Hero</td><td>The three headline lines, the paragraph, both buttons, and the three trust stats</td></tr>
+    <tr><td>Marquee</td><td>The scrolling word strip — edit <strong>both</strong> <code>&lt;span&gt;</code>s identically or the loop will jump</td></tr>
+    <tr><td>Programs</td><td>Four <code>&lt;article class="card"&gt;</code> blocks</td></tr>
+    <tr><td>Age Groups</td><td>Three <code>&lt;div class="lane"&gt;</code> blocks</td></tr>
+    <tr><td>Stats</td><td>Change <code>data-count="1200"</code> — the number animates up to it</td></tr>
+    <tr><td>How It Works</td><td>Four <code>&lt;li class="step"&gt;</code> blocks</td></tr>
+    <tr><td>Parents</td><td>Three <code>&lt;figure class="quote"&gt;</code> blocks</td></tr>
+  </table>
+
+  <h4>The animated headline</h4>
+  <p>Each word is its own span so it can fly in separately. Keep the
+     <code>--i</code> numbers in order (0, 1, 2 …) — they set the delay:</p>
+<pre><code>&lt;span class="line"&gt;
+  &lt;span class="word" style="--i:0"&gt;Build&lt;/span&gt;
+  &lt;span class="word" style="--i:1"&gt;robots.&lt;/span&gt;
+&lt;/span&gt;</code></pre>
+  <p>Add <code>class="word pop"</code> for the highlighter-pen effect, or
+     <code>class="word grad"</code> for gradient text.</p>
+
+  <h3>products.html — Products</h3>
+  <p>One <code>&lt;article class="prod"&gt;</code> is one product. The
+     <code>data-cat</code> value must match one of the
+     <code>data-filter</code> buttons above the grid, or the card will vanish when
+     that filter is clicked.</p>
+<pre><code>&lt;!-- filter button --&gt;
+&lt;button class="chip-btn" data-filter="junior"&gt;Ages 9–12&lt;/button&gt;
+
+&lt;!-- a card that this filter shows --&gt;
+&lt;article class="prod" data-cat="junior"&gt;</code></pre>
+  <p>The coloured panel behind each product emoji is set by
+     <code>prod__art--a</code> through <code>--f</code>. Swap the letter for a
+     different colour. The “Ask about this kit” link passes the product name to
+     the contact form:</p>
+<pre><code>href="contact.html?item=Junior%20Arduino%20Lab#book"</code></pre>
+  <p>Spaces must be written as <code>%20</code>. The contact form then
+     pre-selects that product automatically.</p>
+
+  <h3>gallery.html — Gallery</h3>
+  <p>Each tile stores its pop-up text in <code>data-</code> attributes:</p>
+<pre><code>&lt;article class="gal__tile" tabindex="0" role="button" data-cat="robots"
+  data-title="Line-Follower Racer"
+  data-maker="Zayn, 9 · Robot Lab"
+  data-tech="Arduino · IR sensors · 3D printed chassis"
+  data-story="The longer story that appears in the pop-up…"&gt;
+  &lt;div class="gal__art gal__art--a"&gt;🏎️&lt;/div&gt;
+  &lt;div class="gal__meta"&gt;…&lt;/div&gt;
+&lt;/article&gt;</code></pre>
+  <div class="warn">
+    <strong>Careful with apostrophes</strong>
+    The <code>data-story</code> text sits inside double quotes. Do not use a double
+    quote inside it — write <code>&amp;quot;</code> instead, or use single quotes.
+  </div>
+
+  <h3>about.html — About Us</h3>
+  <p>Story, four value cards, a timeline, and four mentor cards. Mentor avatar
+     colours use theme tokens, so they follow whichever theme is active:</p>
+<pre><code>&lt;div class="mentor__ava" style="--c:var(--grape)"&gt;S&lt;/div&gt;</code></pre>
+  <p>Valid values: <code>var(--grape)</code>, <code>var(--coral)</code>,
+     <code>var(--mint)</code>, <code>var(--sky)</code>.</p>
+
+  <h3>contact.html — Contact</h3>
+  <p>Four info cards, the booking form, a decorative map panel, opening hours and
+     an FAQ. The map is drawn in CSS — see <a href="#faq">the FAQ</a> to swap in a
+     real Google Map.</p>
+
+  <h3>404.html — Error page</h3>
+  <p>Point your host at this file so broken links land somewhere friendly.
+     On Netlify, Vercel and GitHub Pages a file named <code>404.html</code> in the
+     root is picked up automatically. On Apache, add a line to
+     <code>.htaccess</code>:</p>
+<pre><code>ErrorDocument 404 /404.html</code></pre>
+
+  <h4>FAQ accordions</h4>
+  <p>These use native HTML — no JavaScript. Copy a block to add a question:</p>
+<pre><code>&lt;details class="faq__item reveal" data-reveal="1"&gt;
+  &lt;summary&gt;Your question here?&lt;/summary&gt;
+  &lt;p&gt;Your answer here.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
+<section id="form">
+  <h2 class="t">Make the contact form send email</h2>
+
+  <div class="warn">
+    <strong>Read this before you launch</strong>
+    Out of the box the form validates the fields and shows a success message,
+    but it does <strong>not</strong> deliver the message anywhere. HTML alone
+    cannot send email. Connect one of the services below.
+  </div>
+
+  <h3>Option A — Formspree (easiest, free tier)</h3>
+  <ol class="steps">
+    <li>Create a free form at <a href="https://formspree.io">formspree.io</a> and copy your endpoint URL.</li>
+    <li>In <code>contact.html</code>, find <code>&lt;form class="book__form" id="contactForm"</code> and add the action:
+<pre><code>&lt;form class="book__form reveal" id="contactForm"
+      action="https://formspree.io/f/YOUR_ID"
+      method="POST" novalidate&gt;</code></pre></li>
+    <li>In <code>assets/js/main.js</code>, find the contact-form block (section 10)
+        and delete the line <code>e.preventDefault();</code> together with the two
+        lines that hide the form. The browser will then submit normally.</li>
+  </ol>
+
+  <h3>Option B — Keep the nice success message</h3>
+  <p>To submit in the background and still show the built-in “Message received!”
+     panel, replace the success part of the submit handler in
+     <code>assets/js/main.js</code> with:</p>
+<pre><code>fetch(cForm.action, {
+  method: "POST",
+  body: new FormData(cForm),
+  headers: { Accept: "application/json" }
+}).then(function () {
+  cForm.hidden = true;
+  document.getElementById("contactDone").hidden = false;
+});</code></pre>
+
+  <h3>Option C — Your own PHP host</h3>
+  <p>Point the form at a PHP script and rename the file to <code>contact.php</code>:</p>
+<pre><code>&lt;form action="send.php" method="POST"&gt;</code></pre>
+  <p>Every field already has a <code>name</code> attribute
+     (<code>pname</code>, <code>pmail</code>, <code>pphone</code>,
+     <code>cage</code>, <code>interest</code>, <code>msg</code>), so
+     <code>$_POST['pmail']</code> works straight away.</p>
+
+  <div class="tip">
+    <strong>Also on the Home page</strong>
+    <code>index.html</code> has a shorter sign-up form near the bottom
+    (<code>id="trialForm"</code>). It behaves the same way and needs the same
+    treatment, or you can delete it and link to the contact page instead.
+  </div>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
+<section id="fonts">
+  <h2 class="t">Fonts</h2>
+  <p>Two Google Fonts are used: <strong>Fredoka</strong> for headings and
+     <strong>Nunito</strong> for body text. Both are free for commercial use
+     (SIL Open Font License).</p>
+
+  <h3>Swapping them</h3>
+  <p>Change the <code>&lt;link&gt;</code> in the <code>&lt;head&gt;</code> of all five pages,
+     then update the two font stacks in <code>assets/css/style.css</code>:</p>
+<pre><code>body{ font-family:"Nunito", system-ui, sans-serif; }         /* body */
+h1,h2,h3,h4,.brand__text,.btn{ font-family:"Fredoka", … }   /* headings */</code></pre>
+
+  <h3>Hosting the fonts yourself</h3>
+  <p>If you need the site to work fully offline, or you must avoid third-party
+     requests for privacy law reasons, download the two families from
+     <a href="https://fonts.google.com">fonts.google.com</a>, place the files in
+     <code>assets/fonts/</code>, remove the Google <code>&lt;link&gt;</code> tags and add
+     <code>@font-face</code> rules at the top of <code>style.css</code>.</p>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
+<section id="logo">
+  <h2 class="t">Logo &amp; favicon</h2>
+
+  <h3>Text logo</h3>
+  <p>The logo is text plus a small inline robot. In the nav of every page:</p>
+<pre><code>&lt;span class="brand__text"&gt;Curio&lt;span&gt;Maker&lt;/span&gt;&lt;/span&gt;</code></pre>
+  <p>The inner <code>&lt;span&gt;</code> is what gets the accent colour.</p>
+
+  <h3>Using an image logo instead</h3>
+  <p>Replace the whole <code>&lt;span class="brand__bot"&gt;…&lt;/span&gt;</code> block
+     (the inline <code>&lt;svg&gt;</code>) with:</p>
+<pre><code>&lt;img src="assets/img/logo.svg" alt="Your Brand" width="140" /&gt;</code></pre>
+  <p>…and delete the <code>&lt;span class="brand__text"&gt;</code> line if your image
+     already contains the name.</p>
+
+  <h3>Favicon</h3>
+  <p>Replace <code>favicon.svg</code> in the root folder, keeping the same
+     filename. For wider device support you can also add a PNG:</p>
+<pre><code>&lt;link rel="icon" href="favicon.svg" type="image/svg+xml" /&gt;
+&lt;link rel="apple-touch-icon" href="assets/img/icon-180.png" /&gt;</code></pre>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
+<section id="images">
+  <h2 class="t">Using real photos</h2>
+
+  <p>The template ships with <strong>zero image files</strong> on purpose —
+     everything is CSS gradients, emoji and inline SVG. That keeps it fast,
+     licence-free and instantly recolourable. Most buyers will want real photos
+     of their own classes, though.</p>
+
+  <h3>Replacing a product or gallery panel with a photo</h3>
+  <p>Find the coloured panel:</p>
+<pre><code>&lt;div class="gal__art gal__art--a"&gt;🏎️&lt;/div&gt;</code></pre>
+  <p>Replace it with:</p>
+<pre><code>&lt;div class="gal__art"&gt;
+  &lt;img src="assets/img/project-1.jpg" alt="Line-follower robot"
+       style="width:100%;height:100%;object-fit:cover" /&gt;
+&lt;/div&gt;</code></pre>
+
+  <div class="tip">
+    <strong>Photo tips</strong>
+    Gallery panels are 4:3 and product panels are 16:10. Save JPGs around
+    1200&nbsp;px wide, compress them at <a href="https://squoosh.app">squoosh.app</a>,
+    and always write a real <code>alt</code> description — it matters for Google
+    and for screen readers.
+  </div>
+
+  <div class="warn">
+    <strong>Photographs of children</strong>
+    If you publish photos of real students, get written permission from a parent
+    or guardian first. Many countries require it.
+  </div>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
+<section id="animation">
+  <h2 class="t">Scroll animation</h2>
+
+  <p>Any element with <code>class="reveal"</code> fades and slides up when it
+     scrolls into view. The number sets the order within its group:</p>
+<pre><code>&lt;div class="card reveal" data-reveal="1"&gt;…&lt;/div&gt;
+&lt;div class="card reveal" data-reveal="2"&gt;…&lt;/div&gt;  &lt;!-- appears slightly later --&gt;</code></pre>
+
+  <p>Add <code>reveal</code> to anything you create. To make something appear
+     immediately, just leave the class off.</p>
+
+  <h3>Parallax layers</h3>
+  <p>Background shapes drift as you scroll. The <code>data-speed</code> value is
+     how fast — <code>0.1</code> is subtle, <code>0.7</code> is dramatic:</p>
+<pre><code>&lt;div class="blob blob--grape" data-speed="0.28"&gt;&lt;/div&gt;
+&lt;span class="float float--gear" data-speed="0.55"&gt;⚙️&lt;/span&gt;</code></pre>
+
+  <h3>Turning animation off</h3>
+  <p>Delete <code>class="reveal"</code> and the <code>data-speed</code> attributes,
+     or add this to the end of <code>style.css</code>:</p>
+<pre><code>.reveal{opacity:1 !important;transform:none !important}</code></pre>
+  <div class="note">
+    <strong>Already handled for you</strong>
+    Visitors who set “reduce motion” in their operating system get a static
+    version automatically, and the site still displays correctly with
+    JavaScript disabled.
+  </div>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
+<section id="addpage">
+  <h2 class="t">Adding a new page</h2>
+  <ol class="steps">
+    <li>Duplicate <code>about.html</code> and rename it, e.g. <code>pricing.html</code>.</li>
+    <li>Change the <code>&lt;title&gt;</code> and meta description at the top.</li>
+    <li>Edit the breadcrumb and page-hero heading.</li>
+    <li>Delete the sections you do not need, keeping the nav, footer and the
+        two <code>&lt;script&gt;</code> blocks.</li>
+    <li>Add the link to the nav <strong>on all pages</strong>:
+<pre><code>&lt;a href="pricing.html"&gt;Pricing&lt;/a&gt;</code></pre></li>
+    <li>On the new page only, mark it as current:
+<pre><code>&lt;a class="is-active" href="pricing.html"&gt;Pricing&lt;/a&gt;</code></pre></li>
+  </ol>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
+<section id="deploy">
+  <h2 class="t">Going live</h2>
+
+  <p>This is a static site, so it will run on any host — no PHP, database or
+     Node.js needed.</p>
+
+  <h3>Free hosting</h3>
+  <table>
+    <tr><th>Netlify</th><td>Drag the whole folder onto <a href="https://app.netlify.com/drop">netlify.com/drop</a>. Live in seconds.</td></tr>
+    <tr><th>Vercel</th><td>Import the folder, deploy with default settings.</td></tr>
+    <tr><th>GitHub Pages</th><td>Push the folder to a repository, then Settings → Pages → deploy from branch.</td></tr>
+    <tr><th>Cloudflare Pages</th><td>Connect a repo or upload directly.</td></tr>
+  </table>
+
+  <h3>Traditional web hosting (cPanel / FTP)</h3>
+  <p>Upload the <strong>contents</strong> of the folder — not the folder itself —
+     into <code>public_html</code>. Keep <code>assets/</code> next to the HTML files
+     or the styling will not load.</p>
+
+  <div class="tip">
+    <strong>Before you launch</strong>
+    Delete the <code>documentation/</code> folder from your live site, and remove
+    <code>README.md</code>, <code>CHANGELOG.md</code> and <code>LICENSE.txt</code>.
+    Visitors do not need them.
+  </div>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
+<section id="seo">
+  <h2 class="t">SEO checklist</h2>
+  <ul>
+    <li>Give every page a unique <code>&lt;title&gt;</code> — about 55 characters.</li>
+    <li>Give every page a unique <code>&lt;meta name="description"&gt;</code> — about 155 characters.</li>
+    <li>Keep exactly one <code>&lt;h1&gt;</code> per page (already set up that way).</li>
+    <li>Write real <code>alt</code> text on every photo you add.</li>
+    <li>Add social preview tags to each <code>&lt;head&gt;</code>:
+<pre><code>&lt;meta property="og:title" content="Your Club Name" /&gt;
+&lt;meta property="og:description" content="One sentence about you." /&gt;
+&lt;meta property="og:image" content="https://yoursite.com/assets/img/share.jpg" /&gt;
+&lt;meta property="og:type" content="website" /&gt;</code></pre></li>
+    <li>Submit your site to <a href="https://search.google.com/search-console">Google Search Console</a>.</li>
+  </ul>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
+<section id="newpages">
+  <h2 class="t">Pricing &amp; Blog pages</h2>
+
+  <h3>pricing.html</h3>
+  <p>Three plan cards, a billing toggle and a comparison table.</p>
+  <p>The toggle swaps every price between two values you set on the price
+     element itself &mdash; there is no JavaScript to edit:</p>
+<pre><code>&lt;b class="price" data-month="39" data-term="99"&gt;$39&lt;/b&gt;</code></pre>
+  <p><code>data-month</code> shows when the switch is off, <code>data-term</code>
+     when it is on. Type the same monthly figure between the tags so the page
+     looks right before any JavaScript runs.</p>
+
+  <div class="note">
+    <strong>Changing the currency</strong>
+    The <code>$</code> is added by the script. In
+    <code>assets/js/main.js</code>, find the pricing block (section 10b) and change
+    <code>"$"</code> to your symbol. Remember to change the hard-coded
+    <code>$</code> in the HTML too.
+  </div>
+
+  <p>Mark a plan as the highlighted one by adding <code>plan--best</code> and a
+     ribbon:</p>
+<pre><code>&lt;article class="plan plan--best"&gt;
+  &lt;span class="plan__tag"&gt;Most popular&lt;/span&gt;</code></pre>
+  <p>In a plan&rsquo;s feature list, add <code>class="no"</code> to show a feature as
+     not included:</p>
+<pre><code>&lt;li class="no"&gt;Competition team&lt;/li&gt;</code></pre>
+
+  <h3>blog.html</h3>
+  <p>One <code>&lt;article class="post"&gt;</code> is one article. It uses the same
+     filter system as the Products page &mdash; <code>data-cat</code> must match a
+     <code>data-filter</code> button.</p>
+  <p>Add <code>post--feature</code> to make a card span the full width as the
+     lead story:</p>
+<pre><code>&lt;article class="post post--feature" data-cat="parents"&gt;</code></pre>
+  <p>Pagination at the bottom is static. When you have enough posts, create
+     <code>blog-2.html</code> and point the links at it.</p>
+
+  <h3>blog-single.html</h3>
+  <p>Duplicate this file for each article. Inside
+     <code>&lt;div class="article__body"&gt;</code> you can use ordinary
+     <code>&lt;h2&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code> and
+     <code>&lt;blockquote&gt;</code>, plus two extras:</p>
+<pre><code>&lt;!-- a highlighted tip box --&gt;
+&lt;div class="callout"&gt;
+  &lt;b&gt;Try this&lt;/b&gt;
+  &lt;p&gt;Your tip here.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- an inline figure with caption --&gt;
+&lt;div class="article__fig post__art--b"&gt;🔍&lt;/div&gt;
+&lt;p class="article__cap"&gt;Your caption.&lt;/p&gt;</code></pre>
+  <p>Swap <code>post__art--a</code> through <code>--f</code> for different
+     panel colours, or replace the whole div with an
+     <code>&lt;img&gt;</code> as described under
+     <a href="#images">Using real photos</a>.</p>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
+<section id="credits">
+  <h2 class="t">Credits &amp; licences</h2>
+
+  <table>
+    <tr><th>Item</th><th>Source</th><th>Licence</th></tr>
+    <tr><td>Fredoka (headings)</td><td>Google Fonts</td><td>SIL Open Font License 1.1</td></tr>
+    <tr><td>Nunito (body)</td><td>Google Fonts</td><td>SIL Open Font License 1.1</td></tr>
+    <tr><td>Icons</td><td>Unicode emoji</td><td>Rendered by the visitor&rsquo;s device — no licence needed</td></tr>
+    <tr><td>Robot mascot</td><td>Original artwork, inline SVG</td><td>Included with the template</td></tr>
+    <tr><td>Photos</td><td>None included</td><td>—</td></tr>
+  </table>
+
+  <div class="note">
+    <strong>No third-party JavaScript</strong>
+    There is no jQuery, Bootstrap, GSAP or any other library. All the
+    JavaScript is in <code>assets/js/main.js</code> and was written for this
+    template, so there are no extra licences to worry about.
+  </div>
+
+  <p>All names, prices, testimonials and student projects in the demo are
+     fictional and exist only to show the layout. Replace them with your own.</p>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
+<section id="faq">
+  <h2 class="t">FAQ</h2>
+
+  <h4>The page looks unstyled — just black text on white.</h4>
+  <p>The <code>assets</code> folder is missing or was moved. It must sit in the
+     same folder as the HTML files.</p>
+
+  <h4>My theme choice does not stick between pages.</h4>
+  <p>You are opening the files by double-clicking (<code>file://</code>).
+     Browsers isolate storage per file in that mode. It works normally once the
+     site is on a web server.</p>
+
+  <h4>Can I use a real Google Map?</h4>
+  <p>Yes. Replace the whole <code>&lt;div class="map"&gt;…&lt;/div&gt;</code> block in
+     <code>contact.html</code> with a Google Maps embed iframe, and add
+     <code>style="width:100%;height:100%;border:0"</code> to the iframe.</p>
+
+  <h4>How do I remove a whole page?</h4>
+  <p>Delete the <code>.html</code> file, then remove its link from the nav and
+     footer on the remaining pages.</p>
+
+  <h4>Does it work in Internet Explorer?</h4>
+  <p>No. It uses CSS custom properties and <code>color-mix()</code>, so it needs a
+     modern browser: Chrome, Edge, Firefox or Safari from 2023 onward. IE reached
+     end of life in 2022.</p>
+
+  <h4>Can I use this for a school, nursery or coding bootcamp?</h4>
+  <p>Yes — the layout suits any kids&rsquo; education business. Change the wording
+     and the colour theme and it reads completely differently.</p>
+
+  <h4>Is it a WordPress theme?</h4>
+  <p>No, this is a plain HTML template. It can be converted to WordPress by a
+     developer, but no WordPress version is included.</p>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
+<section id="support">
+  <h2 class="t">Support</h2>
+  <p>If something in the template does not work as described here, get in touch
+     through the item&rsquo;s support channel on the marketplace where you bought it,
+     and include:</p>
+  <ul>
+    <li>Your browser and version</li>
+    <li>Which page and section</li>
+    <li>A screenshot if you can</li>
+  </ul>
+  <p>Support covers bugs and questions about the template as delivered. It does
+     not cover custom development, hosting problems, or third-party services.</p>
+
+  <p style="margin-top:2.5rem;color:var(--soft);font-size:.9rem">
+    Thanks for choosing Curio Maker. If it works out for you, a rating on the
+    marketplace genuinely helps. 🤖
+  </p>
+</section>
+
+</main>
+</div>
+</body>
+</html>

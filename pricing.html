@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- EDIT: page title + description (shown in Google results) -->
+<title>Pricing — Curio Maker Robotics Club</title>
+<meta name="description" content="Simple monthly or termly membership plans for the Curio Maker robotics and coding club. No joining fee, cancel any time, first class free." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/themes.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/pages.css" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.hero__title .word{opacity:1!important;transform:none!important}</style></noscript>
+<script>/* apply the saved theme before first paint, so there is no flash */
+try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<!-- EDIT: your logo + brand name -->
+<header class="nav" id="nav">
+  <a class="brand" href="index.html">
+    <span class="brand__bot" aria-hidden="true">
+      <svg viewBox="0 0 40 40" width="34" height="34">
+        <rect class="r-shell" x="7" y="12" width="26" height="21" rx="8" fill="#7b5cff"/>
+        <circle class="r-bulb" cx="20" cy="6" r="3" fill="#ffd23f"/>
+        <rect class="r-bulb" x="19" y="8" width="2" height="5" fill="#ffd23f"/>
+        <circle cx="15" cy="21" r="3.4" fill="#fff"/><circle cx="25" cy="21" r="3.4" fill="#fff"/>
+        <circle class="r-pupil" cx="15" cy="21.5" r="1.7" fill="#16123a"/><circle class="r-pupil" cx="25" cy="21.5" r="1.7" fill="#16123a"/>
+        <path class="r-smile--light" d="M15 27.5q5 3.5 10 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <span class="brand__text">Curio<span>Maker</span></span>
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a class="is-active" href="pricing.html">Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn btn--sm btn--primary" href="contact.html#book">Book Free Trial</a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+<!-- ══ PAGE HERO ══ -->
+<section class="phero">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="grid" data-speed="0.10"></div>
+    <div class="blob blob--grape" data-speed="0.26"></div>
+    <div class="blob blob--sun"   data-speed="0.18"></div>
+    <div class="blob blob--mint"  data-speed="0.32"></div>
+    <span class="float float--star" data-speed="0.6">⭐</span>
+    <span class="float float--bolt" data-speed="0.68">⚡</span>
+    <span class="float float--gear" data-speed="0.44">⚙️</span>
+  </div>
+  <div class="phero__inner">
+    <nav class="crumb reveal" data-reveal="1" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><b>Pricing</b>
+    </nav>
+    <h1 class="phero__title reveal" data-reveal="2">
+      One price. <span class="hl hl--mint">Everything included.</span>
+    </h1>
+    <p class="phero__sub reveal" data-reveal="3">
+      No joining fee, no kit to buy, no long contract. Every plan starts with a
+      free trial class and you can cancel whenever you like.
+    </p>
+  </div>
+</section>
+
+<!-- ══ PLANS ══
+     EDIT: change the numbers in data-month / data-term and the plan features.
+     The toggle swaps between the two values automatically. -->
+<section class="section">
+
+  <div class="billing reveal" data-reveal="1">
+    <span class="billing__opt is-on" id="optMonthly">Monthly</span>
+    <button class="billing__switch" id="billingSwitch" role="switch"
+            aria-checked="false" aria-label="Switch between monthly and termly billing"></button>
+    <span class="billing__opt" id="optTermly">Per term</span>
+    <span class="billing__save">Save 15%</span>
+  </div>
+
+  <div class="plans">
+
+    <article class="plan reveal" data-reveal="1">
+      <h3 class="plan__name">Explorer</h3>
+      <p class="plan__note">One lab, once a week. Perfect for a first year.</p>
+      <p class="plan__price">
+        <b class="price" data-month="39" data-term="99">$39</b>
+        <span class="per">/ month</span>
+      </p>
+      <p class="plan__bill">Billed monthly · cancel any time</p>
+      <ul class="plan__feat">
+        <li>1 weekly 90-minute session</li>
+        <li>All hardware provided in class</li>
+        <li>Max 8 kids per mentor</li>
+        <li>Termly progress report</li>
+        <li class="no">Take-home kit</li>
+        <li class="no">Competition team</li>
+      </ul>
+      <a class="btn btn--ghost btn--full" href="contact.html?item=Explorer%20plan#book">Start free trial</a>
+    </article>
+
+    <article class="plan plan--best reveal" data-reveal="2">
+      <span class="plan__tag">Most popular</span>
+      <h3 class="plan__name">Maker</h3>
+      <p class="plan__note">Two labs a week and a kit to keep building at home.</p>
+      <p class="plan__price">
+        <b class="price" data-month="69" data-term="176">$69</b>
+        <span class="per">/ month</span>
+      </p>
+      <p class="plan__bill">Billed monthly · cancel any time</p>
+      <ul class="plan__feat">
+        <li>2 weekly 90-minute sessions</li>
+        <li>Choose any two labs</li>
+        <li>Take-home starter kit included</li>
+        <li>Mentor helpline for home builds</li>
+        <li>Showcase day priority slot</li>
+        <li class="no">Competition team</li>
+      </ul>
+      <a class="btn btn--primary btn--full" href="contact.html?item=Maker%20plan#book">Start free trial</a>
+    </article>
+
+    <article class="plan reveal" data-reveal="3">
+      <h3 class="plan__name">Innovator</h3>
+      <p class="plan__note">Unlimited labs plus the competition squad.</p>
+      <p class="plan__price">
+        <b class="price" data-month="99" data-term="252">$99</b>
+        <span class="per">/ month</span>
+      </p>
+      <p class="plan__bill">Billed monthly · cancel any time</p>
+      <ul class="plan__feat">
+        <li>Unlimited weekly sessions</li>
+        <li>Access to every lab</li>
+        <li>Advanced kit (drone or AI pack)</li>
+        <li>1-to-1 mentor hour each month</li>
+        <li>Showcase day priority slot</li>
+        <li>Competition team place</li>
+      </ul>
+      <a class="btn btn--ghost btn--full" href="contact.html?item=Innovator%20plan#book">Start free trial</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- ══ COMPARISON ══ -->
+<section class="section">
+  <header class="sec-head">
+    <p class="pill pill--dark reveal" data-reveal="1"><span class="pill__dot"></span> Side by Side</p>
+    <h2 class="sec-title reveal" data-reveal="2">What each plan <span class="hl">actually gets you</span></h2>
+  </header>
+
+  <div class="compare reveal" data-reveal="1">
+    <table>
+      <thead>
+        <tr><th scope="col">Feature</th><th scope="col">Explorer</th><th scope="col">Maker</th><th scope="col">Innovator</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Sessions per week</th><td>1</td><td>2</td><td>Unlimited</td></tr>
+        <tr><th scope="row">Labs available</th><td>1</td><td>2</td><td>All 4</td></tr>
+        <tr><th scope="row">Kids per mentor</th><td>8</td><td>8</td><td>6</td></tr>
+        <tr><th scope="row">Hardware in class</th><td class="y">✔</td><td class="y">✔</td><td class="y">✔</td></tr>
+        <tr><th scope="row">Take-home kit</th><td class="n">—</td><td class="y">✔</td><td class="y">✔</td></tr>
+        <tr><th scope="row">Mentor helpline</th><td class="n">—</td><td class="y">✔</td><td class="y">✔</td></tr>
+        <tr><th scope="row">1-to-1 mentor hour</th><td class="n">—</td><td class="n">—</td><td class="y">✔</td></tr>
+        <tr><th scope="row">Competition team</th><td class="n">—</td><td class="n">—</td><td class="y">✔</td></tr>
+        <tr><th scope="row">Showcase day</th><td class="y">✔</td><td class="y">✔</td><td class="y">✔</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ══ EVERY PLAN INCLUDES ══ -->
+<section class="section">
+  <header class="sec-head">
+    <p class="pill pill--dark reveal" data-reveal="1"><span class="pill__dot"></span> Always Included</p>
+    <h2 class="sec-title reveal" data-reveal="2">No hidden extras, <span class="hl hl--sun">ever</span></h2>
+  </header>
+
+  <div class="incl reveal" data-reveal="1">
+    <div class="incl__item"><i>🎁</i><div><b>Free trial class</b><span>Try a full session before you pay anything.</span></div></div>
+    <div class="incl__item"><i>🔧</i><div><b>All hardware</b><span>Boards, sensors and tools are on the bench.</span></div></div>
+    <div class="incl__item"><i>🚫</i><div><b>No joining fee</b><span>No registration cost, no admin charge.</span></div></div>
+    <div class="incl__item"><i>🗓️</i><div><b>Cancel any time</b><span>One month&rsquo;s notice, no cancellation penalty.</span></div></div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="section">
+  <header class="sec-head">
+    <p class="pill pill--dark reveal" data-reveal="1"><span class="pill__dot"></span> Billing Questions</p>
+    <h2 class="sec-title reveal" data-reveal="2">The money bits, <span class="hl hl--coral">explained</span></h2>
+  </header>
+
+  <div class="faq">
+    <details class="faq__item reveal" data-reveal="1">
+      <summary>Do I pay for the trial class?</summary>
+      <p>No. The first session is free for every plan, and you only start paying if your child wants to come back.</p>
+    </details>
+    <details class="faq__item reveal" data-reveal="2">
+      <summary>Is there a discount for siblings?</summary>
+      <p>Yes — 20% off the second child and every child after that, on any plan. Mention it when you book and we apply it automatically.</p>
+    </details>
+    <details class="faq__item reveal" data-reveal="3">
+      <summary>What happens during school holidays?</summary>
+      <p>Regular sessions pause and billing pauses with them. Holiday camps run separately and are optional.</p>
+    </details>
+    <details class="faq__item reveal" data-reveal="4">
+      <summary>Can we switch plans later?</summary>
+      <p>Any time, in either direction. Changes take effect from your next billing date and we never charge a fee for switching.</p>
+    </details>
+    <details class="faq__item reveal" data-reveal="5">
+      <summary>What if we miss a class?</summary>
+      <p>Tell us before the session and we will move it. Missed classes can be made up on a Saturday within the same month.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="cta">
+  <div class="cta__card reveal" data-reveal="1">
+    <span class="cta__spark cta__spark--1">✦</span>
+    <span class="cta__spark cta__spark--2">✦</span>
+    <h2>Still deciding? <span>Try it free</span></h2>
+    <p>One class, no cost, no card. If it is not for them, nothing happens next.</p>
+    <a class="btn btn--dark btn--lg" href="contact.html#book">Book a free trial →</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ FOOTER — EDIT: same on every page, keep them in sync ══ -->
+<footer class="foot">
+  <div class="foot__inner">
+    <div class="foot__brand">
+      <span class="brand__text">Curio<span>Maker</span></span>
+      <p>A STEM &amp; robotics club where children learn by building things that actually work.</p>
+      <div class="foot__social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="YouTube">YT</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+    <div class="foot__col"><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a></div>
+    <div class="foot__col"><h4>Labs</h4><a href="index.html#programs">Robot Lab</a><a href="index.html#programs">Code &amp; Game</a><a href="index.html#programs">Maker Studio</a><a href="index.html#programs">AI Explorers</a></div>
+    <div class="foot__col"><h4>Say hi</h4><a href="mailto:hello@curiomaker.com">hello@curiomaker.com</a><a href="tel:+920000000000">+92 000 000 0000</a><a href="contact.html#book">Book a free trial</a></div>
+  </div>
+  <p class="foot__base">© <span class="yr">2026</span> Curio Maker · Made for young inventors 🤖</p>
+</footer>
+
+<!-- ══ THEME SWITCHER ══ -->
+<div class="themer" id="themer">
+  <button class="themer__btn" id="themerBtn" aria-expanded="false" aria-controls="themerPanel" aria-label="Change colour theme" title="Change colour theme">🎨</button>
+  <div class="themer__panel" id="themerPanel" role="group" aria-label="Colour themes">
+    <p class="themer__title">Pick a colour</p>
+    <button class="swatch" data-theme="pop"    aria-pressed="true"><i></i>Curio Pop<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="bubble" aria-pressed="false"><i></i>Bubblegum<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="jungle" aria-pressed="false"><i></i>Jungle Circuit<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="space"  aria-pressed="false"><i></i>Space Cadet<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="sunset" aria-pressed="false"><i></i>Sunset Lab<span class="swatch__tick">✓</span></button>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

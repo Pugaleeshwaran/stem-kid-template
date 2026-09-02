@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- EDIT: page title + description (shown in Google results) -->
+<title>Blog — Curio Maker</title>
+<meta name="description" content="Project write-ups, parent guides and lab notes from the Curio Maker robotics and coding club for kids." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/themes.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/pages.css" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.hero__title .word{opacity:1!important;transform:none!important}</style></noscript>
+<script>/* apply the saved theme before first paint, so there is no flash */
+try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<!-- EDIT: your logo + brand name -->
+<header class="nav" id="nav">
+  <a class="brand" href="index.html">
+    <span class="brand__bot" aria-hidden="true">
+      <svg viewBox="0 0 40 40" width="34" height="34">
+        <rect class="r-shell" x="7" y="12" width="26" height="21" rx="8" fill="#7b5cff"/>
+        <circle class="r-bulb" cx="20" cy="6" r="3" fill="#ffd23f"/>
+        <rect class="r-bulb" x="19" y="8" width="2" height="5" fill="#ffd23f"/>
+        <circle cx="15" cy="21" r="3.4" fill="#fff"/><circle cx="25" cy="21" r="3.4" fill="#fff"/>
+        <circle class="r-pupil" cx="15" cy="21.5" r="1.7" fill="#16123a"/><circle class="r-pupil" cx="25" cy="21.5" r="1.7" fill="#16123a"/>
+        <path class="r-smile--light" d="M15 27.5q5 3.5 10 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <span class="brand__text">Curio<span>Maker</span></span>
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a class="is-active" href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn btn--sm btn--primary" href="contact.html#book">Book Free Trial</a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+<!-- ══ PAGE HERO ══ -->
+<section class="phero">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="grid" data-speed="0.10"></div>
+    <div class="blob blob--sky"   data-speed="0.3"></div>
+    <div class="blob blob--sun"   data-speed="0.18"></div>
+    <div class="blob blob--grape" data-speed="0.26"></div>
+    <span class="float float--bulb" data-speed="0.5">💡</span>
+    <span class="float float--star" data-speed="0.62">⭐</span>
+    <span class="float float--chip" data-speed="0.44">🔩</span>
+  </div>
+  <div class="phero__inner">
+    <nav class="crumb reveal" data-reveal="1" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><b>Blog</b>
+    </nav>
+    <h1 class="phero__title reveal" data-reveal="2">
+      Notes from <span class="hl">the lab bench</span>
+    </h1>
+    <p class="phero__sub reveal" data-reveal="3">
+      Project write-ups, honest parent guides and the occasional post-mortem on a
+      robot that refused to cooperate.
+    </p>
+  </div>
+</section>
+
+<!-- ══ POSTS ══
+     EDIT: one <article class="post"> = one article.
+     data-cat="…" must match a data-filter="…" button below.
+     Copy a whole <article> block to add another post. -->
+<section class="section">
+
+  <div class="filters" data-filter-target="#postGrid" role="group" aria-label="Filter articles">
+    <button class="chip-btn is-on" data-filter="all"     aria-pressed="true">All posts</button>
+    <button class="chip-btn"       data-filter="parents" aria-pressed="false">For parents</button>
+    <button class="chip-btn"       data-filter="projects" aria-pressed="false">Projects</button>
+    <button class="chip-btn"       data-filter="howto"   aria-pressed="false">How-to</button>
+    <button class="chip-btn"       data-filter="news"    aria-pressed="false">Club news</button>
+  </div>
+
+  <div class="posts" id="postGrid">
+
+    <article class="post post--feature reveal" data-cat="parents" data-reveal="1">
+      <div class="post__art post__art--e">🧠</div>
+      <div class="post__body">
+        <span class="post__cat">For parents</span>
+        <h3><a href="blog-single.html">Why we let kids break the robot</a></h3>
+        <p>
+          Every instinct says step in and fix it. We have found the opposite works better —
+          and the research on productive failure backs it up. Here is what actually happens
+          in the ten minutes after something stops working, and why those ten minutes are
+          the most valuable part of the class.
+        </p>
+        <p class="post__meta">Sana Iqbal <i>·</i> 28 Aug 2026 <i>·</i> 6 min read</p>
+      </div>
+    </article>
+
+    <article class="post reveal" data-cat="projects" data-reveal="1">
+      <div class="post__art post__art--a">🏎️</div>
+      <div class="post__body">
+        <span class="post__cat">Projects</span>
+        <h3><a href="blog-single.html">Building a line-follower that actually finishes</a></h3>
+        <p>Six failed attempts, one working fix. A nine-year-old explains why slowing down before the corner beats more motor power.</p>
+        <p class="post__meta">Omar Farooq <i>·</i> 21 Aug 2026 <i>·</i> 4 min</p>
+      </div>
+    </article>
+
+    <article class="post reveal" data-cat="howto" data-reveal="2">
+      <div class="post__art post__art--b">🔌</div>
+      <div class="post__body">
+        <span class="post__cat">How-to</span>
+        <h3><a href="blog-single.html">Your first Arduino circuit, in plain English</a></h3>
+        <p>No jargon, no theory dump. Five components, one breadboard and a blinking LED in under twenty minutes at the kitchen table.</p>
+        <p class="post__meta">Omar Farooq <i>·</i> 14 Aug 2026 <i>·</i> 8 min</p>
+      </div>
+    </article>
+
+    <article class="post reveal" data-cat="parents" data-reveal="3">
+      <div class="post__art post__art--c">📱</div>
+      <div class="post__body">
+        <span class="post__cat">For parents</span>
+        <h3><a href="blog-single.html">Screen time vs build time: a practical split</a></h3>
+        <p>Not all screens are equal. A simple weekly framework that swaps passive scrolling for making, without starting a fight about it.</p>
+        <p class="post__meta">Hina Raza <i>·</i> 07 Aug 2026 <i>·</i> 5 min</p>
+      </div>
+    </article>
+
+    <article class="post reveal" data-cat="news" data-reveal="1">
+      <div class="post__art post__art--d">🏆</div>
+      <div class="post__body">
+        <span class="post__cat">Club news</span>
+        <h3><a href="blog-single.html">Our squad placed third at the regional finals</a></h3>
+        <p>Four teenagers, one sorting arm and a very long Saturday. How the team debugged a jammed servo forty minutes before judging.</p>
+        <p class="post__meta">Sana Iqbal <i>·</i> 30 Jul 2026 <i>·</i> 3 min</p>
+      </div>
+    </article>
+
+    <article class="post reveal" data-cat="howto" data-reveal="2">
+      <div class="post__art post__art--f">🖨️</div>
+      <div class="post__body">
+        <span class="post__cat">How-to</span>
+        <h3><a href="blog-single.html">Designing a printable part in Tinkercad</a></h3>
+        <p>From a sketch on paper to a printed bracket in one session — including the three mistakes every beginner makes with tolerances.</p>
+        <p class="post__meta">Hina Raza <i>·</i> 22 Jul 2026 <i>·</i> 7 min</p>
+      </div>
+    </article>
+
+    <article class="post reveal" data-cat="projects" data-reveal="3">
+      <div class="post__art post__art--e">♻️</div>
+      <div class="post__body">
+        <span class="post__cat">Projects</span>
+        <h3><a href="blog-single.html">Teaching a camera to sort the recycling</a></h3>
+        <p>A fourteen-year-old&rsquo;s AI project worked perfectly in the lab and failed everywhere else. The fix was better data, not better code.</p>
+        <p class="post__meta">Bilal Ahmed <i>·</i> 15 Jul 2026 <i>·</i> 6 min</p>
+      </div>
+    </article>
+
+  </div>
+  <p class="grid-empty" hidden>No posts in that category yet — try another filter.</p>
+
+  <!-- EDIT: static pagination. Point these at blog-2.html etc. when you add pages. -->
+  <nav class="pager" aria-label="Pagination">
+    <span class="is-off">← Prev</span>
+    <span class="is-here" aria-current="page">1</span>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">Next →</a>
+  </nav>
+</section>
+
+<!-- ══ NEWSLETTER ══ -->
+<section class="section">
+  <div class="news reveal" data-reveal="1">
+    <div>
+      <h2>One email a month. That&rsquo;s it.</h2>
+      <p>New projects, free build guides and workshop dates. No spam, unsubscribe in one click.</p>
+    </div>
+    <form onsubmit="return false;">
+      <input type="email" aria-label="Email address" placeholder="you@example.com" required />
+      <button class="btn btn--primary" type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ FOOTER — EDIT: same on every page, keep them in sync ══ -->
+<footer class="foot">
+  <div class="foot__inner">
+    <div class="foot__brand">
+      <span class="brand__text">Curio<span>Maker</span></span>
+      <p>A STEM &amp; robotics club where children learn by building things that actually work.</p>
+      <div class="foot__social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="YouTube">YT</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+    <div class="foot__col"><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a></div>
+    <div class="foot__col"><h4>Labs</h4><a href="index.html#programs">Robot Lab</a><a href="index.html#programs">Code &amp; Game</a><a href="index.html#programs">Maker Studio</a><a href="index.html#programs">AI Explorers</a></div>
+    <div class="foot__col"><h4>Say hi</h4><a href="mailto:hello@curiomaker.com">hello@curiomaker.com</a><a href="tel:+920000000000">+92 000 000 0000</a><a href="contact.html#book">Book a free trial</a></div>
+  </div>
+  <p class="foot__base">© <span class="yr">2026</span> Curio Maker · Made for young inventors 🤖</p>
+</footer>
+
+<!-- ══ THEME SWITCHER ══ -->
+<div class="themer" id="themer">
+  <button class="themer__btn" id="themerBtn" aria-expanded="false" aria-controls="themerPanel" aria-label="Change colour theme" title="Change colour theme">🎨</button>
+  <div class="themer__panel" id="themerPanel" role="group" aria-label="Colour themes">
+    <p class="themer__title">Pick a colour</p>
+    <button class="swatch" data-theme="pop"    aria-pressed="true"><i></i>Curio Pop<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="bubble" aria-pressed="false"><i></i>Bubblegum<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="jungle" aria-pressed="false"><i></i>Jungle Circuit<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="space"  aria-pressed="false"><i></i>Space Cadet<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="sunset" aria-pressed="false"><i></i>Sunset Lab<span class="swatch__tick">✓</span></button>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

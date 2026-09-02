@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- EDIT: page title + description (shown in Google results) -->
+<title>Why we let kids break the robot — Curio Maker</title>
+<meta name="description" content="Every instinct says step in and fix it. We found the opposite works better. What happens in the ten minutes after a project stops working." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/themes.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/pages.css" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.hero__title .word{opacity:1!important;transform:none!important}</style></noscript>
+<script>/* apply the saved theme before first paint, so there is no flash */
+try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<!-- EDIT: your logo + brand name -->
+<header class="nav" id="nav">
+  <a class="brand" href="index.html">
+    <span class="brand__bot" aria-hidden="true">
+      <svg viewBox="0 0 40 40" width="34" height="34">
+        <rect class="r-shell" x="7" y="12" width="26" height="21" rx="8" fill="#7b5cff"/>
+        <circle class="r-bulb" cx="20" cy="6" r="3" fill="#ffd23f"/>
+        <rect class="r-bulb" x="19" y="8" width="2" height="5" fill="#ffd23f"/>
+        <circle cx="15" cy="21" r="3.4" fill="#fff"/><circle cx="25" cy="21" r="3.4" fill="#fff"/>
+        <circle class="r-pupil" cx="15" cy="21.5" r="1.7" fill="#16123a"/><circle class="r-pupil" cx="25" cy="21.5" r="1.7" fill="#16123a"/>
+        <path class="r-smile--light" d="M15 27.5q5 3.5 10 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </svg>
+    </span>
+    <span class="brand__text">Curio<span>Maker</span></span>
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a class="is-active" href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn btn--sm btn--primary" href="contact.html#book">Book Free Trial</a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+<!-- ══ ARTICLE HEADER ══ -->
+<section class="phero">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="grid" data-speed="0.10"></div>
+    <div class="blob blob--grape" data-speed="0.26"></div>
+    <div class="blob blob--sun"   data-speed="0.18"></div>
+    <span class="float float--bulb" data-speed="0.5">💡</span>
+    <span class="float float--star" data-speed="0.6">⭐</span>
+  </div>
+  <div class="phero__inner">
+    <nav class="crumb reveal" data-reveal="1" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><a href="blog.html">Blog</a><span>/</span><b>Why we let kids break the robot</b>
+    </nav>
+    <h1 class="phero__title reveal" data-reveal="2">
+      Why we let kids <span class="hl hl--coral">break the robot</span>
+    </h1>
+    <p class="article__meta reveal" data-reveal="3">
+      <span>By Sana Iqbal</span> <i>·</i>
+      <time datetime="2026-08-28">28 August 2026</time> <i>·</i>
+      <span>6 min read</span> <i>·</i>
+      <span>For parents</span>
+    </p>
+  </div>
+</section>
+
+<!-- ══ ARTICLE BODY ══
+     EDIT: this is your article. Use <h2>, <p>, <ul>, <blockquote>,
+     .callout and .article__fig blocks in any order you like. -->
+<section class="section">
+  <div class="article">
+
+    <div class="article__hero post__art--e reveal" data-reveal="1">🧠</div>
+
+    <div class="article__body">
+      <p>
+        There is a moment in every class that used to make me uncomfortable. A child
+        finishes wiring their robot, presses the button, and nothing happens. Their
+        shoulders drop. They look up at the mentor, waiting to be rescued.
+      </p>
+      <p>
+        For the first year of running this club, we rescued them. We would lean in,
+        spot the loose jumper wire in about four seconds, push it back into the
+        breadboard, and watch the robot spring to life. The child would smile. We
+        would feel useful. Everyone went home happy.
+      </p>
+      <p>
+        It took us far too long to notice that those children were not getting better
+        at anything.
+      </p>
+
+      <h2>What we do instead</h2>
+      <p>
+        Now the rule is simple: <strong>the mentor never touches the hardware.</strong>
+        We ask questions instead of pointing. The first one is always the same, and it
+        is almost never about the robot.
+      </p>
+      <ul>
+        <li>What did you expect it to do?</li>
+        <li>What did it actually do?</li>
+        <li>What is the smallest thing you could test to find the difference?</li>
+      </ul>
+      <p>
+        That third question is the whole method. It turns a vague feeling of
+        &ldquo;it&rsquo;s broken&rdquo; into a testable guess. A nine-year-old who can form a
+        testable guess is doing real engineering, whatever the robot ends up doing.
+      </p>
+
+      <blockquote>
+        The child who fixes their own loose wire remembers it for a year. The child
+        whose wire I fixed forgets by the following Tuesday.
+        <footer>— something I should have worked out much sooner</footer>
+      </blockquote>
+
+      <h2>The ten uncomfortable minutes</h2>
+      <p>
+        Between the robot failing and the child finding the fault, there is a stretch
+        of maybe ten minutes that is genuinely uncomfortable to watch. They try
+        things that will not work. They get frustrated. Some of them want to give up.
+      </p>
+      <p>
+        Those ten minutes are the class. Everything before them was assembly, and
+        everything after them is celebration. The learning happens in the middle,
+        and it only happens if we can sit still through it.
+      </p>
+
+      <div class="article__fig post__art--b reveal" data-reveal="1">🔍</div>
+      <p class="article__cap">A jammed servo, forty minutes before judging. They found it.</p>
+
+      <h2>What this looks like at home</h2>
+      <p>
+        Parents ask how to do this outside the lab, usually while their child is
+        halfway through a Lego set or a science kit. The honest answer is that it is
+        harder at home, because you are tired and it would be faster to just do it.
+      </p>
+
+      <div class="callout">
+        <b>Try this instead of helping</b>
+        <p>Ask &ldquo;what have you already tried?&rdquo; and then stay quiet for longer than
+           feels natural. Most children answer the question themselves in the silence.</p>
+      </div>
+
+      <h2>When we do step in</h2>
+      <p>
+        This is not a rule about letting children struggle indefinitely. We step in
+        when three things are true: the child has genuinely run out of ideas, the
+        frustration has stopped being productive, and there is something dangerous
+        or expensive about to happen.
+      </p>
+      <p>
+        Even then, we hand back the smallest possible clue. Not &ldquo;this wire is
+        loose&rdquo; but &ldquo;check the power side of the board first.&rdquo; They still get
+        to find it.
+      </p>
+
+      <h2>The part nobody expects</h2>
+      <p>
+        The change we did not predict is what happens the following week. Children who
+        have debugged something themselves start volunteering to help other children
+        debug. They ask the same three questions we asked them, in the same order,
+        often word for word. By the end of a term, half the debugging in the room is
+        being done by nine-year-olds.
+      </p>
+      <p>
+        That is the whole point. We are not trying to produce children who can build
+        one specific robot. We are trying to produce children who are not afraid of
+        the moment something stops working &mdash; because that moment is most of
+        engineering, and most of everything else too.
+      </p>
+    </div>
+
+    <!-- EDIT: tags -->
+    <div class="tags">
+      <a href="blog.html">Teaching method</a>
+      <a href="blog.html">For parents</a>
+      <a href="blog.html">Robotics</a>
+      <a href="blog.html">Resilience</a>
+    </div>
+
+    <!-- EDIT: share links — replace # with real share URLs -->
+    <div class="share">
+      <b>Share this:</b>
+      <a href="#" aria-label="Share on Facebook">FB</a>
+      <a href="#" aria-label="Share on X">X</a>
+      <a href="#" aria-label="Share on WhatsApp">WA</a>
+      <a href="#" aria-label="Share by email">✉</a>
+    </div>
+
+    <!-- EDIT: author box -->
+    <div class="author reveal" data-reveal="1">
+      <div class="author__ava" style="--c:var(--grape)">S</div>
+      <div>
+        <h3>Sana Iqbal</h3>
+        <p class="role">Founder &amp; Robot Lab mentor</p>
+        <p>Mechatronics engineer who started Curio Maker in her garage in 2019.
+           Still fixes the 3D printers herself, still refuses to fix the students&rsquo; robots.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══ RELATED ══ -->
+<section class="section">
+  <header class="sec-head">
+    <p class="pill pill--dark reveal" data-reveal="1"><span class="pill__dot"></span> Keep Reading</p>
+    <h2 class="sec-title reveal" data-reveal="2">More from <span class="hl">the lab</span></h2>
+  </header>
+
+  <div class="posts">
+    <article class="post reveal" data-reveal="1">
+      <div class="post__art post__art--a">🏎️</div>
+      <div class="post__body">
+        <span class="post__cat">Projects</span>
+        <h3><a href="blog-single.html">Building a line-follower that actually finishes</a></h3>
+        <p>Six failed attempts, one working fix, and a nine-year-old&rsquo;s explanation of why.</p>
+        <p class="post__meta">Omar Farooq <i>·</i> 4 min</p>
+      </div>
+    </article>
+    <article class="post reveal" data-reveal="2">
+      <div class="post__art post__art--c">📱</div>
+      <div class="post__body">
+        <span class="post__cat">For parents</span>
+        <h3><a href="blog-single.html">Screen time vs build time: a practical split</a></h3>
+        <p>A weekly framework that swaps scrolling for making, without a fight.</p>
+        <p class="post__meta">Hina Raza <i>·</i> 5 min</p>
+      </div>
+    </article>
+    <article class="post reveal" data-reveal="3">
+      <div class="post__art post__art--b">🔌</div>
+      <div class="post__body">
+        <span class="post__cat">How-to</span>
+        <h3><a href="blog-single.html">Your first Arduino circuit, in plain English</a></h3>
+        <p>Five components and a blinking LED in under twenty minutes.</p>
+        <p class="post__meta">Omar Farooq <i>·</i> 8 min</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="cta">
+  <div class="cta__card reveal" data-reveal="1">
+    <span class="cta__spark cta__spark--1">✦</span>
+    <span class="cta__spark cta__spark--2">✦</span>
+    <h2>Come watch a class <span>break something</span></h2>
+    <p>Book a free trial and see the ten uncomfortable minutes for yourself.</p>
+    <a class="btn btn--dark btn--lg" href="contact.html#book">Book a free trial →</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ FOOTER — EDIT: same on every page, keep them in sync ══ -->
+<footer class="foot">
+  <div class="foot__inner">
+    <div class="foot__brand">
+      <span class="brand__text">Curio<span>Maker</span></span>
+      <p>A STEM &amp; robotics club where children learn by building things that actually work.</p>
+      <div class="foot__social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="YouTube">YT</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="WhatsApp">WA</a>
+      </div>
+    </div>
+    <div class="foot__col"><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a></div>
+    <div class="foot__col"><h4>Labs</h4><a href="index.html#programs">Robot Lab</a><a href="index.html#programs">Code &amp; Game</a><a href="index.html#programs">Maker Studio</a><a href="index.html#programs">AI Explorers</a></div>
+    <div class="foot__col"><h4>Say hi</h4><a href="mailto:hello@curiomaker.com">hello@curiomaker.com</a><a href="tel:+920000000000">+92 000 000 0000</a><a href="contact.html#book">Book a free trial</a></div>
+  </div>
+  <p class="foot__base">© <span class="yr">2026</span> Curio Maker · Made for young inventors 🤖</p>
+</footer>
+
+<!-- ══ THEME SWITCHER ══ -->
+<div class="themer" id="themer">
+  <button class="themer__btn" id="themerBtn" aria-expanded="false" aria-controls="themerPanel" aria-label="Change colour theme" title="Change colour theme">🎨</button>
+  <div class="themer__panel" id="themerPanel" role="group" aria-label="Colour themes">
+    <p class="themer__title">Pick a colour</p>
+    <button class="swatch" data-theme="pop"    aria-pressed="true"><i></i>Curio Pop<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="bubble" aria-pressed="false"><i></i>Bubblegum<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="jungle" aria-pressed="false"><i></i>Jungle Circuit<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="space"  aria-pressed="false"><i></i>Space Cadet<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="sunset" aria-pressed="false"><i></i>Sunset Lab<span class="swatch__tick">✓</span></button>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
