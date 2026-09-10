@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to the Curio Maker template.
+All notable changes to the STEM Robo Kid’s template.
 This project follows [Semantic Versioning](https://semver.org/).
 
 ---
@@ -30,6 +30,14 @@ First public release.
 - Sticky nav, mobile menu, scroll progress bar
 - Native FAQ accordions (no JavaScript required)
 - Product enquiry links that pre-select the product on the contact form
+
+### Images & icons
+- 15 image slots wired up with branded placeholders (logo ×2, hero, about story,
+  6 products, 4 mentors, social share) — full spec in `assets/img/IMAGE-LIST.md`
+- Two logo files: dark artwork for the light themes, light artwork for Space Cadet
+- Icons are inline SVG drawn for this template — no icon font, no external file,
+  works when the page is opened directly from disk
+- Open Graph and Twitter card tags on every page
 
 ### Accessibility & robustness
 - Respects `prefers-reduced-motion`

@@ -1,5 +1,5 @@
 /* ============================================================
-   CURIO MAKER — shared interactions for every page
+   STEM ROBO KID’S — shared interactions for every page
    Every block is guarded, so this one file is safe to load
    on pages that do not contain that block.
    ============================================================ */
@@ -371,7 +371,7 @@
     };
 
     var stored = "pop";
-    try { stored = localStorage.getItem("curio-theme") || "pop"; } catch (e) {}
+    try { stored = localStorage.getItem("srk-theme") || "pop"; } catch (e) {}
     markActive(stored);
 
     var closePanel = function () {
@@ -389,7 +389,7 @@
       s.addEventListener("click", function () {
         var name = s.dataset.theme;
         document.documentElement.setAttribute("data-theme", name);
-        try { localStorage.setItem("curio-theme", name); } catch (e) {}
+        try { localStorage.setItem("srk-theme", name); } catch (e) {}
         markActive(name);
       });
     });

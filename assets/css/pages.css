@@ -1,5 +1,5 @@
 /* ============================================================
-   CURIO MAKER — interior pages (about / products / gallery / contact)
+   STEM ROBO KID’S — interior pages (about / products / gallery / contact)
    Loaded on top of style.css, which owns the shared shell.
    ============================================================ */
 
@@ -198,7 +198,7 @@
   background:var(--deep);color:var(--on-deep);border:3px solid var(--ink);
 }
 .incl__item{display:flex;gap:.8rem;align-items:flex-start}
-.incl__item i{font-size:1.5rem;font-style:normal;line-height:1}
+.incl__item i{font-size:1.5rem;font-style:normal;line-height:1;flex:none}
 .incl__item b{display:block;font-family:"Fredoka",sans-serif;font-size:1rem;margin-bottom:.15rem}
 .incl__item span{font-size:.88rem;opacity:.75}
 
@@ -661,4 +661,109 @@
   .post--feature .post__art{aspect-ratio:16/9;border-right:0;border-bottom:3px solid var(--ink)}
   .news{grid-template-columns:1fr}
   .author{flex-direction:column;text-align:center;align-items:center}
+}
+
+/* ============================================================
+   ICONS
+   The sprite is inlined once per page (top of <body>), so icons
+   work even when the file is opened directly from disk.
+   Size an icon by setting font-size on its parent — it is 1em.
+   ============================================================ */
+.sprite{display:none}
+.ico{
+  width:1em;height:1em;display:block;flex:none;
+  fill:none;stroke:currentColor;stroke-width:1.9;
+  stroke-linecap:round;stroke-linejoin:round;
+}
+.foot__social .ico{width:20px;height:20px;stroke-width:1.8}
+
+/* ============================================================
+   LOGO
+   Two files: dark art for the four light themes, light art for
+   Space Cadet. The footer band is dark in every theme, so it
+   always uses the light one.
+   ============================================================ */
+.brand__logo{height:42px;width:auto;display:block}
+.brand__logo--light{display:none}
+:root[data-theme="space"] .nav .brand__logo--dark{display:none}
+:root[data-theme="space"] .nav .brand__logo--light{display:block}
+.foot__brand .brand__logo--dark{display:none}
+.foot__brand .brand__logo--light{display:block;height:44px;margin-bottom:.2rem}
+@media (max-width:520px){.brand__logo{height:36px}}
+
+/* ============================================================
+   HERO PHOTO
+   The mascot shrinks to a badge in the corner so you get both.
+   ============================================================ */
+.hero__photo{
+  position:relative;z-index:1;
+  width:min(100%,430px);aspect-ratio:1/1;overflow:hidden;
+  border-radius:var(--r-lg);border:3px solid var(--ink);
+  box-shadow:0 14px 0 var(--ink);background:var(--white);
+  animation:floaty 5.6s ease-in-out infinite;
+}
+.hero__photo img{width:100%;height:100%;object-fit:cover;display:block}
+
+.bot--badge{
+  position:absolute;z-index:3;width:min(30%,128px);left:0;bottom:0;
+  animation:floaty 4.4s ease-in-out infinite .4s;
+}
+.bot--badge .bot__svg{filter:drop-shadow(0 12px 14px rgba(var(--ink-rgb),.3))}
+
+/* Chips now orbit the stage rather than the mascot, so every offset is
+   restated — the old .chip--n rules set the opposite edge and a chip with
+   both top and bottom set stretches instead of moving. */
+.hero__stage>.chip{z-index:4}
+.hero__stage>.chip--1{top:3%;  bottom:auto;left:0;    right:auto}
+.hero__stage>.chip--2{top:28%; bottom:auto;right:0;   left:auto}
+.hero__stage>.chip--3{top:46%; bottom:auto;left:-2%;  right:auto}
+.hero__stage>.chip--4{top:auto;bottom:6%;  right:2%;  left:auto}
+
+@media (max-width:980px){
+  .hero__photo{width:min(72%,330px)}
+  .bot--badge{width:min(26%,104px);left:4%}
+}
+@media (max-width:760px){
+  .hero__photo{width:min(74%,268px)}
+  .bot--badge{width:92px;left:0;bottom:-2%}
+  .hero__stage>.chip--1{top:0;   bottom:auto;left:0;   right:auto}
+  .hero__stage>.chip--2{top:24%; bottom:auto;right:0;  left:auto}
+  .hero__stage>.chip--3{top:44%; bottom:auto;left:-2%; right:auto}
+  .hero__stage>.chip--4{top:auto;bottom:2%;  right:0;  left:auto}
+}
+
+/* ============================================================
+   PHOTOS IN CARDS & PANELS
+   Every slot crops with object-fit, so any photo of roughly the
+   right shape will sit correctly without editing CSS.
+   ============================================================ */
+
+/* About-page story panel */
+.split__art>img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
+}
+.split__art .tick{z-index:2}
+
+/* Mentor headshots */
+img.mentor__ava{object-fit:cover;padding:0;background:var(--white)}
+
+/* Product cards */
+.prod__art>img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+}
+.prod__badge{z-index:2}
+
+/* Testimonial + author avatars, when you swap the initial for a photo */
+img.ava,img.author__ava{object-fit:cover;background:var(--white)}
+
+/* Gallery, blog and article panels — drop an <img> straight in and
+   it fills the coloured panel. See documentation → Using real photos. */
+.gal__art>img,.post__art>img,.article__hero>img,.article__fig>img{
+  width:100%;height:100%;object-fit:cover;display:block;
+}
+.gal__art,.post__art,.article__hero,.article__fig{overflow:hidden}
+
+/* Contact map, when you swap the CSS panel for a photo or embed */
+.map>img,.map>iframe{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border:0;
 }

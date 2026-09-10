@@ -1,5 +1,5 @@
 /* ============================================================
-   CURIO MAKER — colour themes
+   STEM ROBO KID’S — colour themes
    Loaded BEFORE style.css. Each block is a complete palette;
    the switcher sets data-theme="…" on <html>.
 
@@ -20,7 +20,7 @@
      --grape --sky --sun --coral --mint   the five accents
    ============================================================ */
 
-/* ── 1 · Curio Pop — grape, sky and sunshine on warm cream ── */
+/* ── 1 · Robo Pop — grape, sky and sunshine on warm cream ── */
 :root,
 :root[data-theme="pop"]{
   --ink:#16123a;      --ink-rgb:22,18,58;

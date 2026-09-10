@@ -4,9 +4,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- EDIT: page title + description (shown in Google results) -->
-<title>Page not found — Curio Maker</title>
-<meta name="description" content="That page took a wrong turn. Head back to the Curio Maker home page." />
+<title>Page not found — STEM Robo Kid’s</title>
+<meta name="description" content="That page took a wrong turn. Head back to the STEM Robo Kid’s home page." />
 <meta name="robots" content="noindex" />
+<!-- EDIT: social preview. og:url and og:image must be full https:// links once live. -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Page not found — STEM Robo Kid’s" />
+<meta property="og:description" content="That page took a wrong turn. Head back to the STEM Robo Kid’s home page." />
+<meta property="og:image" content="assets/img/og-share.svg" />
+<meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -16,7 +22,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <script>/* apply the saved theme before first paint, so there is no flash */
-try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+try{var t=localStorage.getItem('srk-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
 </head>
 <body>
 
@@ -24,18 +30,13 @@ try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setA
 
 <!-- EDIT: your logo + brand name -->
 <header class="nav" id="nav">
-  <a class="brand" href="index.html">
-    <span class="brand__bot" aria-hidden="true">
-      <svg viewBox="0 0 40 40" width="34" height="34">
-        <rect class="r-shell" x="7" y="12" width="26" height="21" rx="8" fill="#7b5cff"/>
-        <circle class="r-bulb" cx="20" cy="6" r="3" fill="#ffd23f"/>
-        <rect class="r-bulb" x="19" y="8" width="2" height="5" fill="#ffd23f"/>
-        <circle cx="15" cy="21" r="3.4" fill="#fff"/><circle cx="25" cy="21" r="3.4" fill="#fff"/>
-        <circle class="r-pupil" cx="15" cy="21.5" r="1.7" fill="#16123a"/><circle class="r-pupil" cx="25" cy="21.5" r="1.7" fill="#16123a"/>
-        <path class="r-smile--light" d="M15 27.5q5 3.5 10 0" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
-      </svg>
-    </span>
-    <span class="brand__text">Curio<span>Maker</span></span>
+  <!-- EDIT: swap both files in assets/img/ for your own logo.
+       Two versions: -dark for the light themes, -light for Space Cadet. -->
+  <a class="brand" href="index.html" aria-label="STEM Robo Kid&rsquo;s home">
+    <img class="brand__logo brand__logo--dark"  src="assets/img/logo.svg"
+         alt="STEM Robo Kid&rsquo;s" width="260" height="56" />
+    <img class="brand__logo brand__logo--light" src="assets/img/logo-light.svg"
+         alt="" aria-hidden="true" width="260" height="56" />
   </a>
   <nav class="nav__links" id="navLinks">
     <a href="index.html">Home</a>
@@ -68,7 +69,7 @@ try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setA
 
   <div class="err__inner">
     <div class="err__bot bot" id="bot">
-      <svg viewBox="0 0 320 240" role="img" aria-label="A confused Curio Maker robot">
+      <svg viewBox="0 0 320 240" role="img" aria-label="A confused STEM Robo Kid’s robot">
         <line class="r-line" x1="160" y1="46" x2="160" y2="22" stroke="#16123a" stroke-width="7" stroke-linecap="round"/>
         <circle class="bot__ping r-bulb" cx="160" cy="14" r="12" fill="#ffd23f"/>
         <rect class="r-shell" x="60" y="44" width="200" height="150" rx="46" fill="#7b5cff"/>
@@ -118,7 +119,7 @@ try{var t=localStorage.getItem('curio-theme');if(t)document.documentElement.setA
   <button class="themer__btn" id="themerBtn" aria-expanded="false" aria-controls="themerPanel" aria-label="Change colour theme" title="Change colour theme">🎨</button>
   <div class="themer__panel" id="themerPanel" role="group" aria-label="Colour themes">
     <p class="themer__title">Pick a colour</p>
-    <button class="swatch" data-theme="pop"    aria-pressed="true"><i></i>Curio Pop<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="pop"    aria-pressed="true"><i></i>Robo Pop<span class="swatch__tick">✓</span></button>
     <button class="swatch" data-theme="bubble" aria-pressed="false"><i></i>Bubblegum<span class="swatch__tick">✓</span></button>
     <button class="swatch" data-theme="jungle" aria-pressed="false"><i></i>Jungle Circuit<span class="swatch__tick">✓</span></button>
     <button class="swatch" data-theme="space"  aria-pressed="false"><i></i>Space Cadet<span class="swatch__tick">✓</span></button>

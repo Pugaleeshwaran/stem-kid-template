@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Curio Maker — Documentation</title>
+<title>STEM Robo Kid’s — Documentation</title>
 <style>
   :root{
     --ink:#16123a; --soft:#5b5580; --line:#e4e0f0;
@@ -84,7 +84,7 @@
 <div class="wrap">
 
 <aside class="side">
-  <h1>Curio Maker</h1>
+  <h1>STEM Robo Kid’s</h1>
   <span class="ver">HTML Template · v1.0.0</span>
 
   <h2>Start here</h2>
@@ -99,7 +99,8 @@
   <a href="#newpages">Pricing &amp; Blog</a>
   <a href="#fonts">Fonts</a>
   <a href="#logo">Logo &amp; favicon</a>
-  <a href="#images">Using real photos</a>
+  <a href="#images">Images you need</a>
+  <a href="#icons">Icons</a>
 
   <h2>Features</h2>
   <a href="#form">Make the form send</a>
@@ -120,13 +121,13 @@
 
 <!-- ─────────────────────────────────────────── -->
 <section id="intro">
-  <h2 class="t">Curio Maker <span class="badge">v1.0.0</span></h2>
+  <h2 class="t">STEM Robo Kid’s <span class="badge">v1.0.0</span></h2>
   <p class="lead">
     A nine-page HTML template for kids&rsquo; STEM, robotics and coding clubs —
     with five built-in colour themes and a scroll-animated hero.
   </p>
 
-  <p>Thank you for buying Curio Maker. This document covers everything you need
+  <p>Thank you for buying STEM Robo Kid’s. This document covers everything you need
      to make the template your own. Nothing here requires a build step, a
      framework, or Node.js — it is plain HTML, CSS and JavaScript.</p>
 
@@ -179,7 +180,7 @@
 <section id="files">
   <h2 class="t">File structure</h2>
 
-<pre><code>curio-maker/
+<pre><code>stem-robo-kids/
 ├── index.html            ← Home page
 ├── about.html            ← About Us
 ├── products.html         ← Products / kits
@@ -239,7 +240,7 @@
   <h3>The five bundled themes</h3>
   <table>
     <tr><th>Name</th><th>Key</th><th>Look</th></tr>
-    <tr><td>Curio Pop</td><td><code>pop</code></td><td>Purple, sky blue and sunshine on cream <em>(default)</em></td></tr>
+    <tr><td>Robo Pop</td><td><code>pop</code></td><td>Purple, sky blue and sunshine on cream <em>(default)</em></td></tr>
     <tr><td>Bubblegum</td><td><code>bubble</code></td><td>Candy pink, cyan and teal</td></tr>
     <tr><td>Jungle Circuit</td><td><code>jungle</code></td><td>Forest green, river blue and clay</td></tr>
     <tr><td>Space Cadet</td><td><code>space</code></td><td>Dark theme — deep navy and neon</td></tr>
@@ -321,7 +322,7 @@
   <table>
     <tr><th>Placeholder</th><th>Where</th></tr>
     <tr><td>Brand name <code>CurioMaker</code></td><td>Nav and footer on all 9 pages</td></tr>
-    <tr><td><code>hello@curiomaker.com</code></td><td>Footer on all 9 pages, Contact page</td></tr>
+    <tr><td><code>hello@stemrobokids.com</code></td><td>Footer on all 9 pages, Contact page</td></tr>
     <tr><td><code>+92 000 000 0000</code></td><td>Footer on all 9 pages, Contact page</td></tr>
     <tr><td><code>24 Maker Street, Your City</code></td><td>Contact page</td></tr>
     <tr><td>Social links <code>href="#"</code></td><td>Footer on all 9 pages</td></tr>
@@ -332,7 +333,7 @@
   <div class="tip">
     <strong>Fastest way to do this</strong>
     Use your editor&rsquo;s <em>Find in Folder</em> (Ctrl/Cmd + Shift + F in VS Code),
-    search for <code>curiomaker.com</code>, and Replace All across the folder.
+    search for <code>stemrobokids.com</code>, and Replace All across the folder.
     Repeat for the phone number and brand name.
   </div>
 
@@ -539,12 +540,40 @@ h1,h2,h3,h4,.brand__text,.btn{ font-family:"Fredoka", … }   /* headings */</co
 
 <!-- ─────────────────────────────────────────── -->
 <section id="images">
-  <h2 class="t">Using real photos</h2>
+  <h2 class="t">Images you need</h2>
 
-  <p>The template ships with <strong>zero image files</strong> on purpose —
-     everything is CSS gradients, emoji and inline SVG. That keeps it fast,
-     licence-free and instantly recolourable. Most buyers will want real photos
-     of their own classes, though.</p>
+  <div class="tip">
+    <strong>The exact list lives in <code>assets/img/IMAGE-LIST.md</code></strong>
+    It names every file, its exact pixel size, where it appears and what to
+    photograph. Short version: <strong>15 images are already wired up</strong>
+    (shipped as placeholders you replace), and 19 more are optional.
+  </div>
+
+  <p>Every slot crops with <code>object-fit: cover</code>, so a photo of roughly
+     the right shape will sit correctly without any CSS edits.</p>
+
+  <table>
+    <tr><th>File</th><th>Size</th><th>Where</th></tr>
+    <tr><td><code>logo.svg</code> + <code>logo-light.svg</code></td><td>260 &times; 56</td><td>Nav and footer, all 9 pages</td></tr>
+    <tr><td><code>hero.svg</code></td><td>1000 &times; 1000</td><td>Home hero</td></tr>
+    <tr><td><code>about-story.svg</code></td><td>1000 &times; 920</td><td>About &rarr; Our Story</td></tr>
+    <tr><td><code>product-1&hellip;6</code></td><td>1200 &times; 750</td><td>Products, six cards</td></tr>
+    <tr><td><code>team-1&hellip;4</code></td><td>400 &times; 400</td><td>About &rarr; Mentors</td></tr>
+    <tr><td><code>og-share.svg</code></td><td>1200 &times; 630</td><td>Social preview</td></tr>
+  </table>
+
+  <div class="warn">
+    <strong>Change the extension too</strong>
+    The placeholders are <code>.svg</code>; your photos will be
+    <code>.jpg</code>. Update the <code>src</code> in the HTML to match, or the
+    image will not appear.
+  </div>
+
+  <h3>Two logo files, not one</h3>
+  <p>The nav carries both and CSS shows the right one: <code>logo.svg</code>
+     (dark artwork) on the four light themes, <code>logo-light.svg</code> (light
+     artwork) on Space Cadet. The footer band is dark in every theme, so it always
+     uses the light one. Replace both, same size, keeping the filenames.</p>
 
   <h3>Replacing a product or gallery panel with a photo</h3>
   <p>Find the coloured panel:</p>
@@ -733,6 +762,51 @@ h1,h2,h3,h4,.brand__text,.btn{ font-family:"Fredoka", … }   /* headings */</co
 <hr />
 
 <!-- ─────────────────────────────────────────── -->
+<section id="icons">
+  <h2 class="t">Icons</h2>
+
+  <p>Icons are inline SVG, drawn for this template. There is no icon font, no
+     external file and no licence to pay for. Each page defines only the symbols
+     it uses, in a hidden block just after <code>&lt;body&gt;</code>:</p>
+<pre><code>&lt;svg class="sprite" aria-hidden="true"&gt;&lt;defs&gt;
+  &lt;symbol id="i-robot" viewBox="0 0 24 24"&gt;…&lt;/symbol&gt;
+&lt;/defs&gt;&lt;/svg&gt;</code></pre>
+
+  <p>An icon is then one line:</p>
+<pre><code>&lt;svg class="ico" aria-hidden="true"&gt;&lt;use href="#i-robot"/&gt;&lt;/svg&gt;</code></pre>
+
+  <div class="tip">
+    <strong>They theme themselves</strong>
+    Icons use <code>stroke: currentColor</code> and are sized in <code>em</code>,
+    so they take the colour and size of whatever they sit in &mdash; and follow
+    all five themes with no extra work. To resize one, change the
+    <code>font-size</code> of its parent.
+  </div>
+
+  <h3>Swapping an icon</h3>
+  <p>Point the <code>use</code> at a different id on the same page, or paste a
+     new <code>&lt;symbol&gt;</code> into that page&rsquo;s sprite. Any 24 &times; 24
+     stroke icon works &mdash; set <code>fill="none"</code> and leave the stroke
+     colour off so <code>currentColor</code> applies.</p>
+
+  <div class="note">
+    <strong>Why inline and not one shared file?</strong>
+    An external sprite with <code>&lt;use href="icons.svg#id"&gt;</code> is blocked
+    by browsers when a page is opened directly from disk. Inlining keeps the
+    template working when you just double-click <code>index.html</code>.
+  </div>
+
+  <h3>Social icons</h3>
+  <p>The four footer icons are deliberately generic shapes (camera, play,
+     speech bubble, chat) rather than the official Instagram, YouTube, Facebook
+     and WhatsApp marks, so there is no trademark question. If you want the real
+     brand marks, download them from each company&rsquo;s own brand-assets page and
+     follow their usage rules.</p>
+</section>
+
+<hr />
+
+<!-- ─────────────────────────────────────────── -->
 <section id="credits">
   <h2 class="t">Credits &amp; licences</h2>
 
@@ -740,9 +814,9 @@ h1,h2,h3,h4,.brand__text,.btn{ font-family:"Fredoka", … }   /* headings */</co
     <tr><th>Item</th><th>Source</th><th>Licence</th></tr>
     <tr><td>Fredoka (headings)</td><td>Google Fonts</td><td>SIL Open Font License 1.1</td></tr>
     <tr><td>Nunito (body)</td><td>Google Fonts</td><td>SIL Open Font License 1.1</td></tr>
-    <tr><td>Icons</td><td>Unicode emoji</td><td>Rendered by the visitor&rsquo;s device — no licence needed</td></tr>
+    <tr><td>Icons</td><td>Original inline SVG, drawn for this template</td><td>Included with the template</td></tr>
     <tr><td>Robot mascot</td><td>Original artwork, inline SVG</td><td>Included with the template</td></tr>
-    <tr><td>Photos</td><td>None included</td><td>—</td></tr>
+    <tr><td>Photos</td><td>Placeholders only — no stock photography</td><td>Included; replace with your own</td></tr>
   </table>
 
   <div class="note">
@@ -811,7 +885,7 @@ h1,h2,h3,h4,.brand__text,.btn{ font-family:"Fredoka", … }   /* headings */</co
      not cover custom development, hosting problems, or third-party services.</p>
 
   <p style="margin-top:2.5rem;color:var(--soft);font-size:.9rem">
-    Thanks for choosing Curio Maker. If it works out for you, a rating on the
+    Thanks for choosing STEM Robo Kid’s. If it works out for you, a rating on the
     marketplace genuinely helps. 🤖
   </p>
 </section>

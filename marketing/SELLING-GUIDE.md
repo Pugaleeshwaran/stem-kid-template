@@ -1,4 +1,4 @@
-# Selling Guide — Curio Maker
+# Selling Guide — STEM Robo Kid’s
 
 Everything you need to list this template. **Delete the whole `marketing/` folder
 before you ZIP the product** — it is for you, not the buyer.
@@ -22,8 +22,8 @@ before you ZIP the product** — it is for you, not the buyer.
 **ZIP structure reviewers expect:**
 
 ```
-curio-maker.zip
-└── curio-maker/
+stem-robo-kids.zip
+└── stem-robo-kids/
     ├── index.html … 404.html
     ├── assets/
     ├── documentation/
@@ -63,7 +63,7 @@ Chrome and screenshot the bordered blocks.
 Fastest route: drag the product folder onto
 [netlify.com/drop](https://app.netlify.com/drop). Free, no account needed for the
 first deploy, live in about 30 seconds. Rename the site to something like
-`curio-maker-demo.netlify.app`.
+`stem-robo-kids-demo.netlify.app`.
 
 Make sure the demo has the theme switcher visible — letting buyers click through
 the 5 themes themselves is the whole pitch.
@@ -102,7 +102,7 @@ sale for the life of the item.
 
 ### Item title
 ```
-Curio Maker — Kids STEM, Robotics & Coding Club HTML Template
+STEM Robo Kid’s — Kids STEM, Robotics & Coding Club HTML Template
 ```
 
 ### Short description / tagline
@@ -115,7 +115,7 @@ animations, and zero dependencies.
 ### Full description
 
 ```
-Curio Maker is a modern, colourful HTML template built for businesses that teach
+STEM Robo Kid’s is a modern, colourful HTML template built for businesses that teach
 children — robotics clubs, coding schools, STEM academies, maker spaces, science
 camps and after-school programmes.
 
@@ -139,7 +139,7 @@ and start editing. Anyone who can edit text in a code editor can customise it.
   • 404 — friendly error page
 
 5 colour themes, switchable live
-  Curio Pop · Bubblegum · Jungle Circuit · Space Cadet (dark) · Sunset Lab
+  Robo Pop · Bubblegum · Jungle Circuit · Space Cadet (dark) · Sunset Lab
   Every colour lives in ONE file. Change a theme and the whole site follows —
   including the robot mascot. Visitors can switch themes themselves, and their
   choice is remembered.

@@ -1,4 +1,4 @@
-# Curio Maker — STEM & Robotics Template for Kids
+# STEM Robo Kid’s — STEM & Robotics Template for Kids
 
 A nine-page HTML template for kids' STEM, robotics and coding clubs.
 Five colour themes, a scroll-animated hero, and no build step.
@@ -28,7 +28,8 @@ No installation, no Node.js, no build tools.
 | **Themes** | 5 palettes, switchable live — one full dark theme |
 | **Responsive** | Desktop, tablet and mobile |
 | **Dependencies** | None. No jQuery, no Bootstrap, no frameworks |
-| **Images required** | None — all visuals are CSS, emoji and inline SVG |
+| **Images** | 15 slots wired up with placeholders — see `assets/img/IMAGE-LIST.md` |
+| **Icons** | Inline SVG, drawn for this template — no icon font, no licence |
 
 **Working features:** filterable product, gallery and blog grids, project lightbox,
 monthly/termly pricing toggle, validated booking form, FAQ accordions, animated counters, scroll-parallax hero,
@@ -39,7 +40,7 @@ sticky nav, mobile menu, scroll progress bar.
 ## File structure
 
 ```
-curio-maker/
+stem-robo-kids/
 ├── index.html            Home page
 ├── about.html            About Us
 ├── products.html         Products / kits
@@ -58,7 +59,7 @@ curio-maker/
 │   │   └── pages.css     Inner-page styles: products, gallery, forms
 │   ├── js/
 │   │   └── main.js       All interactions — one commented file
-│   └── img/              Put your own photos here
+│   └── img/              Your photos + IMAGE-LIST.md (sizes & specs)
 │
 ├── documentation/
 │   └── index.html        Full guide — start here
@@ -86,7 +87,27 @@ To ship with a single fixed theme, add it to the `<html>` tag on every page:
 
 Available keys: `pop` (default), `bubble`, `jungle`, `space` (dark), `sunset`.
 
-### 2. Text and contact details
+### 2. Images
+
+**15 images are wired up and working now** as placeholders. Replace those and the
+site is finished. Full spec — filenames, exact pixel sizes, what to photograph —
+is in **`assets/img/IMAGE-LIST.md`**.
+
+The essentials:
+
+| File | Size | Where |
+|---|---|---|
+| `logo.svg` + `logo-light.svg` | 260 × 56 | Nav + footer (dark and light artwork) |
+| `hero.svg` | 1000 × 1000 | Home hero |
+| `about-story.svg` | 1000 × 920 | About page |
+| `product-1…6.svg` | 1200 × 750 | Products, 6 cards |
+| `team-1…4.svg` | 400 × 400 | Mentor headshots |
+| `og-share.svg` | 1200 × 630 | Social preview |
+
+⚠️ Placeholders are `.svg`; your photos will be `.jpg` — change the extension in
+the `src` too or the image won't show.
+
+### 3. Text and contact details
 
 Open any `.html` file and type over the words. Look for `EDIT:` comments marking
 the spots most people change first.
@@ -95,12 +116,12 @@ Use **Find in Folder** (Ctrl/Cmd + Shift + F in VS Code) to replace these across
 all pages at once:
 
 - `CurioMaker` → your brand name
-- `hello@curiomaker.com` → your email
+- `hello@stemrobokids.com` → your email
 - `+92 000 000 0000` → your phone
 - `24 Maker Street, Your City` → your address
 - `href="#"` in the footer → your social links
 
-### 3. The contact form
+### 4. The contact form
 
 ⚠️ **The form validates but does not send anywhere yet.** HTML alone cannot send
 email. Connect Formspree, Web3Forms or your own PHP script — step-by-step
@@ -154,7 +175,7 @@ Uses CSS custom properties and `color-mix()`. Internet Explorer is not supported
 | Item | Source | Licence |
 |---|---|---|
 | Fredoka, Nunito | Google Fonts | SIL Open Font License 1.1 |
-| Icons | Unicode emoji | Rendered by the device — no licence needed |
+| Icons | Original inline SVG | Included with the template |
 | Robot mascot | Original inline SVG | Included with the template |
 
 No third-party JavaScript. All names, prices, testimonials and student projects
