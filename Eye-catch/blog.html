@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- EDIT: page title + description (shown in Google results) -->
+<title>Blog — STEM Robo Kid’s</title>
+<meta name="description" content="Project write-ups, parent guides and lab notes from the STEM Robo Kid’s robotics and coding club for kids." />
+<!-- EDIT: social preview. og:url and og:image must be full https:// links once live. -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Blog — STEM Robo Kid’s" />
+<meta property="og:description" content="Project write-ups, parent guides and lab notes from the STEM Robo Kid’s robotics and coding club for kids." />
+<meta property="og:image" content="assets/img/og-share.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/themes.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/pages.css" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.hero__title .word{opacity:1!important;transform:none!important}</style></noscript>
+<script>/* apply the saved theme before first paint, so there is no flash */
+try{var t=localStorage.getItem('srk-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+
+<!-- Icon sprite: inline so it also works when the file is opened directly. -->
+<svg class="sprite" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-s-photo" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.2" cy="6.8" r="1.15" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-s-play" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4.6"/><path d="M10.2 9.2l4.8 2.8-4.8 2.8z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-s-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.6 8.6 0 0 1-11.7 8L4 21l1.5-5.1A8.6 8.6 0 1 1 21 11.5z"/><path d="M9 11.6h.01M12 11.6h.01M15 11.6h.01" stroke-width="2.6"/></symbol>
+<symbol id="i-s-wa" viewBox="0 0 24 24"><path d="M20.5 11.6A8.4 8.4 0 0 1 7.9 19l-4.4 1.2 1.2-4.3A8.4 8.4 0 1 1 20.5 11.6z"/><path d="M9.3 9.3c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .6.4l.6 1.5c.1.3 0 .4-.1.6l-.4.5c-.1.2-.2.3 0 .5a5.6 5.6 0 0 0 2.4 2.1c.3.1.4 0 .5-.1l.5-.6c.2-.2.3-.2.5-.1l1.5.7c.2.1.4.2.4.4a1.7 1.7 0 0 1-1.2 1.5 3.1 3.1 0 0 1-2.2-.2 9.4 9.4 0 0 1-4.4-4 3.3 3.3 0 0 1-.6-1.9c0-.5.2-.9.6-1.2z"/></symbol>
+</defs></svg>
+
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<!-- EDIT: your logo + brand name -->
+<header class="nav" id="nav">
+  <!-- EDIT: swap both files in assets/img/ for your own logo.
+       Two versions: -dark for the light themes, -light for Space Cadet. -->
+  <a class="brand" href="index.html" aria-label="STEM Robo Kid&rsquo;s home">
+    <img class="brand__logo brand__logo--dark"  src="assets/img/logo.svg"
+         alt="STEM Robo Kid&rsquo;s" width="260" height="56" />
+    <img class="brand__logo brand__logo--light" src="assets/img/logo-light.svg"
+         alt="" aria-hidden="true" width="260" height="56" />
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a class="is-active" href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn btn--sm btn--primary" href="contact.html#book">Book Free Trial</a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+<!-- ══ PAGE HERO ══ -->
+<section class="phero">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="grid" data-speed="0.10"></div>
+    <div class="blob blob--sky"   data-speed="0.3"></div>
+    <div class="blob blob--sun"   data-speed="0.18"></div>
+    <div class="blob blob--grape" data-speed="0.26"></div>
+    <span class="float float--bulb" data-speed="0.5">💡</span>
+    <span class="float float--star" data-speed="0.62">⭐</span>
+    <span class="float float--chip" data-speed="0.44">🔩</span>
+  </div>
+  <div class="phero__inner">
+    <nav class="crumb reveal" data-reveal="1" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><b>Blog</b>
+    </nav>
+    <h1 class="phero__title reveal" data-reveal="2">
+      Notes from <span class="hl">the lab bench</span>
+    </h1>
+    <p class="phero__sub reveal" data-reveal="3">
+      Project write-ups, honest parent guides and the occasional post-mortem on a
+      robot that refused to cooperate.
+    </p>
+  </div>
+</section>
+
+<!-- ══ POSTS ══
+     EDIT: one <article class="post"> = one article.
+     data-cat="…" must match a data-filter="…" button below.
+     Copy a whole <article> block to add another post. -->
+<section class="section">
+
+  <div class="filters" data-filter-target="#postGrid" role="group" aria-label="Filter articles">
+    <button class="chip-btn is-on" data-filter="all"     aria-pressed="true">All posts</button>
+    <button class="chip-btn"       data-filter="parents" aria-pressed="false">For parents</button>
+    <button class="chip-btn"       data-filter="projects" aria-pressed="false">Projects</button>
+    <button class="chip-btn"       data-filter="howto"   aria-pressed="false">How-to</button>
+    <button class="chip-btn"       data-filter="news"    aria-pressed="false">Club news</button>
+  </div>
+
+  <div class="posts" id="postGrid">
+
+    <article class="post post--feature reveal" data-cat="parents" data-reveal="1">
+      <div class="post__art post__art--e">🧠</div>
+      <div class="post__body">
+        <span class="post__cat">For parents</span>
+        <h3><a href="blog-single.html">Why we let kids break the robot</a></h3>
+        <p>
+          Every instinct says step in and fix it. We have found the opposite works better —
+          and the research on productive failure backs it up. Here is what actually happens
+          in the ten minutes after something stops working, and why those ten minutes are
+          the most valuable part of the class.
+        </p>
+        <p class="post__meta">Sana Iqbal <i>·</i> 28 Aug 2026 <i>·</i> 6 min read</p>
+      </div>
+    </article>
+
+    <article class="post reveal" data-cat="projects" data-reveal="1">
+      <div class="post__art post__art--a">🏎️</div>
+      <div class="post__body">
+        <span class="post__cat">Projects</span>
+        <h3><a href="blog-single.html">Building a line-follower that actually finishes</a></h3>
+        <p>Six failed attempts, one working fix. A nine-year-old explains why slowing down before the corner beats more motor power.</p>
+        <p class="post__meta">Omar Farooq <i>·</i> 21 Aug 2026 <i>·</i> 4 min</p>
+      </div>
+    </article>
+
+    <article class="post reveal" data-cat="howto" data-reveal="2">
+      <div class="post__art post__art--b">🔌</div>
+      <div class="post__body">
+        <span class="post__cat">How-to</span>
+        <h3><a href="blog-single.html">Your first Arduino circuit, in plain English</a></h3>
+        <p>No jargon, no theory dump. Five components, one breadboard and a blinking LED in under twenty minutes at the kitchen table.</p>
+        <p class="post__meta">Omar Farooq <i>·</i> 14 Aug 2026 <i>·</i> 8 min</p>
+      </div>
+    </article>
+
+    <article class="post reveal" data-cat="parents" data-reveal="3">
+      <div class="post__art post__art--c">📱</div>
+      <div class="post__body">
+        <span class="post__cat">For parents</span>
+        <h3><a href="blog-single.html">Screen time vs build time: a practical split</a></h3>
+        <p>Not all screens are equal. A simple weekly framework that swaps passive scrolling for making, without starting a fight about it.</p>
+        <p class="post__meta">Hina Raza <i>·</i> 07 Aug 2026 <i>·</i> 5 min</p>
+      </div>
+    </article>
+
+    <article class="post reveal" data-cat="news" data-reveal="1">
+      <div class="post__art post__art--d">🏆</div>
+      <div class="post__body">
+        <span class="post__cat">Club news</span>
+        <h3><a href="blog-single.html">Our squad placed third at the regional finals</a></h3>
+        <p>Four teenagers, one sorting arm and a very long Saturday. How the team debugged a jammed servo forty minutes before judging.</p>
+        <p class="post__meta">Sana Iqbal <i>·</i> 30 Jul 2026 <i>·</i> 3 min</p>
+      </div>
+    </article>
+
+    <article class="post reveal" data-cat="howto" data-reveal="2">
+      <div class="post__art post__art--f">🖨️</div>
+      <div class="post__body">
+        <span class="post__cat">How-to</span>
+        <h3><a href="blog-single.html">Designing a printable part in Tinkercad</a></h3>
+        <p>From a sketch on paper to a printed bracket in one session — including the three mistakes every beginner makes with tolerances.</p>
+        <p class="post__meta">Hina Raza <i>·</i> 22 Jul 2026 <i>·</i> 7 min</p>
+      </div>
+    </article>
+
+    <article class="post reveal" data-cat="projects" data-reveal="3">
+      <div class="post__art post__art--e">♻️</div>
+      <div class="post__body">
+        <span class="post__cat">Projects</span>
+        <h3><a href="blog-single.html">Teaching a camera to sort the recycling</a></h3>
+        <p>A fourteen-year-old&rsquo;s AI project worked perfectly in the lab and failed everywhere else. The fix was better data, not better code.</p>
+        <p class="post__meta">Bilal Ahmed <i>·</i> 15 Jul 2026 <i>·</i> 6 min</p>
+      </div>
+    </article>
+
+  </div>
+  <p class="grid-empty" hidden>No posts in that category yet — try another filter.</p>
+
+  <!-- EDIT: static pagination. Point these at blog-2.html etc. when you add pages. -->
+  <nav class="pager" aria-label="Pagination">
+    <span class="is-off">← Prev</span>
+    <span class="is-here" aria-current="page">1</span>
+    <a href="#">2</a>
+    <a href="#">3</a>
+    <a href="#">Next →</a>
+  </nav>
+</section>
+
+<!-- ══ NEWSLETTER ══ -->
+<section class="section">
+  <div class="news reveal" data-reveal="1">
+    <div>
+      <h2>One email a month. That&rsquo;s it.</h2>
+      <p>New projects, free build guides and workshop dates. No spam, unsubscribe in one click.</p>
+    </div>
+    <form onsubmit="return false;">
+      <input type="email" aria-label="Email address" placeholder="you@example.com" required />
+      <button class="btn btn--primary" type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ FOOTER — EDIT: same on every page, keep them in sync ══ -->
+<footer class="foot">
+  <div class="foot__inner">
+    <div class="foot__brand">
+      <img class="brand__logo brand__logo--light" src="assets/img/logo-light.svg"
+           alt="STEM Robo Kid&rsquo;s" width="260" height="56" />
+      <p>A STEM &amp; robotics club where children learn by building things that actually work.</p>
+      <!-- EDIT: point these at your real profiles -->
+      <div class="foot__social">
+        <a href="#" aria-label="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-s-photo"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg class="ico" aria-hidden="true"><use href="#i-s-play"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg class="ico" aria-hidden="true"><use href="#i-s-chat"/></svg></a>
+        <a href="#" aria-label="WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-s-wa"/></svg></a>
+      </div>
+    </div>
+    <div class="foot__col"><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a></div>
+    <div class="foot__col"><h4>Labs</h4><a href="index.html#programs">Robot Lab</a><a href="index.html#programs">Code &amp; Game</a><a href="index.html#programs">Maker Studio</a><a href="index.html#programs">AI Explorers</a></div>
+    <div class="foot__col"><h4>Say hi</h4><a href="mailto:hello@stemrobokids.com">hello@stemrobokids.com</a><a href="tel:+920000000000">+92 000 000 0000</a><a href="contact.html#book">Book a free trial</a></div>
+  </div>
+  <p class="foot__base">© <span class="yr">2026</span> STEM Robo Kid’s · Made for young inventors 🤖</p>
+</footer>
+
+<!-- ══ THEME SWITCHER ══ -->
+<div class="themer" id="themer">
+  <button class="themer__btn" id="themerBtn" aria-expanded="false" aria-controls="themerPanel" aria-label="Change colour theme" title="Change colour theme">🎨</button>
+  <div class="themer__panel" id="themerPanel" role="group" aria-label="Colour themes">
+    <p class="themer__title">Pick a colour</p>
+    <button class="swatch" data-theme="pop"    aria-pressed="true"><i></i>Robo Pop<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="bubble" aria-pressed="false"><i></i>Bubblegum<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="jungle" aria-pressed="false"><i></i>Jungle Circuit<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="space"  aria-pressed="false"><i></i>Space Cadet<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="sunset" aria-pressed="false"><i></i>Sunset Lab<span class="swatch__tick">✓</span></button>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

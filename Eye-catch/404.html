@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- EDIT: page title + description (shown in Google results) -->
+<title>Page not found — STEM Robo Kid’s</title>
+<meta name="description" content="That page took a wrong turn. Head back to the STEM Robo Kid’s home page." />
+<meta name="robots" content="noindex" />
+<!-- EDIT: social preview. og:url and og:image must be full https:// links once live. -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Page not found — STEM Robo Kid’s" />
+<meta property="og:description" content="That page took a wrong turn. Head back to the STEM Robo Kid’s home page." />
+<meta property="og:image" content="assets/img/og-share.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/themes.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/pages.css" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+<script>/* apply the saved theme before first paint, so there is no flash */
+try{var t=localStorage.getItem('srk-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<!-- EDIT: your logo + brand name -->
+<header class="nav" id="nav">
+  <!-- EDIT: swap both files in assets/img/ for your own logo.
+       Two versions: -dark for the light themes, -light for Space Cadet. -->
+  <a class="brand" href="index.html" aria-label="STEM Robo Kid&rsquo;s home">
+    <img class="brand__logo brand__logo--dark"  src="assets/img/logo.svg"
+         alt="STEM Robo Kid&rsquo;s" width="260" height="56" />
+    <img class="brand__logo brand__logo--light" src="assets/img/logo-light.svg"
+         alt="" aria-hidden="true" width="260" height="56" />
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn btn--sm btn--primary" href="contact.html#book">Book Free Trial</a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+<section class="err">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="grid" data-speed="0.10"></div>
+    <div class="blob blob--grape" data-speed="0.26"></div>
+    <div class="blob blob--sky"   data-speed="0.34"></div>
+    <div class="blob blob--sun"   data-speed="0.18"></div>
+    <span class="float float--gear"   data-speed="0.55">⚙️</span>
+    <span class="float float--bolt"   data-speed="0.7">⚡</span>
+    <span class="float float--chip"   data-speed="0.4">🔩</span>
+    <span class="float float--star"   data-speed="0.62">⭐</span>
+  </div>
+
+  <div class="err__inner">
+    <div class="err__bot bot" id="bot">
+      <svg viewBox="0 0 320 240" role="img" aria-label="A confused STEM Robo Kid’s robot">
+        <line class="r-line" x1="160" y1="46" x2="160" y2="22" stroke="#16123a" stroke-width="7" stroke-linecap="round"/>
+        <circle class="bot__ping r-bulb" cx="160" cy="14" r="12" fill="#ffd23f"/>
+        <rect class="r-shell" x="60" y="44" width="200" height="150" rx="46" fill="#7b5cff"/>
+        <rect class="r-face" x="72" y="56" width="176" height="112" rx="36" fill="#16123a"/>
+        <g id="pupils">
+          <circle class="r-eye" cx="128" cy="106" r="21" fill="#ffffff"/>
+          <circle class="r-eye" cx="192" cy="106" r="21" fill="#ffffff"/>
+          <circle class="r-pupil" cx="128" cy="106" r="9.5" fill="#16123a"/>
+          <circle class="r-pupil" cx="192" cy="106" r="9.5" fill="#16123a"/>
+          <circle class="r-eye" cx="132" cy="101" r="3.4" fill="#ffffff"/>
+          <circle class="r-eye" cx="196" cy="101" r="3.4" fill="#ffffff"/>
+        </g>
+        <!-- a wobbly, unsure mouth instead of the usual smile -->
+        <path class="r-smile" d="M134 146q12 -12 24 0t24 0" stroke="#2ee6a8" stroke-width="8" fill="none" stroke-linecap="round"/>
+        <rect class="r-ear" x="42" y="96"  width="18" height="46" rx="9" fill="#ff6b6b"/>
+        <rect class="r-ear" x="260" y="96" width="18" height="46" rx="9" fill="#ff6b6b"/>
+      </svg>
+    </div>
+
+    <p class="err__num">404</p>
+    <h1>This page took a wrong turn</h1>
+    <p>
+      Our robot looked everywhere and came back with nothing. The page may have
+      been moved, renamed, or it never existed in the first place.
+    </p>
+
+    <div class="err__cta">
+      <a class="btn btn--primary btn--lg" href="index.html">Back to home <span class="btn__arrow">→</span></a>
+      <a class="btn btn--ghost btn--lg" href="contact.html#book">Book a free trial</a>
+    </div>
+
+    <div class="err__links">
+      <a href="about.html">About Us</a>
+      <a href="products.html">Products</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ THEME SWITCHER ══ -->
+<div class="themer" id="themer">
+  <button class="themer__btn" id="themerBtn" aria-expanded="false" aria-controls="themerPanel" aria-label="Change colour theme" title="Change colour theme">🎨</button>
+  <div class="themer__panel" id="themerPanel" role="group" aria-label="Colour themes">
+    <p class="themer__title">Pick a colour</p>
+    <button class="swatch" data-theme="pop"    aria-pressed="true"><i></i>Robo Pop<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="bubble" aria-pressed="false"><i></i>Bubblegum<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="jungle" aria-pressed="false"><i></i>Jungle Circuit<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="space"  aria-pressed="false"><i></i>Space Cadet<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="sunset" aria-pressed="false"><i></i>Sunset Lab<span class="swatch__tick">✓</span></button>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- EDIT: page title + description (shown in Google results) -->
+<title>Products — STEM Robo Kid’s Robotics Kits</title>
+<meta name="description" content="Robotics and coding kits for kids aged 6-16. Starter bots, Arduino kits, 3D printing packs and AI add-ons, built for small hands and big ideas." />
+<!-- EDIT: social preview. og:url and og:image must be full https:// links once live. -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Products — STEM Robo Kid’s Robotics Kits" />
+<meta property="og:description" content="Robotics and coding kits for kids aged 6-16. Starter bots, Arduino kits, 3D printing packs and AI add-ons, built for small hands and big ideas." />
+<meta property="og:image" content="assets/img/og-share.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/themes.css" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/pages.css" />
+<link rel="icon" href="favicon.svg" type="image/svg+xml" />
+<noscript><style>.reveal{opacity:1!important;transform:none!important}.hero__title .word{opacity:1!important;transform:none!important}</style></noscript>
+<script>/* apply the saved theme before first paint, so there is no flash */
+try{var t=localStorage.getItem('srk-theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+
+<!-- Icon sprite: inline so it also works when the file is opened directly. -->
+<svg class="sprite" aria-hidden="true" focusable="false"><defs>
+<symbol id="i-book" viewBox="0 0 24 24"><path d="M3.6 5.6a2 2 0 0 1 2-2H10a2.4 2.4 0 0 1 2 1 2.4 2.4 0 0 1 2-1h4.4a2 2 0 0 1 2 2v11.8a2 2 0 0 1-2 2H14a2.4 2.4 0 0 0-2 1 2.4 2.4 0 0 0-2-1H5.6a2 2 0 0 1-2-2z"/><path d="M12 4.6v14.8"/></symbol>
+<symbol id="i-video" viewBox="0 0 24 24"><rect x="2.5" y="5" width="13.4" height="14" rx="3.2"/><path d="M15.9 10.2l5.6-3.2v10l-5.6-3.2z"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.8a8.4 8.4 0 0 1-8.4 8.4 8.6 8.6 0 0 1-3.8-.9L3.6 20.8l1.3-5.2A8.4 8.4 0 1 1 21 11.8z"/></symbol>
+<symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20.4 12a8.4 8.4 0 1 1-2.4-5.9"/><path d="M20.4 3.6V9h-5.4"/></symbol>
+<symbol id="i-s-photo" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.2" cy="6.8" r="1.15" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-s-play" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4.6"/><path d="M10.2 9.2l4.8 2.8-4.8 2.8z" fill="currentColor" stroke="none"/></symbol>
+<symbol id="i-s-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.6 8.6 0 0 1-11.7 8L4 21l1.5-5.1A8.6 8.6 0 1 1 21 11.5z"/><path d="M9 11.6h.01M12 11.6h.01M15 11.6h.01" stroke-width="2.6"/></symbol>
+<symbol id="i-s-wa" viewBox="0 0 24 24"><path d="M20.5 11.6A8.4 8.4 0 0 1 7.9 19l-4.4 1.2 1.2-4.3A8.4 8.4 0 1 1 20.5 11.6z"/><path d="M9.3 9.3c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .6.4l.6 1.5c.1.3 0 .4-.1.6l-.4.5c-.1.2-.2.3 0 .5a5.6 5.6 0 0 0 2.4 2.1c.3.1.4 0 .5-.1l.5-.6c.2-.2.3-.2.5-.1l1.5.7c.2.1.4.2.4.4a1.7 1.7 0 0 1-1.2 1.5 3.1 3.1 0 0 1-2.2-.2 9.4 9.4 0 0 1-4.4-4 3.3 3.3 0 0 1-.6-1.9c0-.5.2-.9.6-1.2z"/></symbol>
+</defs></svg>
+
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+<header class="nav" id="nav">
+  <!-- EDIT: your logo + brand name -->
+  <!-- EDIT: swap both files in assets/img/ for your own logo.
+       Two versions: -dark for the light themes, -light for Space Cadet. -->
+  <a class="brand" href="index.html" aria-label="STEM Robo Kid&rsquo;s home">
+    <img class="brand__logo brand__logo--dark"  src="assets/img/logo.svg"
+         alt="STEM Robo Kid&rsquo;s" width="260" height="56" />
+    <img class="brand__logo brand__logo--light" src="assets/img/logo-light.svg"
+         alt="" aria-hidden="true" width="260" height="56" />
+  </a>
+  <nav class="nav__links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a class="is-active" href="products.html">Products</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+    <a class="btn btn--sm btn--primary" href="contact.html#book">Book Free Trial</a>
+  </nav>
+  <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main>
+
+<!-- ══ PAGE HERO ══ -->
+<section class="phero">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="grid" data-speed="0.10"></div>
+    <div class="blob blob--sky"  data-speed="0.28"></div>
+    <div class="blob blob--sun"  data-speed="0.18"></div>
+    <div class="blob blob--mint" data-speed="0.32"></div>
+    <span class="float float--chip" data-speed="0.5">🔩</span>
+    <span class="float float--bolt" data-speed="0.68">⚡</span>
+    <span class="float float--star" data-speed="0.58">⭐</span>
+  </div>
+  <div class="phero__inner">
+    <nav class="crumb reveal" data-reveal="1" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span>/</span><b>Products</b>
+    </nav>
+    <h1 class="phero__title reveal" data-reveal="2">
+      Arrives as a box. Leaves as a <span class="hl">robot.</span>
+    </h1>
+    <p class="phero__sub reveal" data-reveal="3">
+      Every kit is the same hardware we use in the lab &mdash; chosen because it survives being
+      dropped, rewired backwards and argued with. Illustrated guides included, no jargon.
+    </p>
+  </div>
+</section>
+
+<!-- ══ PRODUCTS ══ -->
+<section class="section">
+  <div class="filters" data-filter-target="#prodGrid" role="group" aria-label="Filter kits">
+    <button class="chip-btn is-on" data-filter="all"     aria-pressed="true">All kits</button>
+    <button class="chip-btn"       data-filter="starter" aria-pressed="false">Ages 6–9</button>
+    <button class="chip-btn"       data-filter="junior"  aria-pressed="false">Ages 9–12</button>
+    <button class="chip-btn"       data-filter="pro"     aria-pressed="false">Ages 13–16</button>
+    <button class="chip-btn"       data-filter="addon"   aria-pressed="false">Add-ons</button>
+  </div>
+
+  <!-- EDIT: one <article class="prod"> = one product card.
+       Copy a whole <article> block to add another; delete one to remove it.
+       data-cat="…" must match a data-filter="…" button above. -->
+  <!-- EDIT: product photos are 1200 x 750 (16:10). Swap the files in
+       assets/img/ keeping the same names, or change the src below. -->
+  <div class="prods" id="prodGrid">
+
+    <article class="prod reveal" data-cat="starter" data-reveal="1">
+      <div class="prod__art prod__art--a">
+        <img src="assets/img/product-1.svg" width="1200" height="750" alt="Robo Starter Bot kit laid out with its parts" />
+        <b class="prod__badge">Best seller</b>
+      </div>
+      <div class="prod__body">
+        <div class="prod__row"><h3>Robo Starter Bot</h3><span class="prod__price">$59</span></div>
+        <p class="prod__age">Ages 6–9 · 12 build projects</p>
+        <p>A snap-together robot with no soldering at all. Kids build it, drive it, then rebuild it as something else.</p>
+        <ul class="prod__kit">
+          <li>Snap-fit chassis + 2 motors</li>
+          <li>Colour and touch sensors</li>
+          <li>Block-coding app, no typing</li>
+          <li>36-page picture guide</li>
+        </ul>
+        <a class="btn btn--primary btn--full" href="contact.html?item=Robo%20Starter%20Bot#book">Ask about this kit →</a>
+      </div>
+    </article>
+
+    <article class="prod reveal" data-cat="junior" data-reveal="2">
+      <div class="prod__art prod__art--b">
+        <img src="assets/img/product-2.svg" width="1200" height="750" alt="Junior Arduino Lab kit with board and breadboard" />
+        
+      </div>
+      <div class="prod__body">
+        <div class="prod__row"><h3>Junior Arduino Lab</h3><span class="prod__price">$109</span></div>
+        <p class="prod__age">Ages 9–12 · 20 build projects</p>
+        <p>The real thing: a genuine microcontroller, a breadboard and their first typed line of code.</p>
+        <ul class="prod__kit">
+          <li>Arduino-compatible board + USB</li>
+          <li>Breadboard, 120 jumper wires</li>
+          <li>Ultrasonic, IR and light sensors</li>
+          <li>Servo, buzzer, 40 LEDs</li>
+        </ul>
+        <a class="btn btn--primary btn--full" href="contact.html?item=Junior%20Arduino%20Lab#book">Ask about this kit →</a>
+      </div>
+    </article>
+
+    <article class="prod reveal" data-cat="pro" data-reveal="3">
+      <div class="prod__art prod__art--c">
+        <img src="assets/img/product-3.svg" width="1200" height="750" alt="Innovator Drone Kit frame and motors" />
+        <b class="prod__badge">New</b>
+      </div>
+      <div class="prod__body">
+        <div class="prod__row"><h3>Innovator Drone Kit</h3><span class="prod__price">$229</span></div>
+        <p class="prod__age">Ages 13–16 · 8 build projects</p>
+        <p>Build the frame, tune the flight controller, then write Python to fly a programmed route.</p>
+        <ul class="prod__kit">
+          <li>Carbon frame + 4 brushless motors</li>
+          <li>Flight controller &amp; telemetry</li>
+          <li>Python flight-scripting library</li>
+          <li>Spare props and safety cage</li>
+        </ul>
+        <a class="btn btn--primary btn--full" href="contact.html?item=Innovator%20Drone%20Kit#book">Ask about this kit →</a>
+      </div>
+    </article>
+
+    <article class="prod reveal" data-cat="pro" data-reveal="1">
+      <div class="prod__art prod__art--e">
+        <img src="assets/img/product-4.svg" width="1200" height="750" alt="AI Vision Pack camera module and single-board computer" />
+        
+      </div>
+      <div class="prod__body">
+        <div class="prod__row"><h3>AI Vision Pack</h3><span class="prod__price">$169</span></div>
+        <p class="prod__age">Ages 13–16 · 10 build projects</p>
+        <p>A camera module and a single-board computer. Teach a machine to spot colours, faces and hand signs.</p>
+        <ul class="prod__kit">
+          <li>Single-board computer + case</li>
+          <li>Camera module and mount</li>
+          <li>Offline vision models, kid-safe</li>
+          <li>Ethics workbook for teens</li>
+        </ul>
+        <a class="btn btn--primary btn--full" href="contact.html?item=AI%20Vision%20Pack#book">Ask about this kit →</a>
+      </div>
+    </article>
+
+    <article class="prod reveal" data-cat="addon" data-reveal="2">
+      <div class="prod__art prod__art--d">
+        <img src="assets/img/product-5.svg" width="1200" height="750" alt="3D Print Parts Pack filament and printed parts" />
+        
+      </div>
+      <div class="prod__body">
+        <div class="prod__row"><h3>3D Print Parts Pack</h3><span class="prod__price">$39</span></div>
+        <p class="prod__age">Any age · add-on</p>
+        <p>Filament plus a printed parts library so robots stop being held together with tape.</p>
+        <ul class="prod__kit">
+          <li>1 kg PLA filament, 2 colours</li>
+          <li>30 ready-to-print STL parts</li>
+          <li>Tinkercad starter workbook</li>
+        </ul>
+        <a class="btn btn--primary btn--full" href="contact.html?item=3D%20Print%20Parts%20Pack#book">Ask about this kit →</a>
+      </div>
+    </article>
+
+    <article class="prod reveal" data-cat="addon" data-reveal="3">
+      <div class="prod__art prod__art--f">
+        <img src="assets/img/product-6.svg" width="1200" height="750" alt="Spare and Rescue Box of replacement components" />
+        
+      </div>
+      <div class="prod__body">
+        <div class="prod__row"><h3>Spare &amp; Rescue Box</h3><span class="prod__price">$32</span></div>
+        <p class="prod__age">Any age · add-on</p>
+        <p>The parts that always go missing or get fried. Every parent buys this one eventually.</p>
+        <ul class="prod__kit">
+          <li>Rechargeable batteries + charger</li>
+          <li>Replacement wires and resistors</li>
+          <li>Spare motor, servo and buzzer</li>
+        </ul>
+        <a class="btn btn--primary btn--full" href="contact.html?item=Spare%20and%20Rescue%20Box#book">Ask about this kit →</a>
+      </div>
+    </article>
+
+  </div>
+  <p class="grid-empty" hidden>No kits in that group yet — try another filter.</p>
+</section>
+
+<!-- ══ WHAT EVERY KIT INCLUDES ══ -->
+<section class="section">
+  <header class="sec-head">
+    <p class="pill pill--dark reveal" data-reveal="1"><span class="pill__dot"></span> Every Kit Includes</p>
+    <h2 class="sec-title reveal" data-reveal="2">No missing screws, <span class="hl hl--sun">no dead ends</span></h2>
+  </header>
+
+  <div class="incl reveal" data-reveal="1">
+    <div class="incl__item"><i><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></i><div><b>Illustrated guide</b><span>Pictures first, words second. Readable by a six-year-old.</span></div></div>
+    <div class="incl__item"><i><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg></i><div><b>Video walkthroughs</b><span>Every build filmed step by step, pause-friendly.</span></div></div>
+    <div class="incl__item"><i><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg></i><div><b>Mentor helpline</b><span>Stuck at home? Message a real mentor, same day.</span></div></div>
+    <div class="incl__item"><i><svg class="ico" aria-hidden="true"><use href="#i-refresh"/></svg></i><div><b>Free part replacement</b><span>Something fried in the first year? We replace it.</span></div></div>
+  </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="section">
+  <header class="sec-head">
+    <p class="pill pill--dark reveal" data-reveal="1"><span class="pill__dot"></span> Kit Questions</p>
+    <h2 class="sec-title reveal" data-reveal="2">Things parents <span class="hl hl--coral">always ask</span></h2>
+  </header>
+
+  <div class="faq">
+    <details class="faq__item reveal" data-reveal="1">
+      <summary>Do I need to buy a kit to join a class?</summary>
+      <p>No. Every lab session already has all the hardware on the bench. Kits are for children who want to keep building at home between classes.</p>
+    </details>
+    <details class="faq__item reveal" data-reveal="2">
+      <summary>Is soldering involved? Is it safe?</summary>
+      <p>Nothing in the 6–9 and 9–12 kits needs soldering — everything snaps or plugs together. Soldering only appears in the teen kits, and only under mentor supervision in the lab.</p>
+    </details>
+    <details class="faq__item reveal" data-reveal="3">
+      <summary>What if my child gets stuck at home?</summary>
+      <p>Each kit comes with a mentor helpline. Send a photo of the wiring on WhatsApp and you will get a reply the same day, usually within a couple of hours.</p>
+    </details>
+    <details class="faq__item reveal" data-reveal="4">
+      <summary>Can we upgrade a kit later?</summary>
+      <p>Yes. The Starter Bot chassis accepts Junior Arduino parts, so nothing gets thrown away when your child moves up an age group.</p>
+    </details>
+    <details class="faq__item reveal" data-reveal="5">
+      <summary>How do we actually order one?</summary>
+      <p>Use the enquiry button on any kit. Tell us your child's age and we will confirm stock, price and delivery before you pay anything.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ══ CTA ══ -->
+<section class="cta">
+  <div class="cta__card reveal" data-reveal="1">
+    <span class="cta__spark cta__spark--1">✦</span>
+    <span class="cta__spark cta__spark--2">✦</span>
+    <h2>Not sure which kit <span>fits your kid?</span></h2>
+    <p>Tell us their age and what they are into. We will point you at one kit, not a catalogue.</p>
+    <a class="btn btn--dark btn--lg" href="contact.html#book">Ask a mentor →</a>
+  </div>
+</section>
+
+</main>
+
+<!-- ══ FOOTER — EDIT: same on every page, keep them in sync ══ -->
+<footer class="foot">
+  <div class="foot__inner">
+    <div class="foot__brand">
+      <img class="brand__logo brand__logo--light" src="assets/img/logo-light.svg"
+           alt="STEM Robo Kid&rsquo;s" width="260" height="56" />
+      <p>A STEM &amp; robotics club where children learn by building things that actually work.</p>
+      <!-- EDIT: point these at your real profiles -->
+      <div class="foot__social">
+        <a href="#" aria-label="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-s-photo"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg class="ico" aria-hidden="true"><use href="#i-s-play"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg class="ico" aria-hidden="true"><use href="#i-s-chat"/></svg></a>
+        <a href="#" aria-label="WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-s-wa"/></svg></a>
+      </div>
+    </div>
+    <div class="foot__col"><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="products.html">Products</a><a href="pricing.html">Pricing</a><a href="gallery.html">Gallery</a><a href="blog.html">Blog</a></div>
+    <div class="foot__col"><h4>Labs</h4><a href="index.html#programs">Robot Lab</a><a href="index.html#programs">Code &amp; Game</a><a href="index.html#programs">Maker Studio</a><a href="index.html#programs">AI Explorers</a></div>
+    <div class="foot__col"><h4>Say hi</h4><a href="mailto:hello@stemrobokids.com">hello@stemrobokids.com</a><a href="tel:+920000000000">+92 000 000 0000</a><a href="contact.html#book">Book a free trial</a></div>
+  </div>
+  <p class="foot__base">© <span class="yr">2026</span> STEM Robo Kid’s · Made for young inventors 🤖</p>
+</footer>
+
+
+<!-- ══ THEME SWITCHER ══ -->
+<div class="themer" id="themer">
+  <button class="themer__btn" id="themerBtn" aria-expanded="false" aria-controls="themerPanel" aria-label="Change colour theme" title="Change colour theme">🎨</button>
+  <div class="themer__panel" id="themerPanel" role="group" aria-label="Colour themes">
+    <p class="themer__title">Pick a colour</p>
+    <button class="swatch" data-theme="pop"    aria-pressed="true"><i></i>Robo Pop<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="bubble" aria-pressed="false"><i></i>Bubblegum<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="jungle" aria-pressed="false"><i></i>Jungle Circuit<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="space"  aria-pressed="false"><i></i>Space Cadet<span class="swatch__tick">✓</span></button>
+    <button class="swatch" data-theme="sunset" aria-pressed="false"><i></i>Sunset Lab<span class="swatch__tick">✓</span></button>
+  </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
